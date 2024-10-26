@@ -1,0 +1,232 @@
+2024-10-24T23:56:40.769Z [INFO]: Server is running successfully on PORT 8080
+2024-10-24T23:57:06.280Z [INFO]: Received POST request for /api/v1/users
+2024-10-24T23:57:06.280Z [INFO]: Creating a new user
+2024-10-25T00:03:37.693Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:04:04.825Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:04:07.472Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:04:11.927Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:07:30.106Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:14:23.487Z [INFO]: Server is running successfully on PORT 8080
+2024-10-25T00:21:02.906Z [INFO]: Received POST request for /api/v1/users
+2024-10-25T00:21:02.909Z [INFO]: Creating a new user
+2024-10-25T00:21:37.626Z [INFO]: Received PATCH request for /api/v1/users/671aded64f1ad61837ab051d
+2024-10-25T00:21:37.628Z [INFO]: Updating user with ID: 671aded64f1ad61837ab051d2024-10-25T00:22:39.410Z [INFO]: Received PATCH request for /api/v1/users/671aded64f1ad61837ab051d
+2024-10-25T00:22:39.411Z [INFO]: Updating user with ID: 671aded64f1ad61837ab051d
+2024-10-25T00:23:08.443Z [INFO]: Received PATCH request for /api/v1/users/671aded64f1ad61837ab051d
+2024-10-25T00:23:08.443Z [INFO]: Updating user with ID: 671aded64f1ad61837ab051d
+2024-10-25T00:30:23.888Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
+2024-10-25T00:30:24.201Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
+2024-10-25T00:47:47.930Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
+2024-10-25T00:47:48.192Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
+2024-10-26T00:27:44.334Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:27:54.620Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:28:01.666Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:31:18.021Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:33:51.629Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:34:48.214Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:36:19.548Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:37:33.109Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:38:53.089Z [INFO]: Server is running successfully on PORT 3000
+2024-10-26T00:49:03.710Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T00:52:13.753Z [INFO]: Received POST request for /api/v1/products/
+2024-10-26T00:52:41.581Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T00:52:46.877Z [INFO]: Received POST request for /api/v1/products/
+2024-10-26T00:52:46.880Z [INFO]: Creating a new product
+2024-10-26T00:53:46.269Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T00:54:45.086Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-10-26T00:55:15.057Z [INFO]: Received GET request for /api/v1/products/products?page=1&limit=5
+2024-10-26T00:55:15.058Z [INFO]: Fetching all products
+2024-10-26T00:56:07.423Z [INFO]: Received POST request for /api/v1/products/
+2024-10-26T00:56:07.424Z [INFO]: Creating a new product
+2024-10-26T00:58:29.776Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T00:58:49.980Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:00:16.887Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:00:23.158Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:00:26.179Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:00:27.060Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:00:49.193Z [INFO]: Received GET request for /api/v1/user/6712a965ece31f4d4f47072e
+2024-10-26T01:00:56.137Z [INFO]: Received GET request for /api/v1/6712a965ece31f4d4f47072e
+2024-10-26T01:01:12.238Z [INFO]: Received GET request for /api/v1/products/6712a965ece31f4d4f47072e
+2024-10-26T01:01:12.254Z [INFO]: Fetching product with ID: 6712a965ece31f4d4f47072e
+2024-10-26T01:01:34.042Z [INFO]: Received GET request for /api/v1/products/671c3e27d8bf31066dad96b7
+2024-10-26T01:01:34.043Z [INFO]: Fetching product with ID: 671c3e27d8bf31066dad96b7
+2024-10-26T01:02:51.224Z [INFO]: Received PUT request for /api/v1/products/6712a9d5ece31f4d4f47072f?%22price%22=1200
+2024-10-26T01:03:06.254Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:03:06.791Z [INFO]: Received PUT request for /api/v1/products/6712a9d5ece31f4d4f47072f?%22price%22=1200
+2024-10-26T01:03:06.792Z [INFO]: Updating product with ID: 6712a9d5ece31f4d4f47072f
+2024-10-26T01:04:55.778Z [INFO]: Received PUT request for /api/v1/products/671c3e27d8bf31066dad96b7?%22price%22=1200
+2024-10-26T01:04:55.779Z [INFO]: Updating product with ID: 671c3e27d8bf31066dad96b7
+2024-10-26T01:05:16.491Z [INFO]: Received PUT request for /api/v1/products/671c3e27d8bf31066dad96b7?%22price%22=1200
+2024-10-26T01:05:16.492Z [INFO]: Updating product with ID: 671c3e27d8bf31066dad96b7
+2024-10-26T01:05:40.690Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:05:41.879Z [INFO]: Received PATCH request for /api/v1/products/671c3e27d8bf31066dad96b7?%22price%22=1200
+2024-10-26T01:05:41.881Z [INFO]: Updating product with ID: 671c3e27d8bf31066dad96b7
+2024-10-26T01:06:04.218Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:06:19.828Z [INFO]: Received GET request for /api/v1/products/list?page=1&limit=5
+2024-10-26T01:06:19.831Z [INFO]: Fetching all products
+2024-10-26T01:06:46.361Z [INFO]: Received DELETE request for /api/v1/products/671c3e27d8bf31066dad96b7
+2024-10-26T01:06:46.362Z [INFO]: Deleting product with ID: 671c3e27d8bf31066dad96b7
+2024-10-26T01:07:28.367Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:07:31.218Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:07:49.814Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:09:58.767Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:02.292Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:10.107Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:24.205Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:36.188Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:42.685Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:46.120Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:10:50.297Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:12.757Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:19.468Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:26.124Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:29.515Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:39.714Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:42.507Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:11:56.540Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:00.631Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:08.901Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:11.889Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:21.109Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:27.682Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:34.661Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:40.308Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:43.685Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:51.431Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:12:56.768Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:13:04.335Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:14:08.552Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:14:37.461Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:14:49.516Z [INFO]: Received POST request for /api/v1/products/6715d0080443e9f82b4eea68/comment
+2024-10-26T01:14:49.518Z [INFO]: Adding comment to product with ID: 6715d0080443e9f82b4eea68
+2024-10-26T01:17:58.901Z [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68/product-comment
+2024-10-26T01:18:34.352Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:18:35.251Z [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68/product-comment
+2024-10-26T01:18:36.531Z [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68/product-comment
+2024-10-26T01:18:37.776Z [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68/product-comment
+2024-10-26T01:18:50.858Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:18:53.624Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:18:55.553Z [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68/product-comment
+2024-10-26T01:18:55.559Z [INFO]: Fetching comments for product with ID: 6715d0080443e9f82b4eea68
+2024-10-26T01:20:25.922Z [INFO]: Received POST request for /api/product/products/comments/6715d0080443e9f82b4eea68/like
+2024-10-26T01:20:39.092Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:20:44.999Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:20:45.953Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:21:20.647Z [INFO]: Received POST request for /api/v1/products/6715d0080443e9f82b4eea68/like-comment
+2024-10-26T01:21:20.648Z [INFO]: Liking comment with ID: 6715d0080443e9f82b4eea68
+2024-10-26T01:23:38.154Z [INFO]: Received POST request for /api/v1/products/671c3d7e93dec02742aaa73d/comment
+2024-10-26T01:23:38.156Z [INFO]: Adding comment to product with ID: 671c3d7e93dec02742aaa73d
+2024-10-26T01:27:03.333Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:27:03.334Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:27:04.930Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:27:04.931Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:27:34.470Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:27:34.476Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:27:35.560Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:27:35.561Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:28:08.762Z [INFO]: Received POST request for /api/v1/products/671c3d7e93dec02742aaa73d/comment
+2024-10-26T01:28:08.763Z [INFO]: Adding comment to product with ID: 671c3d7e93dec02742aaa73d
+2024-10-26T01:29:16.487Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:29:16.488Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:33:33.340Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:33:42.534Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:33:42.537Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:33:44.511Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:33:44.512Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:33:45.972Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:33:45.972Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:33:47.747Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:33:47.749Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:33:50.249Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:33:50.250Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:34:21.545Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:34:21.546Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:38:50.804Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:38:50.805Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:38:52.799Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:38:52.800Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:39:55.582Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:40:03.835Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:40:03.836Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:41:35.581Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:41:35.583Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:41:37.054Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:41:37.055Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:42:18.688Z [ERROR]: Error occurred: Expected ',' or '}' after property value in JSON at position 143
+2024-10-26T01:42:44.894Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:42:47.192Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:42:47.194Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:45:35.905Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:45:42.258Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:45:42.262Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:45:43.500Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:45:43.501Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:45:45.951Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:45:45.952Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:48:38.264Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:48:44.499Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:48:49.049Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:48:49.051Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:01.123Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:01.124Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:03.022Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:03.022Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:28.808Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:28.810Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:29.989Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:29.992Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:30.666Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:30.667Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:31.502Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:31.503Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:31.910Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:31.911Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:32.309Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:32.310Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:32.919Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:32.921Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:33.522Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:33.522Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:51.675Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:51.676Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:52.660Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:52.661Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:53.266Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:53.268Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:53.428Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:53.430Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:53.677Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:53.678Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:53.877Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:53.877Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:54.386Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:54.386Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:54.394Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:54.395Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:54.418Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:54.419Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:54.615Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:54.615Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:49:55.049Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:49:55.049Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:50:12.946Z [INFO]: Received POST request for /api/v1/products/671c3d7e93dec02742aaa73d/like-comment
+2024-10-26T01:50:12.952Z [INFO]: Liking comment with ID: 671c3d7e93dec02742aaa73d
+2024-10-26T01:50:14.588Z [INFO]: Received POST request for /api/v1/products/671c3d7e93dec02742aaa73d/like-comment
+2024-10-26T01:50:14.589Z [INFO]: Liking comment with ID: 671c3d7e93dec02742aaa73d
+2024-10-26T01:50:14.886Z [INFO]: Received POST request for /api/v1/products/671c3d7e93dec02742aaa73d/like-comment
+2024-10-26T01:50:14.887Z [INFO]: Liking comment with ID: 671c3d7e93dec02742aaa73d
+2024-10-26T01:50:34.726Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:50:34.726Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:50:51.219Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:50:51.220Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:51:02.897Z [INFO]: Server is running successfully on PORT 8080
+2024-10-26T01:51:33.736Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:51:33.737Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:52:36.531Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:52:36.534Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:52:39.152Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:52:39.153Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:52:41.382Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:52:41.382Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039
+2024-10-26T01:52:44.413Z [INFO]: Received POST request for /api/v1/products/671c44afcb58694b8c58c039/like-comment
+2024-10-26T01:52:44.414Z [INFO]: Liking comment with ID: 671c44afcb58694b8c58c039

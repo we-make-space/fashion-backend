@@ -1,0 +1,100 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String     @id @default(auto()) @map("_id") @db.ObjectId
+  email         String     @unique
+  firstName     String
+  lastName      String
+  image         String?
+  bio           String
+  coverImage    String?
+  location      String? 
+  comment       Comment[]
+  phoneNumber   String     @default("000-000-0000")
+  likes         Like[]
+  reviews       Review[]
+  followers     Follower[] @relation("Followees")
+  following     Follower[] @relation("Followers")
+  ownedProducts Product[]  @relation("Owner")
+  createdAt     DateTime   @default(now())
+}
+
+model Product {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  product_name        String
+  price               Float
+  product_image       String[]
+  product_description String
+  userEmail           String
+  likes               Like[]
+  reviews             Review[]
+  sizes               String[]
+  colors              String[]
+  owner               User     @relation("Owner", fields: [userEmail], references: [email])
+
+  comments  Comment[]
+  createdAt DateTime  @default(now())
+
+  updatedAt DateTime @updatedAt
+
+  // @@unique(fields: [userEmail])
+}
+
+model Comment {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  content   String
+  likes     Like[]
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String   @db.ObjectId
+  User      User?    @relation(fields: [userEmail], references: [email])
+  userEmail String
+  createdAt DateTime @default(now())
+}
+
+model Category {
+  id   String @id @default(auto()) @map("_id") @db.ObjectId
+  name String
+}
+
+model Like {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userEmail String
+  commentId String   @db.ObjectId
+  productId String   @db.ObjectId
+  createdAt DateTime @default(now())
+
+  User    User?    @relation(fields: [userEmail], references: [email])
+  product Product? @relation(fields: [productId], references: [id])
+  comment Comment? @relation(fields: [commentId], references: [id])
+
+  @@unique([userEmail, commentId]) // Ensure a user can only like a comment once
+}
+
+model Review {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  rating    Int
+  comment   String
+  userEmail String
+  user      User     @relation(fields: [userEmail], references: [email])
+  product   Product  @relation(fields: [productId], references: [id])
+  productId String   @db.ObjectId
+  createdAt DateTime @default(now())
+}
+
+model Follower {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  follower   User     @relation("Followers", fields: [followerId], references: [id])
+  followee   User     @relation("Followees", fields: [followeeId], references: [id])
+  followerId String   @db.ObjectId
+  followeeId String   @db.ObjectId
+  createdAt  DateTime @default(now())
+
+  @@unique([followerId, followeeId]) // Ensure a user can follow another user only once
+}
