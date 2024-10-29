@@ -50,7 +50,7 @@ router.delete("/:id", (req, res, next) => {
 });
 
 // Get products for a specific user by user ID
-router.get("/get/product/:id", (req, res, next) => {
+router.get("/:id", (req, res, next) => {
 	const { id } = req.params;
 	logger.info(`Fetching products for user with ID: ${id}`);
 	GetUserProducts(req, res).catch((error) => {
