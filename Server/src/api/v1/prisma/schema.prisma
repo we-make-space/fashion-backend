@@ -12,13 +12,13 @@ model User {
   email         String     @unique
   firstName     String
   lastName      String
-  image         String?
+  image         String?    @default("https://www.shutterstock.com/image-vector/profile-default-avatar-icon-user-600nw-2463844171.jpg")
   bio           String
   coverImage    String?
-  location      String? 
+  location      String?
   comment       Comment[]
   phoneNumber   String     @default("000-000-0000")
-  likes         Like[]
+  likes         Like[]     @relation("UserLikes")
   reviews       Review[]
   followers     Follower[] @relation("Followees")
   following     Follower[] @relation("Followers")
@@ -33,7 +33,7 @@ model Product {
   product_image       String[]
   product_description String
   userEmail           String
-  likes               Like[]
+  likes               Like[]   @relation("ProductLikes")
   reviews             Review[]
   sizes               String[]
   colors              String[]
@@ -50,7 +50,7 @@ model Product {
 model Comment {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   content   String
-  likes     Like[]
+  likes     Like[]   @relation("CommentLikes")
   product   Product  @relation(fields: [productId], references: [id])
   productId String   @db.ObjectId
   User      User?    @relation(fields: [userEmail], references: [email])
@@ -65,16 +65,17 @@ model Category {
 
 model Like {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  userEmail String
-  commentId String   @db.ObjectId
+  userId    String   @db.ObjectId
   productId String   @db.ObjectId
+  commentId String   @db.ObjectId
   createdAt DateTime @default(now())
 
-  User    User?    @relation(fields: [userEmail], references: [email])
-  product Product? @relation(fields: [productId], references: [id])
-  comment Comment? @relation(fields: [commentId], references: [id])
+  user    User     @relation("UserLikes", fields: [userId], references: [id], onDelete: Cascade)
+  product Product  @relation("ProductLikes", fields: [productId], references: [id], onDelete: Cascade)
+  comment Comment? @relation("CommentLikes", fields: [commentId], references: [id], onDelete: Cascade)
 
-  @@unique([userEmail, commentId]) // Ensure a user can only like a comment once
+  @@unique([userId, productId]) // New unique constraint for userId and productId
+  @@unique([userId, productId, commentId]) // Keep this if you need to also check by commentId
 }
 
 model Review {

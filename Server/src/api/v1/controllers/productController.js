@@ -325,3 +325,57 @@ export const likeComment = asyncHandler(async (req, res) => {
 		like: newLike,
 	});
 });
+
+//? Liking a product
+
+export const likeProduct = asyncHandler(async (req, res) => {
+	try {
+		const { userId, productId } = req.body;
+
+		console.log("Received userId:", userId); // Should not be undefined
+		console.log("Received productId:", productId); // Should not be undefined
+
+		// Make sure the IDs are correctly formatted
+		if (!userId || !productId) {
+			return res
+				.status(400)
+				.json({ message: "userId and productId are required" });
+		}
+
+		// Check if the like exists
+		const existingLike = await prisma.like.findUnique({
+			where: {
+				userId_productId_commentId: {
+					userId,
+					productId,
+					commentId: null, // or whatever logic you are using
+				},
+			},
+		});
+
+		if (existingLike) {
+			// If it exists, delete it (unlike)
+			await prisma.like.delete({
+				where: {
+					id: existingLike.id,
+				},
+			});
+			return res.status(200).json({ message: "Product unliked" });
+		} else {
+			// If it does not exist, create it (like)
+			await prisma.like.create({
+				data: {
+					userId,
+					productId,
+					commentId: null, // or whatever logic you are using
+				},
+			});
+			return res.status(201).json({ message: "Product liked" });
+		}
+	} catch (error) {
+		console.error("Error toggling like for product:", error);
+		return res
+			.status(500)
+			.json({ message: "An error occurred while toggling like", error });
+	}
+});
