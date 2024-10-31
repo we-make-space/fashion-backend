@@ -332,10 +332,9 @@ export const likeProduct = asyncHandler(async (req, res) => {
 	try {
 		const { userId, productId } = req.body;
 
-		console.log("Received userId:", userId); // Should not be undefined
-		console.log("Received productId:", productId); // Should not be undefined
+		console.log("Received userId:", userId); 
+		console.log("Received productId:", productId); 
 
-		// Make sure the IDs are correctly formatted
 		if (!userId || !productId) {
 			return res
 				.status(400)
@@ -348,7 +347,7 @@ export const likeProduct = asyncHandler(async (req, res) => {
 				userId_productId_commentId: {
 					userId,
 					productId,
-					commentId: null, // or whatever logic you are using
+					commentId: null, 
 				},
 			},
 		});
@@ -367,7 +366,7 @@ export const likeProduct = asyncHandler(async (req, res) => {
 				data: {
 					userId,
 					productId,
-					commentId: null, // or whatever logic you are using
+					commentId: null, 
 				},
 			});
 			return res.status(201).json({ message: "Product liked" });
