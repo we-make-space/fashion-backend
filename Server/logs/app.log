@@ -3165,3 +3165,666 @@ An operation failed because it depends on one or more records that were required
 2024-10-31T23:29:14.303Z [INFO]: Server is running successfully on PORT 8080
 2024-10-31T23:29:22.131Z [INFO]: Server is running successfully on PORT 8080
 2024-10-31T23:29:33.613Z [INFO]: Server is running successfully on PORT 8080
+2024-10-31T23:31:11.446Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:31:11.458Z [INFO]: Fetching all products with pagination
+2024-10-31T23:31:13.836Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-10-31T23:31:13.837Z [INFO]: Fetching all products with pagination
+2024-10-31T23:31:40.062Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-10-31T23:31:40.063Z [INFO]: Fetching all products with pagination
+2024-10-31T23:31:57.787Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:31:57.788Z [INFO]: Fetching all products with pagination
+2024-10-31T23:31:58.368Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:31:58.370Z [INFO]: Fetching all products with pagination
+2024-10-31T23:32:05.698Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-10-31T23:32:05.699Z [INFO]: Fetching all products with pagination
+2024-10-31T23:32:14.999Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-10-31T23:32:15.001Z [INFO]: Fetching all products with pagination
+2024-10-31T23:35:12.086Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:35:12.088Z [INFO]: Fetching all products with pagination
+2024-10-31T23:35:12.706Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:35:12.706Z [INFO]: Fetching all products with pagination
+2024-10-31T23:35:22.172Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-10-31T23:35:22.173Z [INFO]: Fetching all products with pagination
+2024-10-31T23:35:32.468Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-10-31T23:35:32.468Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:38.276Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:36:38.277Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:38.796Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-10-31T23:36:38.796Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:39.343Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-10-31T23:36:39.343Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:43.994Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-10-31T23:36:43.994Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:44.788Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-10-31T23:36:44.789Z [INFO]: Fetching all products with pagination
+2024-10-31T23:36:45.348Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-10-31T23:36:45.348Z [INFO]: Fetching all products with pagination
+2024-11-01T00:04:04.866Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:08.691Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:13.728Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:21.286Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:23.269Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:39.270Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:44.669Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:48.006Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:53.882Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:04:56.079Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:02.238Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:03.367Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:06.614Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:07.951Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:09.184Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:28.421Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:47.382Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:49.293Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:05:58.657Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:05.500Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:09.007Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:13.237Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:16.250Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:20.549Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:27.879Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:37.334Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:39.076Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:41.579Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:49.378Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T00:06:55.093Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T02:36:43.995Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T02:36:43.999Z [INFO]: Fetching all products with pagination
+2024-11-01T02:36:46.364Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T02:36:46.365Z [INFO]: Fetching all products with pagination
+2024-11-01T04:37:50.654Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T04:37:50.656Z [INFO]: Fetching all products with pagination
+2024-11-01T04:37:52.011Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T04:37:52.012Z [INFO]: Fetching all products with pagination
+2024-11-01T06:38:58.684Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T06:38:58.687Z [INFO]: Fetching all products with pagination
+2024-11-01T06:39:03.585Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T06:39:03.586Z [INFO]: Fetching all products with pagination
+2024-11-01T09:36:05.469Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T09:36:05.470Z [INFO]: Fetching all products with pagination
+2024-11-01T11:22:29.465Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T11:22:29.466Z [INFO]: Fetching all products with pagination
+2024-11-01T12:19:31.633Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:23:49.179Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:23:53.037Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:45:35.653Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:45:42.428Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:45:54.571Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:45:57.532Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:45:59.003Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:46:01.096Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:46:02.752Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:50:49.319Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:51:20.239Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:51:37.372Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:52:49.712Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:53:05.996Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:53:08.123Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:53:16.634Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:28.556Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:35.297Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:41.466Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:46.916Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:51.157Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:54:53.652Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:55:09.896Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:55:11.768Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:55:18.309Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:55:23.168Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T12:55:24.424Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:02:01.497Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:02:01.498Z [INFO]: Fetching all products with pagination
+2024-11-01T13:09:54.018Z [INFO]: Received POST request for /api/v1/products
+2024-11-01T13:09:54.023Z [INFO]: Creating a new product
+2024-11-01T13:12:36.935Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:15:35.530Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:15:37.569Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:15:42.950Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:15:58.716Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:20:23.463Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:20:26.799Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:20:28.505Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:21:27.500Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:21:36.563Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:22:57.410Z [INFO]: Received POST request for /api/v1/categories/
+2024-11-01T13:22:57.411Z [INFO]: Creating a new category
+2024-11-01T13:23:16.802Z [INFO]: Received GET request for /api/v1/categories
+2024-11-01T13:23:16.803Z [INFO]: Fetching all categories
+2024-11-01T13:25:25.873Z [INFO]: Received PATCH request for /api/v1/products/671fb727f357541653cd416b?%22price%22=1200
+2024-11-01T13:25:25.878Z [INFO]: Updating a product by ID
+2024-11-01T13:25:51.784Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:25:51.786Z [INFO]: Fetching all products with pagination
+2024-11-01T13:25:53.586Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:25:53.587Z [INFO]: Fetching all products with pagination
+2024-11-01T13:25:55.338Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:25:55.341Z [INFO]: Fetching all products with pagination
+2024-11-01T13:25:56.998Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:25:56.999Z [INFO]: Fetching all products with pagination
+2024-11-01T13:26:17.132Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:26:17.133Z [INFO]: Fetching all products with pagination
+2024-11-01T13:31:48.676Z [INFO]: Received PATCH request for /api/v1/products/671fb727f357541653cd416b?%22price%22=1200
+2024-11-01T13:31:48.678Z [INFO]: Updating a product by ID
+2024-11-01T13:31:53.695Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:31:53.696Z [INFO]: Fetching all products with pagination
+2024-11-01T13:31:55.139Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:31:55.140Z [INFO]: Fetching all products with pagination
+2024-11-01T13:31:56.180Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T13:31:56.182Z [INFO]: Fetching all products with pagination
+2024-11-01T13:42:04.615Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:43:04.411Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:43:05.760Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:43:31.315Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:43:58.661Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:44:02.429Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:44:05.027Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:44:06.678Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:44:09.698Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:45:12.251Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:45:49.419Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:45:56.617Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:45:59.483Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:02.678Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:04.879Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:06.328Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:11.268Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:28.499Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:32.721Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:35.313Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:42.508Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:43.701Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:52.862Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:46:57.074Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:47:01.545Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:47:04.974Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:47:09.606Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:02.866Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:05.939Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:36.618Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:40.684Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:44.006Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:46.283Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:52.485Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:54.001Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:48:59.156Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:49:02.350Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:49:05.471Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:49:11.865Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:49:14.626Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T13:54:20.048Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:00:43.819Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:00:48.078Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:00:53.509Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:03:19.778Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:05:17.914Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:07:10.504Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:10:15.540Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:12:36.393Z [INFO]: Received POST request for /api/v1/products
+2024-11-01T14:12:36.394Z [INFO]: Creating a new product
+2024-11-01T14:12:36.403Z [ERROR]: Error: categoryId is not defined
+2024-11-01T14:12:36.404Z [ERROR]: Error occurred: categoryId is not defined
+2024-11-01T14:14:02.678Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:14:06.893Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:14:08.223Z [INFO]: Received POST request for /api/v1/products
+2024-11-01T14:14:08.224Z [INFO]: Creating a new product
+2024-11-01T14:16:09.439Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:16:12.718Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:16:37.219Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:17:55.388Z [INFO]: Received POST request for /api/v1/categories/
+2024-11-01T14:17:55.389Z [INFO]: Creating a new category
+2024-11-01T14:18:10.463Z [INFO]: Received POST request for /api/v1/categories/
+2024-11-01T14:18:10.466Z [INFO]: Creating a new category
+2024-11-01T14:18:26.971Z [INFO]: Received POST request for /api/v1/categories/
+2024-11-01T14:18:26.974Z [INFO]: Creating a new category
+2024-11-01T14:18:38.925Z [INFO]: Received POST request for /api/v1/products
+2024-11-01T14:18:38.926Z [INFO]: Creating a new product
+2024-11-01T14:18:57.172Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:18:57.173Z [INFO]: Fetching all products with pagination
+2024-11-01T14:19:15.686Z [INFO]: Received GET request for /api/v1/categories
+2024-11-01T14:19:15.686Z [INFO]: Fetching all categories
+2024-11-01T14:22:03.401Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:22:05.956Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:22:05.958Z [INFO]: Fetching all products with pagination
+2024-11-01T14:22:11.358Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:22:11.367Z [INFO]: Fetching all products with pagination
+2024-11-01T14:22:20.789Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:22:22.005Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:22:22.006Z [INFO]: Fetching all products with pagination
+2024-11-01T14:23:40.699Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:23:40.701Z [INFO]: Fetching all products with pagination
+2024-11-01T14:25:07.394Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:25:19.677Z [INFO]: Received GET request for /api/v1/products?page=1&limit=5
+2024-11-01T14:25:19.684Z [INFO]: Fetching all products with pagination
+2024-11-01T14:27:59.173Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10&categoryId=6724e3328d14197368393d61
+2024-11-01T14:27:59.174Z [INFO]: Fetching all products with pagination
+2024-11-01T14:33:57.635Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:34:11.420Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:34:11.421Z [INFO]: Fetching all products with pagination
+2024-11-01T14:34:14.120Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:34:14.121Z [INFO]: Fetching all products with pagination
+2024-11-01T14:35:10.199Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:35:10.202Z [INFO]: Fetching all products with pagination
+2024-11-01T14:35:28.397Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:35:50.330Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:36:10.072Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:36:10.074Z [INFO]: Fetching all products with pagination
+2024-11-01T14:38:09.007Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:38:09.008Z [INFO]: Fetching all products with pagination
+2024-11-01T14:38:11.622Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:38:11.622Z [INFO]: Fetching all products with pagination
+2024-11-01T14:40:45.177Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:40:57.430Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:41:04.750Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T14:41:04.751Z [INFO]: Fetching all products with pagination
+2024-11-01T14:43:25.227Z [INFO]: Received PATCH request for /api/v1/products/6724e33f8d14197368393d62?%22price%22=1200
+2024-11-01T14:43:25.229Z [INFO]: Updating a product by ID
+2024-11-01T14:44:08.645Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:44:10.215Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:44:12.597Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:45:45.733Z [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57
+2024-11-01T14:45:45.736Z [INFO]: Fetching products for a specific user
+2024-11-01T14:46:11.513Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:46:14.501Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T14:46:18.148Z [INFO]: Received GET request for /api/v1/users/bubu/6715c68b0443e9f82b4eea57
+2024-11-01T14:46:21.734Z [INFO]: Received GET request for /api/v1/users/bubu/6715c68b0443e9f82b4eea57
+2024-11-01T14:46:23.800Z [INFO]: Received GET request for /api/v1/users/bubu/6715c68b0443e9f82b4eea57
+2024-11-01T14:47:59.054Z [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57
+2024-11-01T14:47:59.055Z [INFO]: Fetching products for a specific user
+2024-11-01T14:49:15.708Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:15.843Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:22.265Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:22.267Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:30.289Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:30.291Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:31.892Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:31.893Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:38.934Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:38.935Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:44.897Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:49:44.897Z [INFO]: Fetching all products with pagination
+2024-11-01T14:49:51.150Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:49:51.151Z [INFO]: Fetching all products with pagination
+2024-11-01T14:50:09.351Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:50:09.352Z [INFO]: Fetching all products with pagination
+2024-11-01T14:51:36.631Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:51:36.641Z [INFO]: Fetching all products with pagination
+2024-11-01T14:51:42.625Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:51:42.626Z [INFO]: Fetching all products with pagination
+2024-11-01T14:51:43.122Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:51:43.123Z [INFO]: Fetching all products with pagination
+2024-11-01T14:52:10.668Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:52:10.668Z [INFO]: Fetching all products with pagination
+2024-11-01T14:52:11.321Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:52:11.327Z [INFO]: Fetching all products with pagination
+2024-11-01T14:52:13.074Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:52:13.075Z [INFO]: Fetching all products with pagination
+2024-11-01T14:53:11.367Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:53:11.525Z [INFO]: Fetching all products with pagination
+2024-11-01T14:53:12.638Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:53:12.642Z [INFO]: Fetching all products with pagination
+2024-11-01T14:53:13.484Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:53:13.484Z [INFO]: Fetching all products with pagination
+2024-11-01T14:54:51.577Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:54:51.579Z [INFO]: Fetching all products with pagination
+2024-11-01T14:55:01.950Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:55:01.951Z [INFO]: Fetching all products with pagination
+2024-11-01T14:55:02.936Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:55:02.939Z [INFO]: Fetching all products with pagination
+2024-11-01T14:55:22.765Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:55:22.768Z [INFO]: Fetching all products with pagination
+2024-11-01T14:55:28.454Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:55:28.455Z [INFO]: Fetching all products with pagination
+2024-11-01T14:55:29.032Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:55:29.085Z [INFO]: Fetching all products with pagination
+2024-11-01T14:58:05.970Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:58:05.971Z [INFO]: Fetching all products with pagination
+2024-11-01T14:58:07.732Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:58:07.733Z [INFO]: Fetching all products with pagination
+2024-11-01T14:58:08.233Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:58:08.233Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:18.639Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:59:18.641Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:20.987Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:59:20.987Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:22.618Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:59:22.619Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:56.843Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T14:59:56.843Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:57.900Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T14:59:57.900Z [INFO]: Fetching all products with pagination
+2024-11-01T14:59:59.606Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T14:59:59.607Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:05.124Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:00:05.125Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:07.502Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:00:07.503Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:08.111Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:00:08.111Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:20.354Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:00:20.367Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:21.478Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:00:21.479Z [INFO]: Fetching all products with pagination
+2024-11-01T15:00:22.086Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:00:22.086Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:17.907Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:01:17.918Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:18.901Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:01:18.902Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:19.606Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:01:19.607Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:39.772Z [INFO]: Received GET request for /api/v1/products/bubu/6724e33f8d14197368393d62
+2024-11-01T15:01:39.790Z [INFO]: Fetching a product by ID
+2024-11-01T15:01:57.953Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:01:57.954Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:58.591Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:01:58.592Z [INFO]: Fetching all products with pagination
+2024-11-01T15:01:59.111Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:01:59.112Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:28.110Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:02:28.113Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:29.094Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:02:29.098Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:29.557Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:02:29.557Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:37.209Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:02:37.209Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:37.960Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:02:37.961Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:38.524Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:02:38.525Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:55.614Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:02:55.627Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:56.539Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:02:56.540Z [INFO]: Fetching all products with pagination
+2024-11-01T15:02:57.361Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:02:57.361Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:06.756Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T15:03:06.757Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:27.621Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:03:27.621Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:28.967Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:03:28.967Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:29.794Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:03:29.794Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:57.224Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:03:57.251Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:58.661Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:03:58.677Z [INFO]: Fetching all products with pagination
+2024-11-01T15:03:59.525Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:03:59.529Z [INFO]: Fetching all products with pagination
+2024-11-01T15:04:34.373Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:04:37.721Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:04:37.724Z [INFO]: Fetching all products with pagination
+2024-11-01T15:04:41.206Z [INFO]: Received GET request for /api/v1/products?page=2&limit=20
+2024-11-01T15:04:41.206Z [INFO]: Fetching all products with pagination
+2024-11-01T15:04:41.688Z [INFO]: Received GET request for /api/v1/products?page=3&limit=20
+2024-11-01T15:04:41.689Z [INFO]: Fetching all products with pagination
+2024-11-01T15:06:58.203Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:07:01.024Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:07:03.386Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:07:17.547Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:07:23.935Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:08:22.557Z [INFO]: Received PATCH request for /api/v1/products/6724e33f8d14197368393d62?%22price%22=1200
+2024-11-01T15:08:22.558Z [INFO]: Updating a product by ID
+2024-11-01T15:09:55.903Z [INFO]: Received GET request for /api/v1/categories
+2024-11-01T15:09:55.903Z [INFO]: Fetching all categories
+2024-11-01T15:10:26.340Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T15:10:26.341Z [INFO]: Fetching all products with pagination
+2024-11-01T15:11:32.701Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:11:36.108Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:11:58.098Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:12:06.003Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:17:32.286Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:17:54.004Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:19:23.016Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:19:26.440Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:19:42.416Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:19:42.518Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:19:42.519Z [INFO]: Review created
+2024-11-01T15:20:06.727Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:20:06.729Z [INFO]: Review created
+2024-11-01T15:21:08.960Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:21:12.964Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:21:12.965Z [INFO]: Review created
+2024-11-01T15:21:14.369Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:21:14.370Z [INFO]: Review created
+2024-11-01T15:21:16.988Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:21:16.988Z [INFO]: Review created
+2024-11-01T15:21:18.290Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:21:18.291Z [INFO]: Review created
+2024-11-01T15:22:56.017Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:23:23.790Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:23:31.365Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:23:31.367Z [INFO]: Review created
+2024-11-01T15:23:35.114Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:23:35.115Z [INFO]: Review created
+2024-11-01T15:25:13.874Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:27:39.855Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:27:48.194Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:27:48.194Z [INFO]: Review created
+2024-11-01T15:27:50.354Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:27:50.355Z [INFO]: Review created
+2024-11-01T15:30:28.312Z [INFO]: Received GET request for /api/v1/reviews/
+2024-11-01T15:30:39.431Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:30:39.432Z [INFO]: Review created
+2024-11-01T15:31:56.099Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:32:19.248Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:19.249Z [INFO]: Review created
+2024-11-01T15:32:19.422Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:19.428Z [INFO]: Review created
+2024-11-01T15:32:19.476Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:19.479Z [INFO]: Review created
+2024-11-01T15:32:22.682Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:22.682Z [INFO]: Review created
+2024-11-01T15:32:25.178Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:25.179Z [INFO]: Review created
+2024-11-01T15:32:44.942Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:32:47.776Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:32:55.500Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:32:57.757Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:32:57.758Z [INFO]: Review created
+2024-11-01T15:35:18.144Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:35:51.580Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:35:54.044Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:35:54.047Z [INFO]: Review created
+2024-11-01T15:35:57.573Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:35:57.576Z [INFO]: Review created
+2024-11-01T15:41:37.289Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T15:41:45.306Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T15:41:45.306Z [INFO]: Review created
+2024-11-01T15:48:27.793Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:48:27.795Z [INFO]: Fetching all products with pagination
+2024-11-01T15:51:43.670Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T15:51:43.671Z [INFO]: Fetching all products with pagination
+2024-11-01T16:00:04.194Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:02:06.104Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:02:14.830Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:02:16.562Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:03:06.470Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:03:07.812Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:03:09.878Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:03:15.013Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:03:15.014Z [INFO]: Review created
+2024-11-01T16:03:24.610Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:03:24.610Z [INFO]: Review created
+2024-11-01T16:03:25.905Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:03:25.908Z [INFO]: Review created
+2024-11-01T16:04:38.333Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:04:40.564Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:40.565Z [INFO]: Review created
+2024-11-01T16:04:42.313Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:42.313Z [INFO]: Review created
+2024-11-01T16:04:44.183Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:44.183Z [INFO]: Review created
+2024-11-01T16:04:46.168Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:46.170Z [INFO]: Review created
+2024-11-01T16:04:54.793Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:54.794Z [INFO]: Review created
+2024-11-01T16:04:56.826Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:04:56.827Z [INFO]: Review created
+2024-11-01T16:06:52.967Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:07:42.977Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:07:42.979Z [INFO]: Review created
+2024-11-01T16:07:44.861Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:07:44.865Z [INFO]: Review created
+2024-11-01T16:08:00.279Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:08:00.280Z [INFO]: Review created
+2024-11-01T16:10:36.337Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:10:36.396Z [INFO]: Fetching all products with pagination
+2024-11-01T16:11:07.439Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:11:07.446Z [INFO]: Fetching all products with pagination
+2024-11-01T16:11:20.581Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:11:20.581Z [INFO]: Fetching all products with pagination
+2024-11-01T16:12:09.825Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:12:11.892Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:12:13.849Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:12:29.507Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:12:29.671Z [INFO]: Fetching all products with pagination
+2024-11-01T16:12:33.274Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:12:33.276Z [INFO]: Fetching all products with pagination
+2024-11-01T16:13:38.871Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:13:42.329Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:42.330Z [INFO]: Review created
+2024-11-01T16:13:42.345Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:42.346Z [INFO]: Review created
+2024-11-01T16:13:42.353Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:42.362Z [INFO]: Review created
+2024-11-01T16:13:42.365Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:42.365Z [INFO]: Review created
+2024-11-01T16:13:44.676Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:44.678Z [INFO]: Review created
+2024-11-01T16:13:45.982Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:45.982Z [INFO]: Review created
+2024-11-01T16:13:49.669Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:13:49.669Z [INFO]: Review created
+2024-11-01T16:14:20.898Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:20.899Z [INFO]: Review created
+2024-11-01T16:14:22.354Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:22.354Z [INFO]: Review created
+2024-11-01T16:14:23.251Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:23.251Z [INFO]: Review created
+2024-11-01T16:14:24.043Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:24.044Z [INFO]: Review created
+2024-11-01T16:14:24.777Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:24.777Z [INFO]: Review created
+2024-11-01T16:14:25.987Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:25.988Z [INFO]: Review created
+2024-11-01T16:14:26.613Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:14:26.614Z [INFO]: Review created
+2024-11-01T16:16:11.593Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:16:14.728Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:16:27.176Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:16:35.802Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:16:41.021Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:17:10.779Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:12.577Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:13.975Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:15.161Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:15.686Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:16.088Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:16.537Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:16.731Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:17.089Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:17:17.619Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:18:15.147Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:19:15.560Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:20:33.490Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:20:37.674Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:20:43.418Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:21:36.855Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:21:40.329Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:21:58.957Z [INFO]: Received GET request for /api/v1/products?page=1&limit=10
+2024-11-01T16:21:58.962Z [INFO]: Fetching all products with pagination
+2024-11-01T16:22:22.200Z [INFO]: Received GET request for /api/v1/products?page=1&limit=4
+2024-11-01T16:22:22.202Z [INFO]: Fetching all products with pagination
+2024-11-01T16:22:43.053Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:22:43.054Z [INFO]: Fetching all products with pagination
+2024-11-01T16:23:42.694Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:23:45.575Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:23:47.988Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:23:54.220Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:23:56.266Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:25:02.234Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:25:10.848Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:25:12.526Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:25:44.993Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:32:23.840Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:33:06.967Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:33:15.361Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:34:49.280Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:34:49.281Z [INFO]: Getting reviews on a product
+2024-11-01T16:35:28.843Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:36:17.612Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:36:22.933Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:36:53.132Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:37:00.629Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:37:00.630Z [INFO]: Fetching all products with pagination
+2024-11-01T16:37:02.686Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:37:02.687Z [INFO]: Fetching all products with pagination
+2024-11-01T16:42:37.343Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:42:56.536Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:42:56.537Z [INFO]: Getting reviews on a product
+2024-11-01T16:45:33.204Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:45:33.206Z [INFO]: Getting reviews on a product
+2024-11-01T16:47:04.765Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:47:06.637Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:47:06.638Z [INFO]: Getting reviews on a product
+2024-11-01T16:47:16.199Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:47:16.201Z [INFO]: Getting reviews on a product
+2024-11-01T16:49:39.285Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:49:39.306Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.832Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.833Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.839Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.840Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.843Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.843Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.859Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.860Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.880Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.881Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:02.902Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:50:02.903Z [INFO]: Getting reviews on a product
+2024-11-01T16:50:25.477Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:50:25.478Z [INFO]: Fetching all products with pagination
+2024-11-01T16:50:46.189Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:50:53.264Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:50:54.281Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:50:54.282Z [INFO]: Fetching all products with pagination
+2024-11-01T16:50:59.081Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:50:59.082Z [INFO]: Fetching all products with pagination
+2024-11-01T16:50:59.093Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:50:59.096Z [INFO]: Fetching all products with pagination
+2024-11-01T16:50:59.099Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:50:59.100Z [INFO]: Fetching all products with pagination
+2024-11-01T16:51:07.332Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:51:07.334Z [INFO]: Getting reviews on a product
+2024-11-01T16:53:17.260Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:54:07.354Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T16:54:07.355Z [INFO]: Fetching all products with pagination
+2024-11-01T16:55:47.484Z [INFO]: Received POST request for /api/v1/reviews/
+2024-11-01T16:56:22.566Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:56:22.567Z [INFO]: Getting reviews on a product
+2024-11-01T16:59:25.193Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:59:25.204Z [INFO]: Getting reviews on a product
+2024-11-01T16:59:48.163Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T16:59:48.324Z [INFO]: Received GET request for /api/v1/reviews/6724e33f8d14197368393d62/reviews
+2024-11-01T16:59:48.329Z [INFO]: Getting reviews on a product
+2024-11-01T17:01:03.229Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:01:03.230Z [INFO]: Fetching all products with pagination
+2024-11-01T17:01:52.794Z [INFO]: Server is running successfully on PORT 8080
+2024-11-01T17:01:55.030Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:01:55.031Z [INFO]: Fetching all products with pagination
+2024-11-01T17:03:01.271Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:03:01.272Z [INFO]: Fetching all products with pagination
+2024-11-01T17:03:09.586Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:03:09.586Z [INFO]: Fetching all products with pagination
+2024-11-01T17:03:10.618Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:03:10.620Z [INFO]: Fetching all products with pagination
+2024-11-01T17:04:01.516Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:04:01.521Z [INFO]: Fetching all products with pagination
+2024-11-01T17:04:22.876Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:04:22.877Z [INFO]: Fetching all products with pagination
+2024-11-01T17:04:23.885Z [INFO]: Received GET request for /api/v1/products?page=1&limit=20
+2024-11-01T17:04:23.885Z [INFO]: Fetching all products with pagination
+2024-11-01T17:05:36.199Z [INFO]: Server is running successfully on PORT 8080

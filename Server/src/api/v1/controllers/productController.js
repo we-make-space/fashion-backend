@@ -9,6 +9,9 @@ export const createProduct = asyncHandler(async (req, res) => {
 		product_image,
 		product_description,
 		userEmail,
+		categoryId, 
+		sizes,
+		colors
 	} = req.body.data;
 
 	console.log(req.body.data);
@@ -20,6 +23,9 @@ export const createProduct = asyncHandler(async (req, res) => {
 				product_image,
 				product_description,
 				owner: { connect: { email: userEmail } },
+				category: { connect: { id: categoryId } }, // Link the product to the category
+				sizes,
+				colors,
 			},
 		});
 
@@ -34,15 +40,15 @@ export const createProduct = asyncHandler(async (req, res) => {
 
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page);
-	const limit = parseInt(req.query.limit);
+	const page = parseInt(req.query.page) || 1; // Default to page 1 if not provided
+	const limit = parseInt(req.query.limit) || 10; // Default to limit of 10 if not provided
 
-	if (isNaN(page) || page < 1) {
+	if (page < 1) {
 		return res
 			.status(400)
 			.json({ error: "Page must be a positive integer." });
 	}
-	if (isNaN(limit) || limit < 1) {
+	if (limit < 1) {
 		return res
 			.status(400)
 			.json({ error: "Limit must be a positive integer." });
@@ -63,6 +69,27 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 						firstName: true,
 						lastName: true,
 						image: true,
+					},
+				},
+				category: {
+					select: {
+						id: true,
+						name: true,
+					},
+				},
+				reviews: {
+					// this include reviews, which can be empty
+					select: {
+						rating: true,
+						comment: true,
+						userEmail: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
 					},
 				},
 			},
@@ -86,6 +113,7 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 	}
 });
 
+
 //& function to get a single product
 export const getProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
@@ -105,8 +133,15 @@ export const getProduct = asyncHandler(async (req, res) => {
 //& Update an existing product
 export const updateProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { product_name, price, product_image, product_description } =
-		req.body;
+	const {
+		product_name,
+		price,
+		product_image,
+		product_description,
+		categoryId, // New field
+		sizes, // New field
+		colors, // New field
+	} = req.body;
 
 	try {
 		// Log request details for debugging
@@ -116,6 +151,9 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			price,
 			product_image,
 			product_description,
+			categoryId,
+			sizes,
+			colors,
 		});
 
 		// Check if the product exists before attempting to update
@@ -134,11 +172,25 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
-				product_name: product_name || existingProduct.product_name,
+				product_name:
+					product_name !== undefined
+						? product_name
+						: existingProduct.product_name,
 				price: price !== undefined ? price : existingProduct.price,
-				product_image: product_image || existingProduct.product_image,
+				product_image:
+					product_image !== undefined
+						? product_image
+						: existingProduct.product_image,
 				product_description:
-					product_description || existingProduct.product_description,
+					product_description !== undefined
+						? product_description
+						: existingProduct.product_description,
+				categoryId:
+					categoryId !== undefined
+						? categoryId
+						: existingProduct.categoryId, // Update categoryId
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes, // Update sizes
+				colors: colors !== undefined ? colors : existingProduct.colors, // Update colors
 			},
 		});
 
@@ -148,7 +200,9 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		res.status(200).json(updatedProduct);
 	} catch (error) {
 		console.error("Error updating product:", error);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({
+			error: "An error occurred while updating the product.",
+		});
 	}
 });
 
@@ -332,8 +386,8 @@ export const likeProduct = asyncHandler(async (req, res) => {
 	try {
 		const { userId, productId } = req.body;
 
-		console.log("Received userId:", userId); 
-		console.log("Received productId:", productId); 
+		console.log("Received userId:", userId);
+		console.log("Received productId:", productId);
 
 		if (!userId || !productId) {
 			return res
@@ -347,7 +401,7 @@ export const likeProduct = asyncHandler(async (req, res) => {
 				userId_productId_commentId: {
 					userId,
 					productId,
-					commentId: null, 
+					commentId: null,
 				},
 			},
 		});
@@ -366,7 +420,7 @@ export const likeProduct = asyncHandler(async (req, res) => {
 				data: {
 					userId,
 					productId,
-					commentId: null, 
+					commentId: null,
 				},
 			});
 			return res.status(201).json({ message: "Product liked" });

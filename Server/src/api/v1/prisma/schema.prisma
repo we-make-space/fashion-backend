@@ -17,12 +17,16 @@ model User {
   coverImage    String?
   location      String?
   comment       Comment[]
-  phoneNumber   String     @default("000-000-0000")
   likes         Like[]     @relation("UserLikes")
+  phoneNumber   String     @default("000-000-0000")
   reviews       Review[]
   followers     Follower[] @relation("Followees")
   following     Follower[] @relation("Followers")
   ownedProducts Product[]  @relation("Owner")
+  cart          Cart?
+  wishlist      Wishlist?
+  addresses     Address[]
+  orders        Order[]
   createdAt     DateTime   @default(now())
 }
 
@@ -41,10 +45,15 @@ model Product {
 
   comments  Comment[]
   createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 
-  updatedAt DateTime @updatedAt
+  categoryId String?   @db.ObjectId
+  category   Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
 
-  // @@unique(fields: [userEmail])
+  OrderItem    OrderItem[]
+  CartItem     CartItem[]
+  Inventory    Inventory[]
+  WishlistItem WishlistItem[]
 }
 
 model Comment {
@@ -59,8 +68,9 @@ model Comment {
 }
 
 model Category {
-  id   String @id @default(auto()) @map("_id") @db.ObjectId
-  name String
+  id       String    @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  products Product[] // One-to-many relationship with Product
 }
 
 model Like {
@@ -70,7 +80,7 @@ model Like {
   commentId String   @db.ObjectId
   createdAt DateTime @default(now())
 
-  user    User     @relation("UserLikes", fields: [userId], references: [id], onDelete: Cascade)
+  user    User     @relation("UserLikes", fields: [userId], references: [id], onDelete: Cascade) // Added onDelete here
   product Product  @relation("ProductLikes", fields: [productId], references: [id], onDelete: Cascade)
   comment Comment? @relation("CommentLikes", fields: [commentId], references: [id], onDelete: Cascade)
 
@@ -82,12 +92,13 @@ model Review {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   rating    Int
   comment   String
-  userEmail String
-  user      User     @relation(fields: [userEmail], references: [email])
+  userEmail String?  // Make userEmail optional if a user is not always required
+  user      User?    @relation(fields: [userEmail], references: [email]) // Make user relation optional
   product   Product  @relation(fields: [productId], references: [id])
   productId String   @db.ObjectId
   createdAt DateTime @default(now())
 }
+
 
 model Follower {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
@@ -98,4 +109,110 @@ model Follower {
   createdAt  DateTime @default(now())
 
   @@unique([followerId, followeeId]) // Ensure a user can follow another user only once
+}
+
+model Order {
+  id          String      @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String      @db.ObjectId
+  user        User        @relation(fields: [userId], references: [id])
+  items       OrderItem[] // Array of items in the order
+  status      String      @default("Pending") // e.g., Pending, Shipped, Delivered, Cancelled
+  totalAmount Float
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  Payment     Payment[]
+  Shipping    Shipping[]
+}
+
+model OrderItem {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  orderId   String  @db.ObjectId
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId String  @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+}
+
+model Payment {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  orderId       String   @db.ObjectId
+  order         Order    @relation(fields: [orderId], references: [id])
+  amount        Float
+  status        String // e.g., Success, Failed, Pending
+  paymentDate   DateTime @default(now())
+  paymentMethod String // e.g., Card, PayPal, etc.
+}
+
+model Cart {
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String     @unique @db.ObjectId // Add @unique here
+  user      User       @relation(fields: [userId], references: [id])
+  items     CartItem[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model CartItem {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  cartId    String  @db.ObjectId
+  cart      Cart    @relation(fields: [cartId], references: [id])
+  productId String  @db.ObjectId
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+}
+
+model Address {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id])
+  street    String
+  city      String
+  state     String
+  zipCode   String
+  country   String
+  isDefault Boolean  @default(false) // To mark the primary address
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Inventory {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  productId String   @db.ObjectId
+  product   Product  @relation(fields: [productId], references: [id])
+  stock     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Shipping {
+  id                String    @id @default(auto()) @map("_id") @db.ObjectId
+  orderId           String    @db.ObjectId
+  order             Order     @relation(fields: [orderId], references: [id])
+  carrier           String
+  trackingNumber    String?
+  status            String
+  estimatedDelivery DateTime?
+  shippedAt         DateTime?
+  deliveredAt       DateTime?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
+}
+
+model Wishlist {
+  id        String         @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String         @unique @db.ObjectId
+  user      User           @relation(fields: [userId], references: [id])
+  items     WishlistItem[]
+  createdAt DateTime       @default(now())
+  updatedAt DateTime       @updatedAt
+}
+
+model WishlistItem {
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
+  wishlistId String   @db.ObjectId
+  wishlist   Wishlist @relation(fields: [wishlistId], references: [id])
+  productId  String   @db.ObjectId
+  product    Product  @relation(fields: [productId], references: [id])
+  addedAt    DateTime @default(now())
 }

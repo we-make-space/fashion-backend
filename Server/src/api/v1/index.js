@@ -5,6 +5,8 @@ import cookieParser from "cookie-parser";
 import logger from "../../utils/logger.js";
 import { userRoute } from "./routes/userRoute.js";
 import { productRoute } from "./routes/productRoute.js";
+import { categoryRoute } from "./routes/categoryRoute.js";
+import { reviewRoute } from "./routes/reviewRoute.js";
 
 dotenv.config();
 
@@ -23,6 +25,8 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);
+app.use("/api/v1/categories", categoryRoute);
+app.use("/api/v1/reviews", reviewRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

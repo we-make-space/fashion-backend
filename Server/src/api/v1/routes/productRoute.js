@@ -25,7 +25,7 @@ router.get(
 );
 
 //? Route to get a single product by ID
-router.get("/:id", logAction("Fetching a product by ID"), getProduct, logError);
+router.get("/bubu/:id", logAction("Fetching a product by ID"), getProduct, logError);
 
 //? Route to update a product by ID
 router.patch(
