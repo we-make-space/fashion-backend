@@ -35,21 +35,27 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 			},
 		});
 
-		if (!users || users.length === 0) {
+		// Map over users to ensure cart is always returned
+		const usersWithCart = users.map((user) => {
+			return {
+				...user,
+				cart: user.cart || { id: null }, // Provide a default value for cart if it doesn't exist
+			};
+		});
+
+		if (!usersWithCart || usersWithCart.length === 0) {
 			return res.status(404).json({ message: "No users found" });
 		}
 
-		res.status(200).json(users);
+		res.status(200).json(usersWithCart);
 	} catch (error) {
 		console.error("Error fetching users:", error);
-
 		res.status(500).json({
 			error: "An error occurred while fetching users",
 			details: error.message,
 		});
 	}
 });
-
 //* Updating a user
 export const UpdateUser = asyncHandler(async (req, res) => {
 	const { id } = req.params;

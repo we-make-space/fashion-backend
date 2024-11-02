@@ -41,7 +41,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
 	const page = parseInt(req.query.page) || 1; // Default to page 1 if not provided
-	const limit = parseInt(req.query.limit) || 10; // Default to limit of 10 if not provided
+	const limit = parseInt(req.query.limit) || 30; // Default to limit of 10 if not provided
 
 	if (page < 1) {
 		return res
@@ -84,6 +84,20 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 						comment: true,
 						userEmail: true,
 						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				comments: {
+					select: {
+						content: true,
+						createdAt: true,
+						userEmail: true,
+						User: {
 							select: {
 								firstName: true,
 								lastName: true,
