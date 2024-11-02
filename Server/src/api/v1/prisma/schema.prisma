@@ -23,12 +23,12 @@ model User {
   followers     Follower[] @relation("Followees")
   following     Follower[] @relation("Followers")
   ownedProducts Product[]  @relation("Owner")
-  cartId        String?    @db.ObjectId 
+  cartId        String?    @db.ObjectId
   wishlist      Wishlist?
   addresses     Address[]
   orders        Order[]
   createdAt     DateTime   @default(now())
-  Cart          Cart?      
+  Cart          Cart?
 }
 
 model Product {
@@ -93,8 +93,8 @@ model Review {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   rating    Int
   comment   String
-  userEmail String? // Make userEmail optional if a user is not always required
-  user      User?    @relation(fields: [userEmail], references: [email]) // Make user relation optional
+  userEmail String?
+  user      User?    @relation(fields: [userEmail], references: [email])
   product   Product  @relation(fields: [productId], references: [id])
   productId String   @db.ObjectId
   createdAt DateTime @default(now())
@@ -139,17 +139,17 @@ model Payment {
   orderId       String   @db.ObjectId
   order         Order    @relation(fields: [orderId], references: [id])
   amount        Float
-  status        String 
+  status        String
   paymentDate   DateTime @default(now())
-  paymentMethod String 
+  paymentMethod String
 }
 
 model Cart {
-  id        String      @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String      @unique @db.ObjectId 
-  user      User        @relation(fields: [userId], references: [id]) 
-  items     CartItem[]  // Relation to CartItem
-  createdAt DateTime    @default(now())
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String     @unique @db.ObjectId
+  user      User       @relation(fields: [userId], references: [id])
+  items     CartItem[] // Relation to CartItem
+  createdAt DateTime   @default(now())
 }
 
 model CartItem {
@@ -163,19 +163,21 @@ model CartItem {
   @@unique([cartId, productId]) // Add this line for composite unique constraint
 }
 
-
 model Address {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String   @db.ObjectId
-  user      User     @relation(fields: [userId], references: [id])
-  street    String
-  city      String
-  state     String
-  zipCode   String
-  country   String
-  isDefault Boolean  @default(false) // To mark the primary address
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String   @db.ObjectId
+  user        User     @relation(fields: [userId], references: [id])
+  street      String
+  city        String
+  town        String?
+  state       String
+  Region      String
+  zipCode     String?
+  country     String
+  countryCode String
+  isDefault   Boolean  @default(false) // To mark the primary address
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }
 
 model Inventory {
