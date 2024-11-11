@@ -7,9 +7,11 @@ import {
 	UpdateUser,
 } from "../controllers/userController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+import { authMiddleware, handleAuthErrors } from "../../../middlewares/auth.js";
+import { authMiddlewarez } from "../../../middlewares/authz.js";
 
 const router = express.Router();
-
+// router.use(authMiddleware);
 //? Creating a user
 router.post("/", logAction("Creating a new user"), CreateUser);
 
@@ -30,5 +32,6 @@ router.get(
 );
 
 router.use(logError);
+// router.use(handleAuthErrors);
 
 export { router as userRoute };

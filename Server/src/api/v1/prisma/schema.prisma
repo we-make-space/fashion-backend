@@ -12,7 +12,7 @@ model User {
   email         String     @unique
   firstName     String
   lastName      String
-  image         String?    @default("https://www.shutterstock.com/image-vector/profile-default-avatar-icon-user-600nw-2463844171.jpg")
+  image         String?
   bio           String
   coverImage    String?
   location      String?
@@ -78,10 +78,10 @@ model Like {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   userId    String   @db.ObjectId
   productId String   @db.ObjectId
-  commentId String   @db.ObjectId
+  commentId String?  @db.ObjectId
   createdAt DateTime @default(now())
 
-  user    User     @relation("UserLikes", fields: [userId], references: [id], onDelete: Cascade) // Added onDelete here
+  user    User     @relation("UserLikes", fields: [userId], references: [id], onDelete: Cascade)
   product Product  @relation("ProductLikes", fields: [productId], references: [id], onDelete: Cascade)
   comment Comment? @relation("CommentLikes", fields: [commentId], references: [id], onDelete: Cascade)
 

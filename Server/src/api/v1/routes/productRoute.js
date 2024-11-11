@@ -4,8 +4,10 @@ import {
 	createProduct,
 	deleteProduct,
 	getAllProducts,
+	getCommentLikes,
 	getCommentsForProduct,
 	getProduct,
+	getProductLikes,
 	likeComment,
 	likeProduct,
 	updateProduct,
@@ -25,7 +27,12 @@ router.get(
 );
 
 //? Route to get a single product by ID
-router.get("/bubu/:id", logAction("Fetching a product by ID"), getProduct, logError);
+router.get(
+	"/bubu/:id",
+	logAction("Fetching a product by ID"),
+	getProduct,
+	logError
+);
 
 //? Route to update a product by ID
 router.patch(
@@ -61,7 +68,7 @@ router.get(
 
 //? Route to like a comment
 router.post(
-	"/:commentId/like-comment",
+	"/:commentId/:userId/like-comment",
 	logAction("Liking a comment"),
 	likeComment,
 	logError
@@ -69,9 +76,25 @@ router.post(
 
 //? Route to like a product
 router.post(
-	"/like-product",
-	logAction("Liking a comment"),
+	"/likes/product/like",
+	logAction("Liking a product"),
 	likeProduct,
+	logError
+);
+
+//? Route to get all the likes on a product
+router.get(
+	"/product/:productId/likes",
+	logAction("Return all likes on a product"),
+	getProductLikes,
+	logError
+);
+
+//? Route to get all likes on a comment
+router.get(
+	"/comment/:commentId/likes",
+	logAction("Return all likes on a comment"),
+	getCommentLikes,
 	logError
 );
 
