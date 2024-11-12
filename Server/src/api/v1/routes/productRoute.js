@@ -3,6 +3,7 @@ import {
 	addCommentToProduct,
 	createProduct,
 	deleteProduct,
+	getAllProductLikes,
 	getAllProducts,
 	getCommentLikes,
 	getCommentsForProduct,
@@ -95,6 +96,14 @@ router.get(
 	"/comment/:commentId/likes",
 	logAction("Return all likes on a comment"),
 	getCommentLikes,
+	logError
+);
+
+//? Route to get all likes on a every product
+router.get(
+	"/products/likes",
+	logAction("Return all likes on a every product"),
+	getAllProductLikes,
 	logError
 );
 

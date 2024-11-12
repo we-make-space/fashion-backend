@@ -683,3 +683,41 @@ export const getCommentLikes = asyncHandler(async (req, res) => {
 		throw new Error(error.message);
 	}
 });
+
+//? Get all product likes
+export const getAllProductLikes = asyncHandler(async (req, res) => {
+	try {
+		// Retrieve all products with their likes and owner details
+		const productsWithLikes = await prisma.product.findMany({
+			include: {
+				likes: true,
+				owner: {
+					select: {
+						id: true,
+						firstName: true,
+						image: true,
+					},
+				},
+			},
+		});
+
+		const response = productsWithLikes
+			.map((product) => ({
+				id: product.id,
+				product_name: product.product_name,
+				likesCount: product.likes.length,
+				likes: product.likes,
+				owner: product.owner,
+			}))
+			.sort((a, b) => b.likesCount - a.likesCount);
+
+		res.status(200).json({ success: true, data: response });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({
+			success: false,
+			message: "Error retrieving product likes",
+		});
+	}
+});
+
