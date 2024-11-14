@@ -47,6 +47,51 @@ export const CreateUser = asyncHandler(async (req, res) => {
 		res.status(500).json({ error: "Failed to create user" });
 	}
 });
+
+// ^ A controller to check if current user exist
+
+export const checkUserExists = asyncHandler(async (req, res) => {
+	const { email } = req.query;
+
+	if (!email) {
+		return res.status(400).json({ error: "Email parameter is required" });
+	}
+
+	try {
+		const user = await prisma.user.findUnique({
+			where: { email },
+			include: {
+				comment: true,
+				likes: true,
+				reviews: true,
+				followers: true,
+				following: true,
+				ownedProducts: true,
+				wishlist: true,
+				addresses: true,
+				orders: true,
+				Cart: true,
+			},
+		});
+
+		if (!user) {
+			return res.status(404).json({ error: "User not found" });
+		}
+
+		// Return the user info directly without restructuring
+		return res.status(200).json({
+			userExists: true,
+			userInfo: user,
+		});
+	} catch (error) {
+		console.error("Error checking user existence:", error);
+		return res.status(500).json({
+			error: "An error occurred while checking user existence",
+		});
+	}
+});
+
+
 //* Get all users method
 
 export const GetAllUsers = asyncHandler(async (req, res) => {

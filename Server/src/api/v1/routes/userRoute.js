@@ -1,5 +1,6 @@
 import express from "express";
 import {
+	checkUserExists,
 	CreateUser,
 	DeleteUser,
 	GetAllUsers,
@@ -14,6 +15,13 @@ const router = express.Router();
 // router.use(authMiddleware);
 //? Creating a user
 router.post("/", logAction("Creating a new user"), CreateUser);
+
+//? Checking if a user exists
+router.get(
+	"/user/checkUserExists",
+	logAction("Checking if current user exists"),
+	checkUserExists
+);
 
 //? Get all users
 router.get("/all", logAction("Fetching all users"), GetAllUsers);
