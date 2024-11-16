@@ -9,41 +9,10 @@ export const createProduct = asyncHandler(async (req, res) => {
 		product_name,
 		price,
 		product_description,
-		sizes,
-		active,
-		stock,
-		gender,
-		material,
-		feature,
-		occasion,
-		match,
-		tags,
-		fabricType,
-		origin,
-		closureType,
-		neckStyle,
-		category,
-		product_image,
-		userEmail
-	} = req.body;
+		userEmail,
+	} = req.body.data;
 
-
-
-	// const uploadResults = await Promise.all(
-	// 	req.files.map(file => 
-	// 		cloudinary.uploader.upload(file.path, )
-	// 	)
-	// );
-
-	// if (uploadResults.some(result => !result)) {
-	// 	console.log('Error uploading image(s)');
-	// 	return res.status(500).json({
-	// 		message: 'Error uploading image(s)',
-	// 		success: false,
-	// 	});
-	// }
-	// const results = uploadResults.map(result => result.secure_url);
-
+	console.log(req.body.data);
 	try {
 		const product = await prisma.product.create({
 			data: {
@@ -59,22 +28,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 				},
 				stock: parseInt(stock),
 				product_description,
-				userEmail,
-				gender: GenderEnum[gender.toUpperCase()],
-				// condition,
-				// brand,
-				material,
-				feature,
-				occasion,
-				match,
-				tags: Array.isArray(tags) ? tags : [tags],
-				fabricType,
-				origin,
-				closureType,
-				neckStyle,
-				// display,
-				// type,
-				categoryName: CategoryEnum[category.toUpperCase()],
+				owner: { connect: { email: userEmail } },
 			},
 		});
 		console.log("Product created successfully");
@@ -89,15 +43,15 @@ export const createProduct = asyncHandler(async (req, res) => {
 
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page);
-	const limit = parseInt(req.query.limit);
+	const page = parseInt(req.query.page) || 1; // Default to page 1 if not provided
+	const limit = parseInt(req.query.limit) || 30; // Default to limit of 10 if not provided
 
-	if (isNaN(page) || page < 1) {
+	if (page < 1) {
 		return res
 			.status(400)
 			.json({ error: "Page must be a positive integer." });
 	}
-	if (isNaN(limit) || limit < 1) {
+	if (limit < 1) {
 		return res
 			.status(400)
 			.json({ error: "Limit must be a positive integer." });
@@ -123,6 +77,59 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 						firstName: true,
 						lastName: true,
 						image: true,
+					},
+				},
+				category: {
+					select: {
+						id: true,
+						name: true,
+					},
+				},
+				reviews: {
+					// this include reviews, which can be empty
+					select: {
+						rating: true,
+						comment: true,
+						userEmail: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				comments: {
+					select: {
+						content: true,
+						createdAt: true,
+						userEmail: true,
+						User: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				likes: {
+					select: {
+						id: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				_count: {
+					select: {
+						comments: true,
+						likes: true,
 					},
 				},
 			},
@@ -205,40 +212,12 @@ export const getProduct = asyncHandler(async (req, res) => {
 	try {
 		const product = await prisma.product.findUnique({
 			where: { id },
-			include:{
-				product_image: {
-					select: {
-						url: true,
-					}
-				},
-				comments:{
-					select: {
-						content: true,
-						createdAt: true,
-						userEmail: true
-					}
-				},
-				reviews: {
-					select:{
-						rating: true,
-						comment: true,
-						createdAt: true,
-						user: {
-							select: {
-								firstName: true,
-								lastName: true,
-								image: true
-							}
-						}
-					}
-				}
-				
-				
-			}
 		});
+
 		if (!product) {
 			return res.status(404).json({ error: "Product not found" });
 		}
+
 		res.status(200).json(product);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
@@ -247,11 +226,19 @@ export const getProduct = asyncHandler(async (req, res) => {
 
 //& Update an existing product
 export const updateProduct = asyncHandler(async (req, res) => {
-  const { id } = req.params;
-  const { product_name, price, product_image,userEmail, product_description } =
-	req.body;
+	const { id } = req.params;
+	const { product_name, price, product_image, product_description } =
+		req.body;
 
-  try {
+	try {
+		// Log request details for debugging
+		console.log("Update request:", {
+			id,
+			product_name,
+			price,
+			product_image,
+			product_description,
+		});
 
 	// Check if the product exists before attempting to update
 	const existingProduct = await prisma.product.findUnique({
@@ -262,41 +249,26 @@ export const updateProduct = asyncHandler(async (req, res) => {
 	  return res.status(404).json({ error: "Product not found" });
 	}
 
-	// Update the product if it exists
-	const updatedProduct = await prisma.product.update({
-	  where: { id },
-	  data: {
-		product_name: product_name || existingProduct.product_name,
-		price: price !== undefined ? price : existingProduct.price,
-		product_description:
-		  product_description || existingProduct.product_description,
-		userEmail: userEmail || existingProduct.userEmail,
-	  },
-	});
-
-	let updatedImages;
-	if (Array.isArray(product_image)) {
-	  // Update the images one by one
-	  updatedImages = [];
-	  for (const image of product_image) {
-		const updatedImage = await prisma.productImage.update({
-		  where: { id: image.id },
-		  data: { url: image.url },
+		// Update the product if it exists
+		const updatedProduct = await prisma.product.update({
+			where: { id },
+			data: {
+				product_name: product_name || existingProduct.product_name,
+				price: price !== undefined ? price : existingProduct.price,
+				product_image: product_image || existingProduct.product_image,
+				product_description:
+					product_description || existingProduct.product_description,
+			},
 		});
-		updatedImages.push(updatedImage);
-	  }
+
+		// Log the updated product for debugging
+		console.log("Updated product:", updatedProduct);
+
+		res.status(200).json(updatedProduct);
+	} catch (error) {
+		console.error("Error updating product:", error);
+		res.status(500).json({ error: error.message });
 	}
-
-
-	console.log("Product updated successfully");
-	res.status(200).json({
-	  message: "Product updated successfully",
-	  updatedProduct,
-	});
-  } catch (error) {
-	console.error("Error updating product:", error);
-	res.status(500).json({ error: error.message });
-  }
 });
 
 //* Delete a product
@@ -335,45 +307,47 @@ export const deleteProduct = asyncHandler(async (req, res) => {
 
 //* Controller to add a comment to a product
 export const addCommentToProduct = asyncHandler(async (req, res) => {
+	const { content, userEmail } = req.body;
+	const { productId } = req.params;
+
 	try {
-		const { productId } = req.params;
-		const { content, userEmail } = req.body;
-
-		// Checking if the product exists
-		const product = await prisma.product.findUnique({
-			where: { id: productId },
-		});
-
-		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
-		}
-
-		// Checking if the user exists
+		// Ensure that the user exists before adding the comment
 		const user = await prisma.user.findUnique({
 			where: { email: userEmail },
 		});
 
 		if (!user) {
-			return res.status(404).json({ message: "User not found" });
+			return res.status(400).json({ message: "User not found" });
 		}
 
-		const newComment = await prisma.comment.create({
+		// Create the comment and connect the user and product
+		const comment = await prisma.comment.create({
 			data: {
 				content,
-				userEmail: user.email,
-				productId: product.id,
 				createdAt: new Date(),
+				User: {
+					// Use 'User' instead of 'user' to match Prisma's schema field name
+					connect: {
+						email: userEmail, // Connect the user by email
+					},
+				},
+				product: {
+					connect: {
+						id: productId, // Connect the product by ID
+					},
+				},
 			},
 		});
 
-		res.status(201).json({
+		return res.status(201).json({
 			message: "Comment added successfully",
-			data: newComment,
+			data: comment,
 		});
 	} catch (error) {
 		console.error("Error adding comment:", error);
-		res.status(500).json({
+		return res.status(500).json({
 			message: "An error occurred while adding the comment",
+			error: error.message,
 		});
 	}
 });
@@ -440,6 +414,7 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 
 //! Controller to like a comment
 
+/*
 export const likeComment = asyncHandler(async (req, res) => {
 	const { commentId } = req.params;
 	const { userEmail } = req.body;
@@ -479,27 +454,3 @@ export const likeComment = asyncHandler(async (req, res) => {
 		like: newLike,
 	});
 });
-
-
-export const uploadImage = asyncHandler(async (req, res) => {
-    // Upload an image
-      const uploadResult = await cloudinary.uploader.upload(
-	   req.file.path,(error, result)=>{
-		if(error){
-			console.log(error);
-			return res.status(500).json({
-				message: 'Error uploading image',
-				success: false,
-			})
-		}
-		res.status(200).json({
-			message: 'Image uploaded successfully',
-			success: true,
-			data: result,
-		})
-	   })
-	   console.log(req.file)
-   
-
-	
-	});

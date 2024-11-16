@@ -5,10 +5,6 @@ import cookieParser from "cookie-parser";
 import logger from "../../utils/logger.js";
 import { userRoute } from "./routes/userRoute.js";
 import { productRoute } from "./routes/productRoute.js";
-import { orderRoute } from "./routes/orderRoute.js"
-import {commentRoute} from "./routes/commentRoute.js"
-import { followerRoute } from "./routes/followerRoute.js";
-import { reviewRoute } from "./routes/reviewRoute.js";
 
 dotenv.config();
 
@@ -16,8 +12,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
+app.use(cors(corsOptions));
 
 // Middleware to log each request
 app.use((req, res, next) => {
@@ -27,10 +25,6 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);
-app.use("/api/v1/orders", orderRoute);
-app.use("/api/v1/comments", commentRoute);
-app.use("/api/v1/followers", followerRoute);
-app.use("/api/v1/reviews", reviewRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

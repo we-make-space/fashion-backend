@@ -1,34 +1,104 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
-import { Role } from "@prisma/client";
 // import { body, validationResult } from "express-validator";
 
-//! Create a new user method
+//* Create a new user method
 
 export const CreateUser = asyncHandler(async (req, res) => {
-	console.log("creating a user");
+	console.log("Creating a user");
 
-	let { email } = req.body;
-	const userExists = await prisma.user.findUnique({
-		where: { email: email },
-	});
-	if (!userExists) {
-		const user = await prisma.user.create({ data: req.body });
-		res.send({
-			message: "User registered successfully",
-			user: user,
+	try {
+		const { email, firstName, lastName, image } = req.body;
+
+		// Check if user already exists
+		const existingUser = await prisma.user.findUnique({
+			where: { email },
 		});
-	} else res.status(209).send({ message: "User already registered" });
+
+		if (existingUser) {
+			return res.status(200).json(existingUser);
+		}
+
+		// Create new user
+		const newUser = await prisma.user.create({
+			data: {
+				email,
+				firstName: firstName || "",
+				lastName: lastName || "",
+				image: image || "",
+				bio: "",
+				location: "",
+				phoneNumber: "000-000-0000",
+				Cart: {
+					create: {}, //? Create an empty cart for the user
+				},
+				wishlist: {
+					create: {}, //? Create an empty wishlist
+				},
+			},
+			include: {
+				Cart: true,
+				wishlist: true,
+			},
+		});
+
+		res.status(201).json(newUser);
+	} catch (error) {
+		console.error("Error creating user:", error);
+		res.status(500).json({ error: "Failed to create user" });
+	}
 });
+
+// ^ A controller to check if current user exist
+
+export const checkUserExists = asyncHandler(async (req, res) => {
+	const { email } = req.query;
+
+	if (!email) {
+		return res.status(400).json({ error: "Email parameter is required" });
+	}
+
+	try {
+		const user = await prisma.user.findUnique({
+			where: { email },
+			include: {
+				comment: true,
+				likes: true,
+				reviews: true,
+				followers: true,
+				following: true,
+				ownedProducts: true,
+				wishlist: true,
+				addresses: true,
+				orders: true,
+				Cart: true,
+			},
+		});
+
+		if (!user) {
+			return res.status(404).json({ error: "User not found" });
+		}
+
+		// Return the user info directly without restructuring
+		return res.status(200).json({
+			userExists: true,
+			userInfo: user,
+		});
+	} catch (error) {
+		console.error("Error checking user existence:", error);
+		return res.status(500).json({
+			error: "An error occurred while checking user existence",
+		});
+	}
+});
+
 
 //* Get all users method
 
 export const GetAllUsers = asyncHandler(async (req, res) => {
 	try {
 		const users = await prisma.user.findMany({
-			orderBy: {
-				createdAt: "desc",
-			},
+			orderBy: { createdAt: "desc" },
 			include: {
 				comment: true,
 				likes: true,
@@ -45,20 +115,18 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 			},
 		});
 
-		if (!users || users.length === 0) {
+		const usersWithCart = users.map((user) => ({
+			...user,
+			cart: user.cart || { id: null }, // Provide a default value for cart if it doesn't exist
+		}));
+
+		if (usersWithCart.length === 0) {
 			return res.status(404).json({ message: "No users found" });
 		}
 
-		res.status(200).json(users);
+		res.status(200).json(usersWithCart);
 	} catch (error) {
 		console.error("Error fetching users:", error);
-
-		if (error.code === 'P2032') {
-			return res.status(400).json({
-				error: "Data inconsistency error",
-				details: "Invalid data found for 'maxStock'"
-			});
-		}
 
 		res.status(500).json({
 			error: "An error occurred while fetching users",
@@ -67,14 +135,15 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 	}
 });
 
-//* Updating a user
+//* Update a user
+
 export const UpdateUser = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { firstName, lastName, role, bio, phoneNumber } = req.body;
+	const { firstName, lastName, image, bio, phoneNumber } = req.body;
 
 	try {
 		const user = await prisma.user.update({
-			where: { id },
+			where: { email },
 			data: {
 				firstName,
 				lastName,
@@ -95,10 +164,11 @@ export const UpdateUser = asyncHandler(async (req, res) => {
 //* Delete a User
 
 export const DeleteUser = asyncHandler(async (req, res) => {
-	const { id } = req.params;
+	// Use authenticated user's email to find their account
+	const { email } = req.user;
 
 	try {
-		await prisma.user.delete({ where: { id } });
+		await prisma.user.delete({ where: { email } });
 		res.status(200).json({ message: "User deleted successfully" });
 	} catch (error) {
 		if (error.code === "P2025") {
@@ -108,14 +178,15 @@ export const DeleteUser = asyncHandler(async (req, res) => {
 	}
 });
 
-//! Get specific products owned by a user
+//* Get specific products owned by a user
 
 export const GetUserProducts = asyncHandler(async (req, res) => {
-	const { id } = req.params;
+	// Use authenticated user's email to find their account
+	const { email } = req.user;
 
 	try {
 		const user = await prisma.user.findUnique({
-			where: { id },
+			where: { email },
 			include: { ownedProducts: true },
 		});
 		if (!user) return res.status(404).json({ message: "User not found" });
