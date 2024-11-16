@@ -29,7 +29,7 @@ router.get(
 
 //? Route to get a single product by ID
 router.get(
-	"/bubu/:id",
+	"/:id",
 	logAction("Fetching a product by ID"),
 	getProduct,
 	logError

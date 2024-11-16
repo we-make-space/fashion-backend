@@ -113,9 +113,9 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 							select: {
 								firstName: true,
 								lastName: true,
-								image: true
-							}
-						}
+								image: true,
+							},
+						},
 					},
 				},
 				_count: {
@@ -151,10 +151,59 @@ export const getProduct = asyncHandler(async (req, res) => {
 	try {
 		const product = await prisma.product.findUnique({
 			where: { id },
+			include: {
+				likes: {
+					include: {
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				owner: {
+					select: {
+						firstName: true,
+						lastName: true,
+						image: true,
+					},
+				},
+				comments: {
+					include: {
+						User: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				reviews: {
+					include: {
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				category: {
+					select: {
+						name: true,
+					},
+				},
+			},
 		});
+
 		if (!product) {
 			return res.status(404).json({ error: "Product not found" });
 		}
+
 		res.status(200).json(product);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
@@ -266,45 +315,47 @@ export const deleteProduct = asyncHandler(async (req, res) => {
 
 //* Controller to add a comment to a product
 export const addCommentToProduct = asyncHandler(async (req, res) => {
+	const { content, userEmail } = req.body;
+	const { productId } = req.params;
+
 	try {
-		const { productId } = req.params;
-		const { content, userEmail } = req.body;
-
-		// Checking if the product exists
-		const product = await prisma.product.findUnique({
-			where: { id: productId },
-		});
-
-		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
-		}
-
-		// Checking if the user exists
+		// Ensure that the user exists before adding the comment
 		const user = await prisma.user.findUnique({
 			where: { email: userEmail },
 		});
 
 		if (!user) {
-			return res.status(404).json({ message: "User not found" });
+			return res.status(400).json({ message: "User not found" });
 		}
 
-		const newComment = await prisma.comment.create({
+		// Create the comment and connect the user and product
+		const comment = await prisma.comment.create({
 			data: {
 				content,
-				userEmail: user.email,
-				productId: product.id,
 				createdAt: new Date(),
+				User: {
+					// Use 'User' instead of 'user' to match Prisma's schema field name
+					connect: {
+						email: userEmail, // Connect the user by email
+					},
+				},
+				product: {
+					connect: {
+						id: productId, // Connect the product by ID
+					},
+				},
 			},
 		});
 
-		res.status(201).json({
+		return res.status(201).json({
 			message: "Comment added successfully",
-			data: newComment,
+			data: comment,
 		});
 	} catch (error) {
 		console.error("Error adding comment:", error);
-		res.status(500).json({
+		return res.status(500).json({
 			message: "An error occurred while adding the comment",
+			error: error.message,
 		});
 	}
 });
@@ -720,4 +771,3 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 		});
 	}
 });
-
