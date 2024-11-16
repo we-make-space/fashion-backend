@@ -5,6 +5,10 @@ import cookieParser from "cookie-parser";
 import logger from "../../utils/logger.js";
 import { userRoute } from "./routes/userRoute.js";
 import { productRoute } from "./routes/productRoute.js";
+import { orderRoute } from "./routes/orderRoute.js"
+import {commentRoute} from "./routes/commentRoute.js"
+import { followerRoute } from "./routes/followerRoute.js";
+import { reviewRoute } from "./routes/reviewRoute.js";
 
 dotenv.config();
 
@@ -23,6 +27,10 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);
+app.use("/api/v1/orders", orderRoute);
+app.use("/api/v1/comments", commentRoute);
+app.use("/api/v1/followers", followerRoute);
+app.use("/api/v1/reviews", reviewRoute);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

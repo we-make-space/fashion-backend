@@ -4,29 +4,53 @@ import {
 	createProduct,
 	deleteProduct,
 	getAllProducts,
+	getAllProductsTrial,
 	getCommentsForProduct,
 	getProduct,
 	likeComment,
 	updateProduct,
+	uploadImage
 } from "../controllers/productController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+import {upload} from "../../../middlewares/multer.js";
+
 
 const router = express.Router();
 
 router.post(
 	"/",
 	logAction("Creating a new product"),
+	upload.array("product_images"),
+	(req, res, next) => {
+		next();
+	  },
 	createProduct,
+	logError
+);
+router.post(
+	"/upload",
+	logAction("Creating a new product"),
+	upload.array("product_images"),
+	uploadImage,
+	logError
+  );
+// Route to get all products with pagination
+router.get(
+	"/home",
+	logAction("Fetching all products with pagination"),
+	getAllProducts,
 	logError
 );
 
 // Route to get all products with pagination
 router.get(
 	"/",
-	logAction("Fetching all products with pagination"),
-	getAllProducts,
+	logAction("Fetching all products"),
+	getAllProductsTrial,
 	logError
 );
+
+
 
 // Route to get a single product by ID
 router.get(

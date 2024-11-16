@@ -3,7 +3,11 @@ import express from "express";
 import {
 	CreateUser,
 	DeleteUser,
+	getAllSeller,
 	GetAllUsers,
+	GetUser,
+	getUserFollowers,
+	getUserFollowing,
 	GetUserProducts,
 	UpdateUser,
 } from "../controllers/userController.js";
@@ -50,7 +54,7 @@ router.delete("/:id", (req, res, next) => {
 });
 
 // Get products for a specific user by user ID
-router.get("/:id", (req, res, next) => {
+router.get("/product/:id", (req, res, next) => {
 	const { id } = req.params;
 	logger.info(`Fetching products for user with ID: ${id}`);
 	GetUserProducts(req, res).catch((error) => {
@@ -60,5 +64,47 @@ router.get("/:id", (req, res, next) => {
 		next(error);
 	});
 });
+
+router.get("/:id", (req, res, next) => {
+	const { id } = req.params;
+	logger.info(`Fetching user with ID: ${id}`);
+	GetUser(req, res).catch((error) => {
+		logger.error(`Error fetching user with ID ${id}: ${error.message}`);
+		next(error);
+	});
+});
+
+router.get("/followers/:id", (req, res, next) => {
+	const { id } = req.params;
+	logger.info(`Fetching followers for user with ID: ${id}`);
+	getUserFollowers(req, res).catch((error) => {
+		logger.error(
+			`Error fetching followers for user with ID ${id}: ${error.message}`
+		);
+		next(error);
+	});
+});
+
+router.get("/followings/:id", (req, res, next) => {
+	const { id } = req.params;
+	logger.info(`Fetching following for user with ID: ${id}`);
+	getUserFollowing(req, res).catch((error) => {
+		logger.error(
+			`Error fetching following for user with ID ${id}: ${error.message}`
+		);
+		next(error);
+	});
+});
+
+router.get("/sellers/all", (req, res, next) => {
+	logger.info("Fetching all sellers");
+	getAllSeller(req, res).catch((error) => {
+		logger.error(`Error fetching all sellers: ${error.message}`);
+		next(error);
+	});
+});
+
+
+
 
 export { router as userRoute };
