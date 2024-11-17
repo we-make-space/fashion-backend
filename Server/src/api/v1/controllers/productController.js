@@ -145,6 +145,54 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 	}
 });
 
+//& function to get all products (Emma)
+export const getAllProductsTrial = asyncHandler(async (req, res) => {
+	try {
+		const products = await prisma.product.findMany({
+			orderBy: {
+				createdAt: "desc",
+			},
+			include: {
+				createdAt: false,
+				updatedAt: false,
+				owner: {
+					select: {
+						firstName: true,
+						lastName: true,
+						image: true,
+					},
+				},
+				orderItems: {
+					select: {
+						quantity: true,
+						order: {
+							select: {
+								id: true,
+								status: true,
+								total: true,
+								userId: true,
+							},
+						},
+					},
+				}, // Including orders
+				product_image: {
+					select: {
+						url: true,
+						id: true,
+					},
+				},
+			},
+		});
+
+		res.status(200).json(products);
+	} catch (error) {
+		console.error("Error fetching products:", error);
+		res.status(500).json({
+			error: "An error occurred while fetching products",
+		});
+	}
+});
+
 //& function to get a single product
 export const getProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
@@ -218,13 +266,12 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		price,
 		product_image,
 		product_description,
-		categoryId, // New field
-		sizes, // New field
-		colors, // New field
+		categoryId, 
+		sizes, 
+		colors, 
 	} = req.body;
 
 	try {
-		// Log request details for debugging
 		console.log("Update request:", {
 			id,
 			product_name,
@@ -236,7 +283,6 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			colors,
 		});
 
-		// Check if the product exists before attempting to update
 		const existingProduct = await prisma.product.findUnique({
 			where: { id },
 		});
@@ -245,10 +291,8 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			return res.status(404).json({ error: "Product not found" });
 		}
 
-		// Log existing product for debugging
 		console.log("Existing product:", existingProduct);
 
-		// Update the product if it exists
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
@@ -268,13 +312,12 @@ export const updateProduct = asyncHandler(async (req, res) => {
 				categoryId:
 					categoryId !== undefined
 						? categoryId
-						: existingProduct.categoryId, // Update categoryId
-				sizes: sizes !== undefined ? sizes : existingProduct.sizes, // Update sizes
-				colors: colors !== undefined ? colors : existingProduct.colors, // Update colors
+						: existingProduct.categoryId, 
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes, 
+				colors: colors !== undefined ? colors : existingProduct.colors, 
 			},
 		});
 
-		// Log the updated product for debugging
 		console.log("Updated product:", updatedProduct);
 
 		res.status(200).json(updatedProduct);
@@ -319,7 +362,6 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 	const { productId } = req.params;
 
 	try {
-		// Ensure that the user exists before adding the comment
 		const user = await prisma.user.findUnique({
 			where: { email: userEmail },
 		});
@@ -328,20 +370,18 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 			return res.status(400).json({ message: "User not found" });
 		}
 
-		// Create the comment and connect the user and product
 		const comment = await prisma.comment.create({
 			data: {
 				content,
 				createdAt: new Date(),
 				User: {
-					// Use 'User' instead of 'user' to match Prisma's schema field name
 					connect: {
-						email: userEmail, // Connect the user by email
+						email: userEmail, 
 					},
 				},
 				product: {
 					connect: {
-						id: productId, // Connect the product by ID
+						id: productId, 
 					},
 				},
 			},
@@ -420,67 +460,14 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 	}
 });
 
-//! Controller to like a comment
 
-/*
-export const likeComment = asyncHandler(async (req, res) => {
-	const { commentId } = req.params;
-	const { userEmail } = req.body;
-
-	if (!userEmail) {
-		return res.status(400).json({
-			message: "User email is required to like a comment.",
-		});
-	}
-
-	// Check if the user has already liked the comment
-	const existingLike = await prisma.like.findUnique({
-		where: {
-			userEmail_commentId: {
-				userEmail,
-				commentId,
-			},
-		},
-	});
-
-	if (existingLike) {
-		return res.status(400).json({
-			message: "You have already liked this comment.",
-		});
-	}
-
-	const newLike = await prisma.like.create({
-		data: {
-			userEmail,
-			commentId,
-			productId: req.body.productId,
-		},
-	});
-
-	res.status(201).json({
-		message: "Comment liked successfully",
-		like: newLike,
-	});
-});
-*/
-
-// Toggle like on a comment
-// Middleware to log requests
-export const logRequest = (req, res, next) => {
-	console.log("Request Body:", req.body);
-	console.log("Request Params:", req.params);
-	console.log("Request Query:", req.query);
-	next();
-};
-
-// Toggle like on a comment
+//* Toggle like on a comment
 export const likeComment = asyncHandler(async (req, res) => {
 	console.log("Received request to toggle comment like");
 	console.log("Request body:", req.body);
 
 	let { userId, commentId } = req.body;
 
-	// Check if values are coming from params instead of body
 	if (!userId && req.params.userId) {
 		userId = req.params.userId;
 	}
@@ -488,7 +475,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 		commentId = req.params.commentId;
 	}
 
-	// Validate input for comment like
 	if (!userId || !commentId) {
 		console.log("Missing required fields:", { userId, commentId });
 		res.status(400);
@@ -499,7 +485,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 
 	try {
 		console.log("Looking up comment:", commentId);
-		// First get the comment to get its associated productId
 		const comment = await prisma.comment.findUnique({
 			where: {
 				id: commentId,
@@ -519,7 +504,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 			throw new Error("Comment not found");
 		}
 
-		// Check if like already exists
 		console.log("Checking for existing like");
 		const existingLike = await prisma.like.findFirst({
 			where: {
@@ -532,7 +516,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 
 		if (existingLike) {
 			console.log("Deleting existing like");
-			// Unlike - remove the existing like
 			await prisma.like.delete({
 				where: {
 					id: existingLike.id,
@@ -546,7 +529,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 			});
 		} else {
 			console.log("Creating new like");
-			// Like - create new like
 			const newLike = await prisma.like.create({
 				data: {
 					userId: userId,
@@ -568,63 +550,6 @@ export const likeComment = asyncHandler(async (req, res) => {
 		throw error;
 	}
 });
-
-//? Liking a product
-
-/*
-export const likeProduct = asyncHandler(async (req, res) => {
-	try {
-		console.log("Request body:", req.body); // Add this line to inspect the body
-
-		const { userId, productId } = req.body;
-
-		console.log("Received userId:", userId);
-		console.log("Received productId:", productId);
-
-		if (!userId || !productId) {
-			return res
-				.status(400)
-				.json({ message: "userId and productId are required" });
-		}
-
-		// Check if the like exists
-		const existingLike = await prisma.like.findUnique({
-			where: {
-				userId_productId: {
-					userId,
-					productId,
-				},
-			},
-		});
-
-		if (existingLike) {
-			// If it exists, delete it (unlike)
-			await prisma.like.delete({
-				where: {
-					id: existingLike.id,
-				},
-			});
-			return res.status(200).json({ message: "Product unliked" });
-		} else {
-			// If it does not exist, create it (like)
-			await prisma.like.create({
-				data: {
-					userId,
-					productId,
-					commentId: null,
-				},
-			});
-			return res.status(201).json({ message: "Product liked" });
-		}
-	} catch (error) {
-		console.error("Error toggling like for product:", error);
-		return res
-			.status(500)
-			.json({ message: "An error occurred while toggling like", error });
-	}
-});
-
-*/
 
 export const likeProduct = asyncHandler(async (req, res) => {
 	try {
@@ -738,7 +663,6 @@ export const getCommentLikes = asyncHandler(async (req, res) => {
 //? Get all product likes
 export const getAllProductLikes = asyncHandler(async (req, res) => {
 	try {
-		// Retrieve all products with their likes and owner details
 		const productsWithLikes = await prisma.product.findMany({
 			include: {
 				likes: true,

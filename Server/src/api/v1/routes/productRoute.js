@@ -5,6 +5,7 @@ import {
 	deleteProduct,
 	getAllProductLikes,
 	getAllProducts,
+	getAllProductsTrial,
 	getCommentLikes,
 	getCommentsForProduct,
 	getProduct,
@@ -26,6 +27,16 @@ router.get(
 	getAllProducts,
 	logError
 );
+
+//^ Route to get all products without pagination (E)
+router.get(
+	"/",
+	logAction("Fetching all products without pagination"),
+	getAllProductsTrial,
+	logError
+);
+
+
 
 //? Route to get a single product by ID
 router.get(
