@@ -12,7 +12,6 @@ import {
 	likeComment,
 	likeProduct,
 	updateProduct,
-	uploadImage
 } from "../controllers/productController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 import {upload} from "../../../middlewares/multer.js";

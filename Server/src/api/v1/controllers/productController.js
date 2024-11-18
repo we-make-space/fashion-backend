@@ -201,58 +201,7 @@ export const getAllProductsTrial = asyncHandler(async (req, res) => {
 	}
 });
 
-//& function to get all products
-export const getAllProductsTrial = asyncHandler(async (req, res) => {
-	try {
-		const products = await prisma.product.findMany({
 
-			orderBy: {
-				createdAt: "desc",
-				
-			},
-			include: {
-				createdAt: false,
-				updatedAt: false,
-				owner: {
-					select: {
-						firstName: true,
-						lastName: true,
-						image: true,
-					},
-				},
-				orderItems: {
-				
-					select: {
-					 
-					quantity: true,
-					  order: {
-						select: {
-							id: true,
-						  status: true,
-						  total: true,
-						  userId: true,
-						  
-						}
-					  }
-					},
-				  },// Including orders
-				  product_image: {
-					select: {
-					  url: true,
-					  id: true
-					}
-				  }
-			},
-		});
-
-		res.status(200).json(products);
-	} catch (error) {
-		console.error("Error fetching products:", error);
-		res.status(500).json({
-			error: "An error occurred while fetching products",
-		});
-	}
-});
 
 //& function to get a single product
 export const getProduct = asyncHandler(async (req, res) => {

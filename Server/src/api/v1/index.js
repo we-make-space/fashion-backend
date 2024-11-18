@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
 // Middleware to log each request
 app.use((req, res, next) => {
