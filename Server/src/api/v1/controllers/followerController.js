@@ -32,7 +32,7 @@ export const followUser = asyncHandler(async (req, res) => {
   res.status(201).json({ message: "User followed successfully" });
 });
 
-// Unfollow a user
+// Unfollow a user method
 export const unfollowUser = asyncHandler(async (req, res) => {
   const { followerId, followingId } = req.body;
 
