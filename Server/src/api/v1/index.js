@@ -6,6 +6,8 @@ import logger from "../../utils/logger.js";
 import { userRoute } from "./routes/userRoute.js";
 import { productRoute } from "./routes/productRoute.js";
 import { followerRoute } from "./routes/followerRoute.js";
+import { addressRoute } from "./routes/addressRoute.js";
+import { inventoryRoute } from "./routes/inventoryRoute.js";
 
 dotenv.config();
 
@@ -18,7 +20,7 @@ app.use(cookieParser());
 app.use(cors());
 // app.use(cors(corsOptions));
 
-// Middleware to log each request
+//^ Middleware to log each request
 app.use((req, res, next) => {
 	logger.info(`Received ${req.method} request for ${req.url}`);
 	next();
@@ -26,15 +28,18 @@ app.use((req, res, next) => {
 
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);
-app.use("/api/v1/followers", followerRoute);
+app.use("/api/v1/categories", categoryRoute);
+app.use("/api/v1/reviews", reviewRoute);
+app.use("/api/v1/cart", cartRoute);
+app.use("/api/v1/cartItem", cartItemRoute);
 
-// Error handling middleware
+//~ Error handling middleware
 app.use((err, req, res, next) => {
 	logger.error(`Error occurred: ${err.message}`);
 	res.status(500).json({ error: "Something went wrong" });
 });
 
-// Start the server
+//* Start the server
 app.listen(PORT, () => {
 	logger.info(`Server is running successfully on PORT ${PORT}`);
 });

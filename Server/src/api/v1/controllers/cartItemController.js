@@ -94,7 +94,7 @@ export const getCartItemsByCartId = asyncHandler(async (req, res) => {
 
 // Get a specific cart item by ID
 export const getCartItemById = asyncHandler(async (req, res) => {
-	const { id } = req.params; // Assuming the cart item ID is passed in the URL
+	const { id } = req.params; 
 
 	try {
 		const cartItem = await prisma.cartItem.findUnique({

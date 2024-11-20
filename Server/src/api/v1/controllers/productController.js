@@ -23,7 +23,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 				price,
 				product_description,
 				owner: { connect: { email: userEmail } },
-				category: { connect: { id: categoryId } }, // Link the product to the category
+				category: { connect: { id: categoryId } },
 				sizes,
 				colors,
 			},
@@ -50,8 +50,8 @@ export const createProduct = asyncHandler(async (req, res) => {
 
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page) || 1; // Default to page 1 if not provided
-	const limit = parseInt(req.query.limit) || 30; // Default to limit of 10 if not provided
+	const page = parseInt(req.query.page) || 1;
+	const limit = parseInt(req.query.limit) || 30;
 
 	if (page < 1) {
 		return res
@@ -95,7 +95,6 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 					},
 				},
 				reviews: {
-					// this include reviews, which can be empty
 					select: {
 						rating: true,
 						comment: true,
@@ -107,6 +106,12 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 								image: true,
 							},
 						},
+					},
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
 					},
 				},
 				comments: {
@@ -179,6 +184,25 @@ export const getAllProductsTrial = asyncHandler(async (req, res) => {
 						image: true,
 					},
 				},
+				orderItems: {
+					select: {
+						quantity: true,
+						order: {
+							select: {
+								id: true,
+								status: true,
+								total: true,
+								userId: true,
+							},
+						},
+					},
+				}, // Including orders
+				product_image: {
+					select: {
+						url: true,
+						id: true,
+					},
+				},
 			},
 		});
 
@@ -244,6 +268,12 @@ export const getProduct = asyncHandler(async (req, res) => {
 						},
 					},
 				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
 				category: {
 					select: {
 						name: true,
@@ -269,15 +299,24 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		product_name,
 		price,
 		product_description,
-		categoryId,
-		sizes,
-		colors,
-		product_images
+		categoryId, 
+		sizes, 
+		colors, 
 	} = req.body;
-	console.log(req.body);
 
 	try {
+		console.log("Update request:", {
+			id,
+			product_name,
+			price,
+			product_image,
+			product_description,
+			categoryId,
+			sizes,
+			colors,
+		});
 
+		// Find the existing product
 		const existingProduct = await prisma.product.findUnique({
 			where: { id },
 		});
@@ -286,33 +325,34 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			return res.status(404).json({ error: "Product not found" });
 		}
 
+		// Update the product details
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
-				product_name: product_name ?? existingProduct.product_name,
-				price: price ?? existingProduct.price,
-				product_description: product_description ?? existingProduct.product_description,
-				categoryId: categoryId ?? existingProduct.categoryId,
-				sizes: sizes ?? existingProduct.sizes,
-				colors: colors ?? existingProduct.colors,
+				product_name:
+					product_name !== undefined
+						? product_name
+						: existingProduct.product_name,
+				price: price !== undefined ? price : existingProduct.price,
+				product_image:
+					product_image !== undefined
+						? product_image
+						: existingProduct.product_image,
+				product_description:
+					product_description !== undefined
+						? product_description
+						: existingProduct.product_description,
+				categoryId:
+					categoryId !== undefined
+						? categoryId
+						: existingProduct.categoryId, 
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes, 
+				colors: colors !== undefined ? colors : existingProduct.colors, 
 			},
 		});
 
-	
+		console.log("Updated product:", updatedProduct);
 
-			const productImages = await Promise.all(
-				product_images.map(async (image) => {
-					return await prisma.productImage.create({
-						data: {
-							url: image.url,
-							product: { connect: { id } },
-						},
-					});
-				})
-			);
-		
-
-		console.log("Updated product:", updatedProduct, productImages);
 		res.status(200).json(updatedProduct);
 	} catch (error) {
 		console.error("Error updating product:", error);
@@ -367,12 +407,12 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 				createdAt: new Date(),
 				User: {
 					connect: {
-						email: userEmail, 
+						email: userEmail,
 					},
 				},
 				product: {
 					connect: {
-						id: productId, 
+						id: productId,
 					},
 				},
 			},
@@ -450,7 +490,6 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 		});
 	}
 });
-
 
 //* Toggle like on a comment
 export const likeComment = asyncHandler(async (req, res) => {
