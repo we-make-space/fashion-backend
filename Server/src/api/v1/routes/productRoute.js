@@ -5,6 +5,7 @@ import {
 	deleteProduct,
 	getAllProductLikes,
 	getAllProducts,
+	getAllProductsTrial,
 	getCommentLikes,
 	getCommentsForProduct,
 	getProduct,
@@ -28,11 +29,19 @@ router.post(
 
 // Route to get all products with pagination
 router.get(
-	"/home",
+	"/",
 	logAction("Fetching all products with pagination"),
 	getAllProducts,
 	logError
 );
+router.get(
+	"/dashboard",
+	logAction("Fetching all pr"),
+	getAllProductsTrial,
+	logError
+);
+
+
 
 //? Route to get a single product by ID
 router.get(
@@ -113,5 +122,7 @@ router.get(
 	getAllProductLikes,
 	logError
 );
+
+
 
 export { router as productRoute };

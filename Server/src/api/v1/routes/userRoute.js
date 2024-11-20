@@ -3,12 +3,17 @@ import {
 	checkUserExists,
 	CreateUser,
 	DeleteUser,
+	followStatus,
+	followUser,
 	getAllSeller,
 	GetAllUsers,
 	GetUser,
 	getUserFollowers,
 	getUserFollowing,
+	getUserId,
 	GetUserProducts,
+	unfollowUser,
+	upadateAllUsersRole,
 	UpdateUser,
 } from "../controllers/userController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
@@ -26,6 +31,8 @@ router.get(
 	logAction("Checking if current user exists"),
 	checkUserExists
 );
+
+router.get('/:id', logAction("Fetching a user"), GetUser);
 
 //? Get all users
 router.get("/all", logAction("Fetching all users"), GetAllUsers);
@@ -47,5 +54,25 @@ router.get("/:id", (req, res, next) => {
 		next(error);
 	});
 });
+
+router.get("/sellers/all", logAction("Fetching all sellers"), getAllSeller);
+
+router.put("/updateRole", logAction("Updating roles"), upadateAllUsersRole)
+
+router.post(
+    "/:id/follow",
+    logAction("Creating a new follower"),
+    followUser,
+    logError
+);
+router.delete(
+    "/:id/unfollow",
+    logAction("Deleting a follower"),
+    unfollowUser,
+    logError
+);
+router.get('/:id/followStatus', logAction("Checking follow status"), followStatus);
+
+router.get("/me/user",logAction("Fetching current user"), getUserId);
 
 export { router as userRoute };

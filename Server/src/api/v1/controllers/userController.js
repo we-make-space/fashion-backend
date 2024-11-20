@@ -1,5 +1,7 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
+import { Role } from '@prisma/client';
+
 // import { body, validationResult } from "express-validator";
 
 //* Create a new user method
@@ -138,11 +140,11 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 
 export const UpdateUser = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { firstName, lastName, image, bio, phoneNumber } = req.body;
+	const { firstName, lastName, image, bio, phoneNumber, role } = req.body;
 
 	try {
 		const user = await prisma.user.update({
-			where: { email },
+			where: { id },
 			data: {
 				firstName,
 				lastName,
@@ -202,6 +204,19 @@ export const GetUser = asyncHandler(async (req, res) => {
 	try {
 		const user = await prisma.user.findUnique({
 			where: { id },
+			include: {
+				ownedProducts: {
+					include: {
+						
+						productImages: {
+							select: {
+								url: true,
+								id: true,
+							}
+						}
+					}
+				},
+			}
 		});
 		if (!user) return res.status(404).json({ message: "User not found" });
 
@@ -274,14 +289,23 @@ export const getUserFollowing = asyncHandler(async (req, res) => {
 // * Get All Seller
 export const getAllSeller = asyncHandler(async (req, res) => {
 	try {
-		const seller = await prisma.user.findMany({
-			where: { role: "SELLER" },
+		const sellers = await prisma.user.findMany({
+			where: {
+				role: "SELLER",
+				ownedProducts: {
+					some: {
+						productImages: {
+							some: {},
+						},
+					},
+				},
+			},
 			include: {
 				ownedProducts: {
-					select: {
-						id: true,
-						product_image: {
+					include: {
+						productImages: {
 							select: {
+								id: true,
 								url: true,
 							},
 						},
@@ -289,12 +313,138 @@ export const getAllSeller = asyncHandler(async (req, res) => {
 				},
 			},
 		});
-		if (!seller || seller.length === 0) {
+
+		if (!sellers || sellers.length === 0) {
 			return res.status(404).json({ message: "No Seller found" });
 		}
 
-		res.status(200).json(seller);
+		res.status(200).json(sellers);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
 	}
 });
+export const upadateAllUsersRole = asyncHandler(async (req, res) => {
+	const { role } = req.body;
+	role.toUpperCase()
+
+	try {
+		if (!role) {
+			return res.status(400).json({ message: "role is required" });
+		}
+		if (role.toUpperCase() !== "ADMIN" && role.toUpperCase() !== "SELLER") {
+			return res.status(400).json({ message: "Invalid role" });
+		}
+		const updatedUsers = await prisma.user.updateMany({
+			data: { role: Role[role.toUpperCase()] },
+		});
+		res.status(200).json(updatedUsers);	
+	} catch (error) {
+		res.status(400);
+		throw new Error(error.message);
+	}
+});
+
+
+// Follow a user
+export const followUser = asyncHandler(async (req, res) => {
+	const followingId = req.params.id;
+	const { followerId } = req.body;
+
+  
+	if (!followerId || !followingId) {
+	  return res.status(400).json({ message: "Missing followerId or followingId" });
+	}
+	if (followerId === followingId) {
+	  return res.status(400).json({ message: "You cannot follow yourself" });
+	}
+  
+	try {
+	  const followerExists = await prisma.follower.findUnique({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  if (followerExists) {
+		return res.status(400).json({ message: "You are already following this user" });
+	  }
+  
+	  await prisma.follower.create({
+		data: {
+		  followerId,
+		  followeeId: followingId,
+		},
+	  });
+  
+	  res.status(201).json({ message: "User followed successfully" });
+	} catch (error) {
+	  console.error(error);
+	  res.status(500).json({ message: "Error following user" });
+	}
+  });
+  
+  // Unfollow a user
+  export const unfollowUser = asyncHandler(async (req, res) => {
+	const { followerId, followingId } = req.body;
+  
+	if (!followerId || !followingId) {
+	  return res.status(400).json({ message: "Missing followerId or followingId" });
+	}
+	if (followerId === followingId) {
+	  return res.status(400).json({ message: "You cannot unfollow yourself" });
+	}
+  
+	try {
+	  const followerExists = await prisma.follower.findUnique({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  if (!followerExists) {
+		return res.status(400).json({ message: "You are not following this user" });
+	  }
+  
+	  await prisma.follower.delete({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  res.status(200).json({ message: "User unfollowed successfully" });
+	} catch (error) {
+	  console.error(error);
+	  res.status(500).json({ message: "Error unfollowing user" });
+	}
+  });
+
+  export const followStatus = asyncHandler(async (req, res) => {
+	const followingId = req.params.id;
+	const { followerId } = req.body;
+
+	try {
+		const followStatus = await prisma.follower.findFirst({
+		  where: {
+			followerId: followerId,
+			followeeId: followingId,
+		  },
+		});
+	
+		if (followStatus) {
+		  res.json({ isFollowing: true });
+		} else {
+		  res.json({ isFollowing: false });
+		}
+	  } catch (error) {
+		console.error(error);
+		res.status(500).json({ error: 'Internal Server Error' });
+	  }
+	});
+
+	export const getUserId = asyncHandler(async (req, res) => {
+		const { email } = req.body;
+		try {
+			const user = await prisma.user.findUnique({
+				where: { email },
+			});
+			if (!user) return res.status(404).json({ message: "User not found" });
+	
+			res.status(200).json(user.id);
+		} catch (error) {
+			res.status(500).json({ error: error.message });
+		}
+	});
