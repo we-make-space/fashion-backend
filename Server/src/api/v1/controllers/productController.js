@@ -23,7 +23,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 				product_image,
 				product_description,
 				owner: { connect: { email: userEmail } },
-				category: { connect: { id: categoryId } }, // Link the product to the category
+				category: { connect: { id: categoryId } },
 				sizes,
 				colors,
 			},
@@ -40,8 +40,8 @@ export const createProduct = asyncHandler(async (req, res) => {
 
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page) || 1; // Default to page 1 if not provided
-	const limit = parseInt(req.query.limit) || 30; // Default to limit of 10 if not provided
+	const page = parseInt(req.query.page) || 1;
+	const limit = parseInt(req.query.limit) || 30;
 
 	if (page < 1) {
 		return res
@@ -78,7 +78,6 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 					},
 				},
 				reviews: {
-					// this include reviews, which can be empty
 					select: {
 						rating: true,
 						comment: true,
@@ -90,6 +89,12 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 								image: true,
 							},
 						},
+					},
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
 					},
 				},
 				comments: {
@@ -174,7 +179,13 @@ export const getAllProductsTrial = asyncHandler(async (req, res) => {
 							},
 						},
 					},
-				}, // Including orders
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
 				product_image: {
 					select: {
 						url: true,
@@ -240,6 +251,12 @@ export const getProduct = asyncHandler(async (req, res) => {
 						},
 					},
 				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
 				category: {
 					select: {
 						name: true,
@@ -266,9 +283,10 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		price,
 		product_image,
 		product_description,
-		categoryId, 
-		sizes, 
-		colors, 
+		categoryId,
+		sizes,
+		colors,
+		stock, // Added stock to the request body
 	} = req.body;
 
 	try {
@@ -281,8 +299,10 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			categoryId,
 			sizes,
 			colors,
+			stock, // Added stock to the log
 		});
 
+		// Find the existing product
 		const existingProduct = await prisma.product.findUnique({
 			where: { id },
 		});
@@ -293,6 +313,7 @@ export const updateProduct = asyncHandler(async (req, res) => {
 
 		console.log("Existing product:", existingProduct);
 
+		// Update the product details
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
@@ -312,13 +333,38 @@ export const updateProduct = asyncHandler(async (req, res) => {
 				categoryId:
 					categoryId !== undefined
 						? categoryId
-						: existingProduct.categoryId, 
-				sizes: sizes !== undefined ? sizes : existingProduct.sizes, 
-				colors: colors !== undefined ? colors : existingProduct.colors, 
+						: existingProduct.categoryId,
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes,
+				colors: colors !== undefined ? colors : existingProduct.colors,
 			},
 		});
 
 		console.log("Updated product:", updatedProduct);
+
+		//? the stock is provided, update the inventory as well
+		if (stock !== undefined) {
+			const inventoryItem = await prisma.inventory.findUnique({
+				where: { productId: id },
+			});
+
+			if (!inventoryItem) {
+				//? creates the inventory item doesn't exist, create a new inventory record
+				await prisma.inventory.create({
+					data: {
+						productId: id,
+						stock,
+					},
+				});
+			} else {
+				//? Update the stock of the existing inventory item
+				await prisma.inventory.update({
+					where: { productId: id },
+					data: { stock },
+				});
+			}
+
+			console.log("Inventory updated with stock:", stock);
+		}
 
 		res.status(200).json(updatedProduct);
 	} catch (error) {
@@ -376,12 +422,12 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 				createdAt: new Date(),
 				User: {
 					connect: {
-						email: userEmail, 
+						email: userEmail,
 					},
 				},
 				product: {
 					connect: {
-						id: productId, 
+						id: productId,
 					},
 				},
 			},
@@ -459,7 +505,6 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 		});
 	}
 });
-
 
 //* Toggle like on a comment
 export const likeComment = asyncHandler(async (req, res) => {
