@@ -5,7 +5,11 @@ import cookieParser from "cookie-parser";
 import logger from "../../utils/logger.js";
 import { userRoute } from "./routes/userRoute.js";
 import { productRoute } from "./routes/productRoute.js";
-import { followerRoute } from "./routes/followerRoute.js";
+import { categoryRoute } from "./routes/categoryRoute.js";
+import { reviewRoute } from "./routes/reviewRoute.js";
+import { cartRoute } from "./routes/cartRoute.js";
+import { cartItemRoute } from "./routes/cartItemRoute.js";
+import { corsOptions } from "../../middlewares/sitesAuthorization.js";
 import { addressRoute } from "./routes/addressRoute.js";
 import { inventoryRoute } from "./routes/inventoryRoute.js";
 
@@ -32,6 +36,8 @@ app.use("/api/v1/categories", categoryRoute);
 app.use("/api/v1/reviews", reviewRoute);
 app.use("/api/v1/cart", cartRoute);
 app.use("/api/v1/cartItem", cartItemRoute);
+app.use("/api/v1/address", addressRoute);
+app.use("/api/v1/inventory", inventoryRoute);
 
 //~ Error handling middleware
 app.use((err, req, res, next) => {
