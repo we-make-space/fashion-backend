@@ -1,53 +1,47 @@
 import express from "express";
-
 import {
+	checkUserExists,
 	CreateUser,
 	DeleteUser,
+	followStatus,
+	followUser,
+	getAllSeller,
 	GetAllUsers,
+	GetUser,
+	getUserFollowers,
+	getUserFollowing,
+	getUserId,
 	GetUserProducts,
+	unfollowUser,
+	upadateAllUsersRole,
 	UpdateUser,
 } from "../controllers/userController.js";
-import logger from "../../../utils/logger.js";
+import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+import { authMiddleware, handleAuthErrors } from "../../../middlewares/auth.js";
+import { authMiddlewarez } from "../../../middlewares/authz.js";
 
 const router = express.Router();
+// router.use(authMiddleware);
+//? Creating a user
+router.post("/", logAction("Creating a new user"), CreateUser);
 
-// Creating a user
-router.post("/", (req, res, next) => {
-	logger.info("Creating a new user");
-	CreateUser(req, res).catch((error) => {
-		logger.error(`Error creating user: ${error.message}`);
-		next(error);
-	});
-});
+//? Checking if a user exists
+router.get(
+	"/user/checkUserExists",
+	logAction("Checking if current user exists"),
+	checkUserExists
+);
 
-// Get all users
-router.get("/all", (req, res, next) => {
-	logger.info("Fetching all users");
-	GetAllUsers(req, res).catch((error) => {
-		logger.error(`Error fetching all users: ${error.message}`);
-		next(error);
-	});
-});
+router.get('/:id', logAction("Fetching a user"), GetUser);
 
-// Update a user by ID
-router.patch("/:id", (req, res, next) => {
-	const { id } = req.params;
-	logger.info(`Updating user with ID: ${id}`);
-	UpdateUser(req, res).catch((error) => {
-		logger.error(`Error updating user with ID ${id}: ${error.message}`);
-		next(error);
-	});
-});
+//? Get all users
+router.get("/all", logAction("Fetching all users"), GetAllUsers);
 
-// Delete a user by ID
-router.delete("/:id", (req, res, next) => {
-	const { id } = req.params;
-	logger.info(`Deleting user with ID: ${id}`);
-	DeleteUser(req, res).catch((error) => {
-		logger.error(`Error deleting user with ID ${id}: ${error.message}`);
-		next(error);
-	});
-});
+//? Update a user by ID
+router.patch("/:id", logAction("Updating a user by ID"), UpdateUser);
+
+//? Delete a user by ID
+router.delete("/:id", logAction("Deleting a user by ID"), DeleteUser);
 
 // Get products for a specific user by user ID
 router.get("/:id", (req, res, next) => {
@@ -60,5 +54,25 @@ router.get("/:id", (req, res, next) => {
 		next(error);
 	});
 });
+
+router.get("/sellers/all", logAction("Fetching all sellers"), getAllSeller);
+
+router.put("/updateRole", logAction("Updating roles"), upadateAllUsersRole)
+
+router.post(
+    "/:id/follow",
+    logAction("Creating a new follower"),
+    followUser,
+    logError
+);
+router.delete(
+    "/:id/unfollow",
+    logAction("Deleting a follower"),
+    unfollowUser,
+    logError
+);
+router.get('/:id/followStatus', logAction("Checking follow status"), followStatus);
+
+router.get("/me/user",logAction("Fetching current user"), getUserId);
 
 export { router as userRoute };

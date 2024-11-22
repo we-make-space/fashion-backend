@@ -9,6 +9,9 @@ export const createProduct = asyncHandler(async (req, res) => {
 		product_image,
 		product_description,
 		userEmail,
+		categoryId,
+		sizes,
+		colors,
 	} = req.body.data;
 
 	console.log(req.body.data);
@@ -20,6 +23,9 @@ export const createProduct = asyncHandler(async (req, res) => {
 				product_image,
 				product_description,
 				owner: { connect: { email: userEmail } },
+				category: { connect: { id: categoryId } },
+				sizes,
+				colors,
 			},
 		});
 
@@ -34,15 +40,15 @@ export const createProduct = asyncHandler(async (req, res) => {
 
 //& function to get all the documents/products
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page);
-	const limit = parseInt(req.query.limit);
+	const page = parseInt(req.query.page) || 1;
+	const limit = parseInt(req.query.limit) || 30;
 
-	if (isNaN(page) || page < 1) {
+	if (page < 1) {
 		return res
 			.status(400)
 			.json({ error: "Page must be a positive integer." });
 	}
-	if (isNaN(limit) || limit < 1) {
+	if (limit < 1) {
 		return res
 			.status(400)
 			.json({ error: "Limit must be a positive integer." });
@@ -63,6 +69,64 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 						firstName: true,
 						lastName: true,
 						image: true,
+					},
+				},
+				category: {
+					select: {
+						id: true,
+						name: true,
+					},
+				},
+				reviews: {
+					select: {
+						rating: true,
+						comment: true,
+						userEmail: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
+				comments: {
+					select: {
+						content: true,
+						createdAt: true,
+						userEmail: true,
+						User: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				likes: {
+					select: {
+						id: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				_count: {
+					select: {
+						comments: true,
+						likes: true,
 					},
 				},
 			},
@@ -86,16 +150,125 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 	}
 });
 
+//& function to get all products (Emma)
+export const getAllProductsTrial = asyncHandler(async (req, res) => {
+	try {
+		const products = await prisma.product.findMany({
+			orderBy: {
+				createdAt: "desc",
+			},
+			include: {
+				createdAt: false,
+				updatedAt: false,
+				owner: {
+					select: {
+						firstName: true,
+						lastName: true,
+						image: true,
+					},
+				},
+				orderItems: {
+					select: {
+						quantity: true,
+						order: {
+							select: {
+								id: true,
+								status: true,
+								total: true,
+								userId: true,
+							},
+						},
+					},
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
+				product_image: {
+					select: {
+						url: true,
+						id: true,
+					},
+				},
+			},
+		});
+
+		res.status(200).json(products);
+	} catch (error) {
+		console.error("Error fetching products:", error);
+		res.status(500).json({
+			error: "An error occurred while fetching products",
+		});
+	}
+});
+
 //& function to get a single product
 export const getProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
 	try {
 		const product = await prisma.product.findUnique({
 			where: { id },
+			include: {
+				likes: {
+					include: {
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				owner: {
+					select: {
+						firstName: true,
+						lastName: true,
+						image: true,
+					},
+				},
+				comments: {
+					include: {
+						User: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				reviews: {
+					include: {
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+					},
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
+				category: {
+					select: {
+						name: true,
+					},
+				},
+			},
 		});
+
 		if (!product) {
 			return res.status(404).json({ error: "Product not found" });
 		}
+
 		res.status(200).json(product);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
@@ -105,20 +278,31 @@ export const getProduct = asyncHandler(async (req, res) => {
 //& Update an existing product
 export const updateProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { product_name, price, product_image, product_description } =
-		req.body;
+	const {
+		product_name,
+		price,
+		product_image,
+		product_description,
+		categoryId,
+		sizes,
+		colors,
+		stock, // Added stock to the request body
+	} = req.body;
 
 	try {
-		// Log request details for debugging
 		console.log("Update request:", {
 			id,
 			product_name,
 			price,
 			product_image,
 			product_description,
+			categoryId,
+			sizes,
+			colors,
+			stock, // Added stock to the log
 		});
 
-		// Check if the product exists before attempting to update
+		// Find the existing product
 		const existingProduct = await prisma.product.findUnique({
 			where: { id },
 		});
@@ -127,28 +311,67 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			return res.status(404).json({ error: "Product not found" });
 		}
 
-		// Log existing product for debugging
 		console.log("Existing product:", existingProduct);
 
-		// Update the product if it exists
+		// Update the product details
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
-				product_name: product_name || existingProduct.product_name,
+				product_name:
+					product_name !== undefined
+						? product_name
+						: existingProduct.product_name,
 				price: price !== undefined ? price : existingProduct.price,
-				product_image: product_image || existingProduct.product_image,
+				product_image:
+					product_image !== undefined
+						? product_image
+						: existingProduct.product_image,
 				product_description:
-					product_description || existingProduct.product_description,
+					product_description !== undefined
+						? product_description
+						: existingProduct.product_description,
+				categoryId:
+					categoryId !== undefined
+						? categoryId
+						: existingProduct.categoryId,
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes,
+				colors: colors !== undefined ? colors : existingProduct.colors,
 			},
 		});
 
-		// Log the updated product for debugging
 		console.log("Updated product:", updatedProduct);
+
+		//? the stock is provided, update the inventory as well
+		if (stock !== undefined) {
+			const inventoryItem = await prisma.inventory.findUnique({
+				where: { productId: id },
+			});
+
+			if (!inventoryItem) {
+				//? creates the inventory item doesn't exist, create a new inventory record
+				await prisma.inventory.create({
+					data: {
+						productId: id,
+						stock,
+					},
+				});
+			} else {
+				//? Update the stock of the existing inventory item
+				await prisma.inventory.update({
+					where: { productId: id },
+					data: { stock },
+				});
+			}
+
+			console.log("Inventory updated with stock:", stock);
+		}
 
 		res.status(200).json(updatedProduct);
 	} catch (error) {
 		console.error("Error updating product:", error);
-		res.status(500).json({ error: error.message });
+		res.status(500).json({
+			error: "An error occurred while updating the product.",
+		});
 	}
 });
 
@@ -181,45 +404,44 @@ export const deleteProduct = asyncHandler(async (req, res) => {
 
 //* Controller to add a comment to a product
 export const addCommentToProduct = asyncHandler(async (req, res) => {
+	const { content, userEmail } = req.body;
+	const { productId } = req.params;
+
 	try {
-		const { productId } = req.params;
-		const { content, userEmail } = req.body;
-
-		// Checking if the product exists
-		const product = await prisma.product.findUnique({
-			where: { id: productId },
-		});
-
-		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
-		}
-
-		// Checking if the user exists
 		const user = await prisma.user.findUnique({
 			where: { email: userEmail },
 		});
 
 		if (!user) {
-			return res.status(404).json({ message: "User not found" });
+			return res.status(400).json({ message: "User not found" });
 		}
 
-		const newComment = await prisma.comment.create({
+		const comment = await prisma.comment.create({
 			data: {
 				content,
-				userEmail: user.email,
-				productId: product.id,
 				createdAt: new Date(),
+				User: {
+					connect: {
+						email: userEmail,
+					},
+				},
+				product: {
+					connect: {
+						id: productId,
+					},
+				},
 			},
 		});
 
-		res.status(201).json({
+		return res.status(201).json({
 			message: "Comment added successfully",
-			data: newComment,
+			data: comment,
 		});
 	} catch (error) {
 		console.error("Error adding comment:", error);
-		res.status(500).json({
+		return res.status(500).json({
 			message: "An error occurred while adding the comment",
+			error: error.message,
 		});
 	}
 });
@@ -284,44 +506,237 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 	}
 });
 
-//! Controller to like a comment
-
+//* Toggle like on a comment
 export const likeComment = asyncHandler(async (req, res) => {
-	const { commentId } = req.params;
-	const { userEmail } = req.body;
+	console.log("Received request to toggle comment like");
+	console.log("Request body:", req.body);
 
-	if (!userEmail) {
-		return res.status(400).json({
-			message: "User email is required to like a comment.",
-		});
+	let { userId, commentId } = req.body;
+
+	if (!userId && req.params.userId) {
+		userId = req.params.userId;
+	}
+	if (!commentId && req.params.commentId) {
+		commentId = req.params.commentId;
 	}
 
-	// Check if the user has already liked the comment
-	const existingLike = await prisma.like.findUnique({
-		where: {
-			userEmail_commentId: {
-				userEmail,
-				commentId,
+	if (!userId || !commentId) {
+		console.log("Missing required fields:", { userId, commentId });
+		res.status(400);
+		throw new Error(
+			`User ID and Comment ID are required. Received: userId=${userId}, commentId=${commentId}`
+		);
+	}
+
+	try {
+		console.log("Looking up comment:", commentId);
+		const comment = await prisma.comment.findUnique({
+			where: {
+				id: commentId,
 			},
-		},
-	});
+			select: {
+				id: true,
+				productId: true,
+				content: true,
+			},
+		});
 
-	if (existingLike) {
-		return res.status(400).json({
-			message: "You have already liked this comment.",
+		console.log("Found comment:", comment);
+
+		if (!comment) {
+			console.log("Comment not found:", commentId);
+			res.status(404);
+			throw new Error("Comment not found");
+		}
+
+		console.log("Checking for existing like");
+		const existingLike = await prisma.like.findFirst({
+			where: {
+				userId: userId,
+				commentId: commentId,
+			},
+		});
+
+		console.log("Existing like:", existingLike);
+
+		if (existingLike) {
+			console.log("Deleting existing like");
+			await prisma.like.delete({
+				where: {
+					id: existingLike.id,
+				},
+			});
+
+			console.log("Like deleted successfully");
+			res.status(200).json({
+				message: "Comment unliked successfully",
+				liked: false,
+			});
+		} else {
+			console.log("Creating new like");
+			const newLike = await prisma.like.create({
+				data: {
+					userId: userId,
+					productId: comment.productId,
+					commentId: commentId,
+				},
+			});
+
+			console.log("New like created:", newLike);
+			res.status(201).json({
+				message: "Comment liked successfully",
+				liked: true,
+				like: newLike,
+			});
+		}
+	} catch (error) {
+		console.error("Error in toggleCommentLike:", error);
+		res.status(error.status || 400);
+		throw error;
+	}
+});
+
+export const likeProduct = asyncHandler(async (req, res) => {
+	try {
+		const { userId, productId, commentId } = req.body.data;
+
+		console.log("Received userId:", userId);
+		console.log("Received productId:", productId);
+		console.log("Received commentId:", commentId);
+
+		if (!userId || !productId) {
+			return res
+				.status(400)
+				.json({ message: "userId and productId are required" });
+		}
+
+		// Check if the like already exists
+		const existingLike = await prisma.like.findFirst({
+			where: {
+				userId,
+				productId,
+				...(commentId ? { commentId } : {}),
+			},
+		});
+
+		if (existingLike) {
+			// If it exists, delete it (unlike)
+			await prisma.like.delete({
+				where: {
+					id: existingLike.id,
+				},
+			});
+			return res.status(200).json({ message: "Product unliked" });
+		} else {
+			// If it does not exist, create it (like)
+			await prisma.like.create({
+				data: {
+					user: {
+						connect: { id: userId },
+					},
+					product: {
+						connect: { id: productId },
+					},
+					...(commentId && {
+						comment: {
+							connect: { id: commentId },
+						},
+					}),
+				},
+			});
+
+			console.log(
+				`Like created for productId: ${productId}, userId: ${userId}`
+			);
+
+			return res.status(201).json({ message: "Product liked" });
+		}
+	} catch (error) {
+		console.error("Error toggling like for product:", error);
+		return res
+			.status(500)
+			.json({ message: "An error occurred while toggling like", error });
+	}
+});
+
+//? Get likes count for a product
+export const getProductLikes = asyncHandler(async (req, res) => {
+	const { productId } = req.params;
+
+	try {
+		// Check the likes for the product where commentId is null
+		const likesCount = await prisma.like.count({
+			where: {
+				productId: productId,
+				commentId: null, // Only count likes for the product, not comments
+			},
+		});
+
+		console.log("Likes count:", likesCount); // Add this to log the count
+
+		res.status(200).json({
+			productId: productId,
+			likesCount: likesCount,
+		});
+	} catch (error) {
+		res.status(400);
+		throw new Error(error.message);
+	}
+});
+
+//? Get likes count for a comment
+export const getCommentLikes = asyncHandler(async (req, res) => {
+	const { commentId } = req.params;
+
+	try {
+		const likesCount = await prisma.like.count({
+			where: {
+				commentId: commentId,
+			},
+		});
+
+		res.status(200).json({
+			commentId: commentId,
+			likesCount: likesCount,
+		});
+	} catch (error) {
+		res.status(400);
+		throw new Error(error.message);
+	}
+});
+
+//? Get all product likes
+export const getAllProductLikes = asyncHandler(async (req, res) => {
+	try {
+		const productsWithLikes = await prisma.product.findMany({
+			include: {
+				likes: true,
+				owner: {
+					select: {
+						id: true,
+						firstName: true,
+						image: true,
+					},
+				},
+			},
+		});
+
+		const response = productsWithLikes
+			.map((product) => ({
+				id: product.id,
+				product_name: product.product_name,
+				likesCount: product.likes.length,
+				likes: product.likes,
+				owner: product.owner,
+			}))
+			.sort((a, b) => b.likesCount - a.likesCount);
+
+		res.status(200).json({ success: true, data: response });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({
+			success: false,
+			message: "Error retrieving product likes",
 		});
 	}
-
-	const newLike = await prisma.like.create({
-		data: {
-			userEmail,
-			commentId,
-			productId: req.body.productId,
-		},
-	});
-
-	res.status(201).json({
-		message: "Comment liked successfully",
-		like: newLike,
-	});
 });
