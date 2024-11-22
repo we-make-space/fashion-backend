@@ -12,7 +12,6 @@ export const createProduct = asyncHandler(async (req, res) => {
 		categoryId,
 		sizes,
 		colors,
-		product_image
 	} = req.body.data;
 
 	console.log(req.body.data);

@@ -319,6 +319,7 @@ export const upadateAllUsersRole = asyncHandler(async (req, res) => {
 	}
 });
 
+
 export const toggleFollowUser = asyncHandler(async (req, res) => {
 	const followingId = req.params.id;
 	const { followerId } = req.body;
@@ -331,59 +332,39 @@ export const toggleFollowUser = asyncHandler(async (req, res) => {
 	if (followerId === followingId) {
 		return res.status(400).json({ message: "You cannot follow yourself" });
 	}
-
-	try {
-	  const followerExists = await prisma.follower.findUnique({
-		where: { followerId_followeeId: { followerId, followeeId: followingId } },
-	  });
-  
-	  if (followerExists) {
-		return res.status(400).json({ message: "You are already following this user" });
-	  }
-  
-	  await prisma.follower.create({
-		data: {
-		  followerId,
-		  followeeId: followingId,
-		},
-	  });
-  
-	  res.status(201).json({ message: "User followed successfully" });
-	} catch (error) {
-	  console.error(error);
-	  res.status(500).json({ message: "Error following user" });
-	}
-  });
-  
-  // Unfollow a user
-  export const unfollowUser = asyncHandler(async (req, res) => {
-	const { followerId, followingId } = req.body;
-  
-	if (!followerId || !followingId) {
-	  return res.status(400).json({ message: "Missing followerId or followingId" });
-	}
-	if (followerId === followingId) {
-	  return res.status(400).json({ message: "You cannot unfollow yourself" });
-	}
   
 	try {
-	  const followerExists = await prisma.follower.findUnique({
-		where: { followerId_followeeId: { followerId, followeeId: followingId } },
-	  });
-  
-	  if (!followerExists) {
-		return res.status(400).json({ message: "You are not following this user" });
+		const followerExists = await prisma.follower.findUnique({
+		  where: { followerId_followeeId: { followerId, followeeId: followingId } },
+		});
+	  
+		if (followerExists) {
+		  await prisma.follower.delete({
+			where: { followerId_followeeId: { followerId, followeeId: followingId } },
+		  });
+		  console.log("User unfollowed successfully");
+		  return res.status(200).json({ message: "User unfollowed successfully" });
+		} else {
+		  const followerUser = await prisma.user.findUnique({ where: { id: followerId } });
+		  const followeeUser = await prisma.user.findUnique({ where: { id: followingId } });
+	  
+		  if (!followerUser || !followeeUser) {
+			return res.status(400).json({ message: "Invalid follower or followee ID" });
+		  }
+	  
+		  await prisma.follower.create({
+			data: {
+			  followerId,
+			  followeeId: followingId,
+			},
+		  });
+		  console.log("User followed successfully");
+		  return res.status(201).json({ message: "User followed successfully" });
+		}
+	  } catch (error) {
+		console.error(error);
+		res.status(500).json({ message: "Error following or unfollowing user" });
 	  }
-  
-	  await prisma.follower.delete({
-		where: { followerId_followeeId: { followerId, followeeId: followingId } },
-	  });
-  
-	  res.status(200).json({ message: "User unfollowed successfully" });
-	} catch (error) {
-	  console.error(error);
-	  res.status(500).json({ message: "Error unfollowing user" });
-	}
   });
 
 export const followStatus = asyncHandler(async (req, res) => {

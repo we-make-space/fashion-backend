@@ -2614,3 +2614,2504 @@ An operation failed because it depends on one or more records that were required
 2024-11-22 00:06:31 [INFO]: Fetching all products with pagination
 2024-11-22 00:06:35 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
 2024-11-22 00:06:35 [INFO]: Fetching all products with pagination
+2024-11-22 02:44:55 [INFO]: Server is running successfully on PORT 8080
+2024-11-22 02:55:16 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:55:16 [INFO]: Fetching all products with pagination
+2024-11-22 02:55:17 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:55:17 [INFO]: Creating a new user
+2024-11-22 02:55:19 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:55:19 [INFO]: Fetching all products with pagination
+2024-11-22 02:56:13 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:56:13 [INFO]: Fetching all products with pagination
+2024-11-22 02:56:13 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:56:13 [INFO]: Creating a new user
+2024-11-22 02:56:15 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:56:15 [INFO]: Fetching all products with pagination
+2024-11-22 02:57:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:57:40 [INFO]: Fetching all products with pagination
+2024-11-22 02:57:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:57:40 [INFO]: Creating a new user
+2024-11-22 02:57:42 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:57:42 [INFO]: Fetching all products with pagination
+2024-11-22 02:58:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:58:08 [INFO]: Fetching all products with pagination
+2024-11-22 02:58:14 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 02:58:14 [INFO]: Fetching all categories
+2024-11-22 02:58:26 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 02:58:26 [INFO]: Fetching all categories
+2024-11-22 02:58:28 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 02:58:28 [INFO]: Fetching all categories
+2024-11-22 02:58:29 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 02:58:29 [INFO]: Fetching all categories
+2024-11-22 02:58:30 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:58:30 [INFO]: Fetching all products with pagination
+2024-11-22 02:58:31 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 02:58:31 [INFO]: Fetching a product by ID
+2024-11-22 02:58:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 02:58:31 [INFO]: Fetching all products with pagination
+2024-11-22 02:58:57 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 02:58:57 [INFO]: Fetching a product by ID
+2024-11-22 02:58:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:58:57 [INFO]: Creating a new user
+2024-11-22 02:59:56 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 02:59:56 [INFO]: Fetching a product by ID
+2024-11-22 02:59:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:59:56 [INFO]: Creating a new user
+2024-11-22 02:59:58 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 02:59:58 [INFO]: Fetching a product by ID
+2024-11-22 02:59:58 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:59:58 [INFO]: Creating a new user
+2024-11-22 02:59:58 [INFO]: Received POST request for /api/v1/users
+2024-11-22 02:59:58 [INFO]: Creating a new user
+2024-11-22 03:04:52 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:04:52 [INFO]: Fetching a product by ID
+2024-11-22 03:04:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:04:53 [INFO]: Creating a new user
+2024-11-22 03:05:12 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:05:12 [INFO]: Fetching a product by ID
+2024-11-22 03:05:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:05:12 [INFO]: Creating a new user
+2024-11-22 03:05:14 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:05:14 [INFO]: Fetching a product by ID
+2024-11-22 03:05:14 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:05:14 [INFO]: Creating a new user
+2024-11-22 03:05:14 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:05:14 [INFO]: Creating a new user
+2024-11-22 03:05:24 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:05:24 [INFO]: Fetching a product by ID
+2024-11-22 03:06:51 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:06:51 [INFO]: Fetching a product by ID
+2024-11-22 03:07:45 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:07:45 [INFO]: Fetching a product by ID
+2024-11-22 03:07:49 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:07:49 [INFO]: Fetching a product by ID
+2024-11-22 03:11:01 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:11:01 [INFO]: Fetching a product by ID
+2024-11-22 03:11:01 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:11:01 [INFO]: Creating a new user
+2024-11-22 03:11:28 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:11:28 [INFO]: Fetching a product by ID
+2024-11-22 03:11:29 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:11:29 [INFO]: Creating a new user
+2024-11-22 03:11:29 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:11:29 [INFO]: Creating a new user
+2024-11-22 03:11:42 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:11:42 [INFO]: Fetching a product by ID
+2024-11-22 03:11:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:11:42 [INFO]: Creating a new user
+2024-11-22 03:11:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:11:42 [INFO]: Creating a new user
+2024-11-22 03:11:49 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:11:49 [INFO]: Fetching a product by ID
+2024-11-22 03:14:21 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:14:21 [INFO]: Fetching a product by ID
+2024-11-22 03:14:23 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:14:23 [INFO]: Creating a new user
+2024-11-22 03:14:40 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:14:40 [INFO]: Fetching a product by ID
+2024-11-22 03:14:50 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:14:50 [INFO]: Fetching a product by ID
+2024-11-22 03:14:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:14:52 [INFO]: Creating a new user
+2024-11-22 03:16:28 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:16:28 [INFO]: Fetching a product by ID
+2024-11-22 03:16:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:16:28 [INFO]: Creating a new user
+2024-11-22 03:16:59 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:16:59 [INFO]: Fetching a product by ID
+2024-11-22 03:17:02 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:17:02 [INFO]: Fetching a product by ID
+2024-11-22 03:17:07 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:17:07 [INFO]: Fetching a product by ID
+2024-11-22 03:17:09 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:17:09 [INFO]: Fetching a product by ID
+2024-11-22 03:17:11 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:17:11 [INFO]: Fetching a product by ID
+2024-11-22 03:18:09 [INFO]: Received GET request for /api/v1/products/6715d11b0443e9f82b4eea6a
+2024-11-22 03:18:09 [INFO]: Fetching a product by ID
+2024-11-22 03:18:11 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:18:11 [INFO]: Fetching all products with pagination
+2024-11-22 03:18:13 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:18:13 [INFO]: Fetching all products with pagination
+2024-11-22 03:18:16 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:18:16 [INFO]: Fetching a product by ID
+2024-11-22 03:19:09 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:19:09 [INFO]: Fetching a product by ID
+2024-11-22 03:19:39 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:19:39 [INFO]: Fetching a product by ID
+2024-11-22 03:19:59 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:19:59 [INFO]: Fetching a product by ID
+2024-11-22 03:20:09 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:09 [INFO]: Fetching a product by ID
+2024-11-22 03:20:20 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:20 [INFO]: Fetching a product by ID
+2024-11-22 03:20:28 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:28 [INFO]: Fetching a product by ID
+2024-11-22 03:20:47 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:47 [INFO]: Fetching a product by ID
+2024-11-22 03:20:51 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:51 [INFO]: Fetching a product by ID
+2024-11-22 03:20:54 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:20:54 [INFO]: Fetching a product by ID
+2024-11-22 03:21:15 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:21:15 [INFO]: Fetching a product by ID
+2024-11-22 03:21:22 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:21:22 [INFO]: Fetching a product by ID
+2024-11-22 03:21:40 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:21:40 [INFO]: Fetching a product by ID
+2024-11-22 03:22:08 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:22:08 [INFO]: Fetching a product by ID
+2024-11-22 03:22:13 [INFO]: Received GET request for /api/v1/products/673b5857a268ec0ca347fbb6
+2024-11-22 03:22:13 [INFO]: Fetching a product by ID
+2024-11-22 03:22:16 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-22 03:22:16 [INFO]: Liking a product
+2024-11-22 03:22:24 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:22:24 [INFO]: Fetching all products with pagination
+2024-11-22 03:22:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:22:26 [INFO]: Fetching all products with pagination
+2024-11-22 03:22:28 [INFO]: Received GET request for /api/v1/products/673b4dfc0751427b2406bb63
+2024-11-22 03:22:28 [INFO]: Fetching a product by ID
+2024-11-22 03:22:35 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-22 03:22:35 [INFO]: Liking a product
+2024-11-22 03:22:48 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:22:48 [INFO]: Fetching all products with pagination
+2024-11-22 03:22:49 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:22:49 [INFO]: Fetching all products with pagination
+2024-11-22 03:22:55 [INFO]: Received GET request for /api/v1/products/673b5820a268ec0ca347fbb4
+2024-11-22 03:22:55 [INFO]: Fetching a product by ID
+2024-11-22 03:22:59 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:22:59 [INFO]: Fetching all products with pagination
+2024-11-22 03:23:01 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:23:01 [INFO]: Fetching all products with pagination
+2024-11-22 03:23:01 [INFO]: Received GET request for /api/v1/products/673b4dfc0751427b2406bb63
+2024-11-22 03:23:01 [INFO]: Fetching a product by ID
+2024-11-22 03:23:16 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-22 03:23:16 [INFO]: Fetching all sellers
+2024-11-22 03:23:16 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:16 [INFO]: Fetching followings
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:17 [INFO]: Fetching a user
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:17 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:23:17 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:18 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:23:18 [INFO]: Checking follow status
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:19 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:20 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:21 [INFO]: Checking follow status
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:21 [INFO]: Fetching a user
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:23:21 [INFO]: Checking follow status
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:23:21 [INFO]: Checking follow status
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:23:21 [INFO]: Checking follow status
+2024-11-22 03:23:21 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:23:21 [INFO]: Checking follow status
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:21 [INFO]: Creating a new user
+2024-11-22 03:23:24 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:24 [INFO]: Fetching followings
+2024-11-22 03:23:24 [INFO]: Received POST request for /api/v1/users/6715d0c30443e9f82b4eea69/follow
+2024-11-22 03:23:24 [INFO]: Creating a new follower
+2024-11-22 03:23:29 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:29 [INFO]: Fetching followings
+2024-11-22 03:23:29 [INFO]: Received POST request for /api/v1/users/67159ff60443e9f82b4eea2a/follow
+2024-11-22 03:23:29 [INFO]: Creating a new follower
+2024-11-22 03:23:31 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:31 [INFO]: Fetching followings
+2024-11-22 03:23:31 [INFO]: Received POST request for /api/v1/users/67159ebe0443e9f82b4eea28/follow
+2024-11-22 03:23:31 [INFO]: Creating a new follower
+2024-11-22 03:23:34 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:34 [INFO]: Fetching followings
+2024-11-22 03:23:34 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:23:34 [INFO]: Creating a new follower
+2024-11-22 03:23:36 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:36 [INFO]: Fetching followings
+2024-11-22 03:23:36 [INFO]: Received POST request for /api/v1/users/671592b40443e9f82b4eea1e/follow
+2024-11-22 03:23:36 [INFO]: Creating a new follower
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:38 [INFO]: Fetching a user
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:38 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:23:38 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:23:39 [INFO]: Checking follow status
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:39 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:39 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:40 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:41 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:42 [INFO]: Checking follow status
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:42 [INFO]: Fetching a user
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:23:42 [INFO]: Checking follow status
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:23:42 [INFO]: Checking follow status
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:23:42 [INFO]: Checking follow status
+2024-11-22 03:23:42 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:23:42 [INFO]: Checking follow status
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:42 [INFO]: Creating a new user
+2024-11-22 03:23:46 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:46 [INFO]: Fetching followings
+2024-11-22 03:23:47 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:23:47 [INFO]: Fetching followings
+2024-11-22 03:23:47 [INFO]: Received POST request for /api/v1/users/67159ebe0443e9f82b4eea28/follow
+2024-11-22 03:23:47 [INFO]: Creating a new follower
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:53 [INFO]: Checking follow status
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:53 [INFO]: Fetching a user
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:23:53 [INFO]: Checking follow status
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:23:53 [INFO]: Checking follow status
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:23:53 [INFO]: Checking follow status
+2024-11-22 03:23:53 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:23:53 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:54 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:23:54 [INFO]: Checking follow status
+2024-11-22 03:23:55 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:23:55 [INFO]: Checking follow status
+2024-11-22 03:23:55 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:23:55 [INFO]: Checking follow status
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:23:55 [INFO]: Checking follow status
+2024-11-22 03:23:55 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:23:55 [INFO]: Fetching a user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:55 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:56 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:56 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:23:57 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:23:57 [INFO]: Creating a new user
+2024-11-22 03:24:01 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:24:01 [INFO]: Checking follow status
+2024-11-22 03:24:01 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:24:01 [INFO]: Fetching a user
+2024-11-22 03:24:01 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:24:01 [INFO]: Creating a new follower
+2024-11-22 03:24:09 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:24:09 [INFO]: Creating a new follower
+2024-11-22 03:24:13 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:24:13 [INFO]: Creating a new follower
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:24:17 [INFO]: Fetching a user
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:17 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:24:17 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:24:18 [INFO]: Checking follow status
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-22 03:24:18 [INFO]: Fetching all sellers
+2024-11-22 03:24:18 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:24:18 [INFO]: Fetching followings
+2024-11-22 03:24:18 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:18 [INFO]: Creating a new user
+2024-11-22 03:24:18 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:18 [INFO]: Creating a new user
+2024-11-22 03:24:18 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:18 [INFO]: Creating a new user
+2024-11-22 03:24:18 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:18 [INFO]: Creating a new user
+2024-11-22 03:24:18 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:18 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:19 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:19 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:20 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:20 [INFO]: Creating a new user
+2024-11-22 03:24:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:21 [INFO]: Creating a new user
+2024-11-22 03:24:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:21 [INFO]: Creating a new user
+2024-11-22 03:24:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:21 [INFO]: Creating a new user
+2024-11-22 03:24:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:21 [INFO]: Creating a new user
+2024-11-22 03:24:21 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:21 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:24:26 [INFO]: Checking follow status
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:24:26 [INFO]: Fetching a user
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:24:26 [INFO]: Checking follow status
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:24:26 [INFO]: Checking follow status
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:24:26 [INFO]: Checking follow status
+2024-11-22 03:24:26 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:24:26 [INFO]: Checking follow status
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:26 [INFO]: Creating a new user
+2024-11-22 03:24:29 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:24:29 [INFO]: Fetching followings
+2024-11-22 03:24:34 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:24:34 [INFO]: Checking follow status
+2024-11-22 03:24:34 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69
+2024-11-22 03:24:34 [INFO]: Fetching a user
+2024-11-22 03:24:34 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:34 [INFO]: Creating a new user
+2024-11-22 03:24:34 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:24:34 [INFO]: Creating a new user
+2024-11-22 03:24:35 [INFO]: Received POST request for /api/v1/users/6715d0c30443e9f82b4eea69/follow
+2024-11-22 03:24:35 [INFO]: Creating a new follower
+2024-11-22 03:27:18 [INFO]: Server is running successfully on PORT 8080
+2024-11-22 03:27:36 [INFO]: Server is running successfully on PORT 8080
+2024-11-22 03:27:43 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69
+2024-11-22 03:27:43 [INFO]: Fetching a user
+2024-11-22 03:27:43 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:27:43 [INFO]: Checking follow status
+2024-11-22 03:27:43 [INFO]: Received POST request for /api/v1/users/6715d0c30443e9f82b4eea69/follow
+2024-11-22 03:27:43 [INFO]: Creating a new follower
+2024-11-22 03:27:47 [INFO]: Received POST request for /api/v1/users/6715d0c30443e9f82b4eea69/follow
+2024-11-22 03:27:47 [INFO]: Creating a new follower
+2024-11-22 03:27:48 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:27:48 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:04 [INFO]: Fetching a user
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:04 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:28:04 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:28:05 [INFO]: Checking follow status
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-22 03:28:05 [INFO]: Fetching all sellers
+2024-11-22 03:28:05 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:05 [INFO]: Fetching followings
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:06 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:06 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:07 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:07 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:08 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:08 [INFO]: Creating a new user
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:11 [INFO]: Checking follow status
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:11 [INFO]: Fetching a user
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:11 [INFO]: Checking follow status
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:11 [INFO]: Checking follow status
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:11 [INFO]: Checking follow status
+2024-11-22 03:28:11 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:11 [INFO]: Checking follow status
+2024-11-22 03:28:11 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:11 [INFO]: Creating a new user
+2024-11-22 03:28:11 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:11 [INFO]: Creating a new user
+2024-11-22 03:28:11 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:11 [INFO]: Creating a new user
+2024-11-22 03:28:11 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:11 [INFO]: Creating a new user
+2024-11-22 03:28:11 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:11 [INFO]: Creating a new user
+2024-11-22 03:28:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:12 [INFO]: Creating a new user
+2024-11-22 03:28:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:12 [INFO]: Creating a new user
+2024-11-22 03:28:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:12 [INFO]: Creating a new user
+2024-11-22 03:28:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:12 [INFO]: Creating a new user
+2024-11-22 03:28:12 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:12 [INFO]: Creating a new user
+2024-11-22 03:28:14 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:14 [INFO]: Fetching followings
+2024-11-22 03:28:14 [INFO]: Received POST request for /api/v1/users/6715d0c30443e9f82b4eea69/follow
+2024-11-22 03:28:14 [INFO]: Creating a new follower
+2024-11-22 03:28:14 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:14 [INFO]: Checking follow status
+2024-11-22 03:28:16 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:16 [INFO]: Fetching followings
+2024-11-22 03:28:16 [INFO]: Received POST request for /api/v1/users/67159ff60443e9f82b4eea2a/follow
+2024-11-22 03:28:16 [INFO]: Creating a new follower
+2024-11-22 03:28:17 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:17 [INFO]: Checking follow status
+2024-11-22 03:28:18 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:18 [INFO]: Fetching followings
+2024-11-22 03:28:18 [INFO]: Received POST request for /api/v1/users/67159ebe0443e9f82b4eea28/follow
+2024-11-22 03:28:18 [INFO]: Creating a new follower
+2024-11-22 03:28:18 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:18 [INFO]: Checking follow status
+2024-11-22 03:28:19 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:19 [INFO]: Fetching followings
+2024-11-22 03:28:19 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:28:19 [INFO]: Creating a new follower
+2024-11-22 03:28:19 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:19 [INFO]: Checking follow status
+2024-11-22 03:28:20 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:20 [INFO]: Checking follow status
+2024-11-22 03:28:21 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:21 [INFO]: Fetching followings
+2024-11-22 03:28:21 [INFO]: Received POST request for /api/v1/users/671592b40443e9f82b4eea1e/follow
+2024-11-22 03:28:21 [INFO]: Creating a new follower
+2024-11-22 03:28:21 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:21 [INFO]: Checking follow status
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:24 [INFO]: Checking follow status
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:24 [INFO]: Fetching a user
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:24 [INFO]: Checking follow status
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:28:24 [INFO]: Checking follow status
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:28:24 [INFO]: Checking follow status
+2024-11-22 03:28:24 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:28:24 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:25 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:28:25 [INFO]: Checking follow status
+2024-11-22 03:28:26 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:28:26 [INFO]: Checking follow status
+2024-11-22 03:28:26 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:28:26 [INFO]: Checking follow status
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:26 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:26 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:27 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:27 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:28 [INFO]: Creating a new user
+2024-11-22 03:28:28 [INFO]: Received POST request for /api/v1/users/6712a965ece31f4d4f47072e/follow
+2024-11-22 03:28:28 [INFO]: Creating a new follower
+2024-11-22 03:28:31 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:31 [INFO]: Fetching followings
+2024-11-22 03:28:32 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:32 [INFO]: Checking follow status
+2024-11-22 03:28:32 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:32 [INFO]: Fetching a user
+2024-11-22 03:28:32 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:32 [INFO]: Creating a new user
+2024-11-22 03:28:32 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:32 [INFO]: Creating a new user
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:39 [INFO]: Fetching a user
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:39 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:28:39 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:28:40 [INFO]: Checking follow status
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:40 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:40 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:41 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:41 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:42 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:42 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:43 [INFO]: Checking follow status
+2024-11-22 03:28:43 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:43 [INFO]: Fetching a user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:43 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:43 [INFO]: Creating a new user
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:28:50 [INFO]: Fetching a user
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/671599580443e9f82b4eea20/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/67159b4f0443e9f82b4eea22/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/67159c900443e9f82b4eea24/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/67159dbb0443e9f82b4eea26/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/67159ebe0443e9f82b4eea28/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/67159ff60443e9f82b4eea2a/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715a1050443e9f82b4eea2c/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715a1d50443e9f82b4eea2e/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715a3470443e9f82b4eea30/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715a46e0443e9f82b4eea32/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715ac090443e9f82b4eea34/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715ae800443e9f82b4eea36/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b11e0443e9f82b4eea38/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b25a0443e9f82b4eea3a/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b4130443e9f82b4eea3c/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b5080443e9f82b4eea3e/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b5d60443e9f82b4eea40/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b77a0443e9f82b4eea42/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715b9d70443e9f82b4eea46/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715ba7f0443e9f82b4eea48/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715bfd10443e9f82b4eea4e/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715c0c40443e9f82b4eea50/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:50 [INFO]: Received GET request for /api/v1/users/6715c1e00443e9f82b4eea53/followStatus
+2024-11-22 03:28:50 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715c30d0443e9f82b4eea55/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715c68b0443e9f82b4eea57/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715c8f00443e9f82b4eea59/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715c9f60443e9f82b4eea5b/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715cd730443e9f82b4eea61/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715ce370443e9f82b4eea63/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715cffb0443e9f82b4eea67/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6715d0c30443e9f82b4eea69/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/671aded64f1ad61837ab051d/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6728254fa74de590a03e21a7/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/6735e2970d5b9b5a7e2aee2f/followStatus
+2024-11-22 03:28:51 [INFO]: Checking follow status
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-22 03:28:51 [INFO]: Fetching all sellers
+2024-11-22 03:28:51 [INFO]: Received GET request for /api/v1/users/followings/673fe23478e9fcfa960dbdc6
+2024-11-22 03:28:51 [INFO]: Fetching followings
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:51 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:51 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:52 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:52 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e
+2024-11-22 03:28:53 [INFO]: Fetching a user
+2024-11-22 03:28:53 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:53 [INFO]: Checking follow status
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:53 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:28:53 [INFO]: Creating a new user
+2024-11-22 03:28:54 [INFO]: Received POST request for /api/v1/users/671592b40443e9f82b4eea1e/follow
+2024-11-22 03:28:54 [INFO]: Creating a new follower
+2024-11-22 03:28:55 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:28:55 [INFO]: Checking follow status
+2024-11-22 03:28:57 [INFO]: Received GET request for /api/v1/products/671592c00443e9f82b4eea1f
+2024-11-22 03:28:57 [INFO]: Fetching a product by ID
+2024-11-22 03:29:04 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:29:04 [INFO]: Creating a new user
+2024-11-22 03:29:04 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:29:04 [INFO]: Checking follow status
+2024-11-22 03:29:04 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e
+2024-11-22 03:29:04 [INFO]: Fetching a user
+2024-11-22 03:29:04 [INFO]: Received POST request for /api/v1/users
+2024-11-22 03:29:04 [INFO]: Creating a new user
+2024-11-22 03:29:23 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e
+2024-11-22 03:29:23 [INFO]: Fetching a user
+2024-11-22 03:29:23 [INFO]: Received GET request for /api/v1/users/671592b40443e9f82b4eea1e/followStatus
+2024-11-22 03:29:23 [INFO]: Checking follow status
+2024-11-22 03:29:27 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:29:27 [INFO]: Fetching all products with pagination
+2024-11-22 03:29:29 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 03:29:29 [INFO]: Fetching all products with pagination
+2024-11-22 03:29:31 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-22 03:29:31 [INFO]: Fetching all sellers
+2024-11-22 03:29:32 [INFO]: Received GET request for /api/v1/users/6712a965ece31f4d4f47072e
+2024-11-22 03:29:32 [INFO]: Fetching a user
