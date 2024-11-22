@@ -5,7 +5,7 @@ import { prisma } from "../config/prismaConfig.js";
 export const getInventoryItems = asyncHandler(async (req, res) => {
 	const inventoryItems = await prisma.inventory.findMany({
 		include: {
-			product: true, // Include product details
+			product: true, 
 		},
 	});
 	res.status(200).json({ success: true, inventoryItems });

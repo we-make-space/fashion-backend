@@ -1,12 +1,12 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
-import { Role } from "@prisma/client";
 
 //! A method to create a product
 export const createProduct = asyncHandler(async (req, res) => {
 	const {
 		product_name,
 		price,
+		product_image,
 		product_description,
 		userEmail,
 		categoryId,
@@ -21,6 +21,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 			data: {
 				product_name,
 				price,
+				product_image,
 				product_description,
 				owner: { connect: { email: userEmail } },
 				category: { connect: { id: categoryId } },
@@ -30,7 +31,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 			},
 		});
 
-		res.send({ message: "product created successfully", product  });
+		res.send({ message: "product created successfully", product,productImages  });
 	} catch (err) {
 		if (err) {
 			throw new Error(err.message);
@@ -67,7 +68,6 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 			include: {
 				owner: {
 					select: {
-						id: true,
 						firstName: true,
 						lastName: true,
 						image: true,
@@ -181,7 +181,13 @@ export const getAllProductsTrial = asyncHandler(async (req, res) => {
 							},
 						},
 					},
-				}, // Including orders
+				},
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true,
+					},
+				},
 				product_image: {
 					select: {
 						url: true,
@@ -277,10 +283,12 @@ export const updateProduct = asyncHandler(async (req, res) => {
 	const {
 		product_name,
 		price,
+		product_image,
 		product_description,
-		categoryId, 
-		sizes, 
-		colors, 
+		categoryId,
+		sizes,
+		colors,
+		stock, // Added stock to the request body
 	} = req.body;
 
 	try {
@@ -293,6 +301,7 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			categoryId,
 			sizes,
 			colors,
+			stock, // Added stock to the log
 		});
 
 		// Find the existing product
@@ -303,6 +312,8 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		if (!existingProduct) {
 			return res.status(404).json({ error: "Product not found" });
 		}
+
+		console.log("Existing product:", existingProduct);
 
 		// Update the product details
 		const updatedProduct = await prisma.product.update({
@@ -324,18 +335,45 @@ export const updateProduct = asyncHandler(async (req, res) => {
 				categoryId:
 					categoryId !== undefined
 						? categoryId
-						: existingProduct.categoryId, 
-				sizes: sizes !== undefined ? sizes : existingProduct.sizes, 
-				colors: colors !== undefined ? colors : existingProduct.colors, 
+						: existingProduct.categoryId,
+				sizes: sizes !== undefined ? sizes : existingProduct.sizes,
+				colors: colors !== undefined ? colors : existingProduct.colors,
 			},
 		});
 
 		console.log("Updated product:", updatedProduct);
 
+		//? the stock is provided, update the inventory as well
+		if (stock !== undefined) {
+			const inventoryItem = await prisma.inventory.findUnique({
+				where: { productId: id },
+			});
+
+			if (!inventoryItem) {
+				//? creates the inventory item doesn't exist, create a new inventory record
+				await prisma.inventory.create({
+					data: {
+						productId: id,
+						stock,
+					},
+				});
+			} else {
+				//? Update the stock of the existing inventory item
+				await prisma.inventory.update({
+					where: { productId: id },
+					data: { stock },
+				});
+			}
+
+			console.log("Inventory updated with stock:", stock);
+		}
+
 		res.status(200).json(updatedProduct);
 	} catch (error) {
 		console.error("Error updating product:", error);
-		res.status(500).json({ error: "An error occurred while updating the product." });
+		res.status(500).json({
+			error: "An error occurred while updating the product.",
+		});
 	}
 });
 
@@ -704,32 +742,3 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 		});
 	}
 });
-
-export const updateUserRole = asyncHandler(async (req, res) => {
-	const { userId, role } = req.body;
-
-	try {
-		if (!userId || !role) {
-			return res
-				.status(400)
-				.json({ message: "userId and role are required" });
-		}
-		if (role !== "ADMIN" && role !== "SELLER") {
-			return res.status(400).json({ message: "Invalid role" });
-		}
-		const updatedUser = await prisma.user.update({
-			where: { id: userId },
-			data: { role },
-		});
-		res.status(200).json(updatedUser);
-	} catch (error) {
-		res.status(400);
-		throw new Error(error.message);
-	}
-});
-
-
-
-
-
-	
