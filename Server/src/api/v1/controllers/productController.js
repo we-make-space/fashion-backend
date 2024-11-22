@@ -12,7 +12,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 		categoryId,
 		sizes,
 		colors,
-		product_images
+		product_image
 	} = req.body.data;
 
 	console.log(req.body.data);
@@ -25,21 +25,12 @@ export const createProduct = asyncHandler(async (req, res) => {
 				owner: { connect: { email: userEmail } },
 				category: { connect: { id: categoryId } },
 				sizes,
+				product_image,
 				colors,
 			},
 		});
-		const productImages = await Promise.all(
-			product_images.map(async (image) => {
-			  return await prisma.productImage.create({
-				data: {
-				  url: image.url,
-				  product: { connect: { id: product.id } },
-				},
-			  });
-			})
-		  );
 
-		res.send({ message: "product created successfully", product,productImages  });
+		res.send({ message: "product created successfully", product  });
 	} catch (err) {
 		if (err) {
 			throw new Error(err.message);
@@ -74,12 +65,6 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 				createdAt: "desc",
 			},
 			include: {
-				productImages: {
-					select: {
-						url: true,
-						id: true,
-					},
-				},
 				owner: {
 					select: {
 						id: true,
@@ -238,12 +223,6 @@ export const getProduct = asyncHandler(async (req, res) => {
 						firstName: true,
 						lastName: true,
 						image: true,
-					},
-				},
-				productImages: {
-					select: {
-						url: true,
-						id: true,
 					},
 				},
 				comments: {
