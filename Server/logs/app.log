@@ -3102,3 +3102,52 @@ An operation failed because it depends on one or more records that were required
 2024-11-24 01:58:29 [INFO]: Fetching a user
 2024-11-24 01:58:33 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f
 2024-11-24 01:58:33 [INFO]: Fetching a user
+2024-11-24 02:02:13 [INFO]: Server is running successfully on PORT 8080
+2024-11-24 02:02:20 [INFO]: Received GET request for /api/v1/products/6715cc180443e9f82b4eea60
+2024-11-24 02:02:20 [INFO]: Fetching a product by ID
+2024-11-24 02:02:23 [INFO]: Received POST request for /api/v1/users
+2024-11-24 02:02:23 [INFO]: Creating a new user
+2024-11-24 02:02:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 02:02:43 [INFO]: Fetching all products with pagination
+2024-11-24 02:02:46 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 02:02:46 [INFO]: Fetching all products with pagination
+2024-11-24 02:02:59 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-24 02:02:59 [INFO]: Checking follow status
+2024-11-24 02:02:59 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d
+2024-11-24 02:02:59 [INFO]: Fetching a user
+2024-11-24 02:02:59 [INFO]: Received POST request for /api/v1/users
+2024-11-24 02:02:59 [INFO]: Creating a new user
+2024-11-24 02:02:59 [INFO]: Received POST request for /api/v1/users
+2024-11-24 02:02:59 [INFO]: Creating a new user
+2024-11-24 02:03:09 [INFO]: Received POST request for /api/v1/users/6715cb540443e9f82b4eea5d/follow
+2024-11-24 02:03:09 [INFO]: Creating a new follower
+2024-11-24 02:03:10 [INFO]: Received GET request for /api/v1/users/6715cb540443e9f82b4eea5d/followStatus
+2024-11-24 02:03:10 [INFO]: Checking follow status
+2024-11-24 02:03:24 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 02:03:24 [INFO]: Fetching all products with pagination
+2024-11-24 02:03:27 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 02:03:27 [INFO]: Fetching all products with pagination
+2024-11-24 02:03:32 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-24 02:03:32 [INFO]: Checking follow status
+2024-11-24 02:03:32 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a
+2024-11-24 02:03:32 [INFO]: Fetching a user
+2024-11-24 02:03:32 [INFO]: Received POST request for /api/v1/users
+2024-11-24 02:03:32 [INFO]: Creating a new user
+2024-11-24 02:03:32 [INFO]: Received POST request for /api/v1/users
+2024-11-24 02:03:32 [INFO]: Creating a new user
+2024-11-24 02:03:36 [INFO]: Received POST request for /api/v1/users/6715bbbd0443e9f82b4eea4a/follow
+2024-11-24 02:03:36 [INFO]: Creating a new follower
+2024-11-24 02:03:37 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-24 02:03:37 [INFO]: Checking follow status
+2024-11-24 02:04:16 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a
+2024-11-24 02:04:16 [INFO]: Fetching a user
+2024-11-24 02:04:16 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-24 02:04:16 [INFO]: Checking follow status
+2024-11-24 02:04:20 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a
+2024-11-24 02:04:20 [INFO]: Fetching a user
+2024-11-24 02:04:20 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-24 02:04:20 [INFO]: Checking follow status
+2024-11-24 02:05:14 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a
+2024-11-24 02:05:14 [INFO]: Fetching a user
+2024-11-24 02:05:14 [INFO]: Received GET request for /api/v1/users/6715bbbd0443e9f82b4eea4a/followStatus
+2024-11-24 02:05:14 [INFO]: Checking follow status
