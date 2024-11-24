@@ -2614,3 +2614,491 @@ An operation failed because it depends on one or more records that were required
 2024-11-22 00:06:31 [INFO]: Fetching all products with pagination
 2024-11-22 00:06:35 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
 2024-11-22 00:06:35 [INFO]: Fetching all products with pagination
+2024-11-22 00:10:03 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:10:03 [INFO]: Fetching all products with pagination
+2024-11-22 00:10:08 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-22 00:10:08 [INFO]: Fetching all products with pagination
+2024-11-22 00:15:16 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:15:16 [INFO]: Fetching all products with pagination
+2024-11-22 00:15:23 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-22 00:15:23 [INFO]: Fetching all products with pagination
+2024-11-22 00:44:24 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:44:24 [INFO]: Fetching all products with pagination
+2024-11-22 00:44:46 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:44:46 [INFO]: Fetching all products with pagination
+2024-11-22 00:45:10 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:45:10 [INFO]: Fetching all products with pagination
+2024-11-22 00:45:34 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:45:34 [INFO]: Fetching all products with pagination
+2024-11-22 00:46:10 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:46:10 [INFO]: Fetching all products with pagination
+2024-11-22 00:46:10 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:46:10 [INFO]: Fetching all products with pagination
+2024-11-22 00:46:57 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:46:57 [INFO]: Fetching all products with pagination
+2024-11-22 00:47:20 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:47:20 [INFO]: Fetching all products with pagination
+2024-11-22 00:47:44 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:47:44 [INFO]: Fetching all products with pagination
+2024-11-22 00:48:53 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:48:53 [INFO]: Fetching all products with pagination
+2024-11-22 00:49:11 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-22 00:49:11 [INFO]: Fetching all products with pagination
+2024-11-22 00:49:35 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 00:49:35 [INFO]: Fetching all products with pagination
+2024-11-22 00:49:40 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-22 00:49:40 [INFO]: Fetching all products with pagination
+2024-11-22 18:46:08 [INFO]: Server is running successfully on PORT 8080
+2024-11-22 18:47:14 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:47:14 [INFO]: Fetching all products with pagination
+2024-11-22 18:47:14 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:47:14 [INFO]: Fetching all products with pagination
+2024-11-22 18:47:23 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:47:23 [INFO]: Fetching all products with pagination
+2024-11-22 18:47:41 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:47:41 [INFO]: Fetching all products with pagination
+2024-11-22 18:48:44 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:48:45 [INFO]: Fetching all products with pagination
+2024-11-22 18:48:47 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:48:47 [INFO]: Fetching all products with pagination
+2024-11-22 18:48:53 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:48:53 [INFO]: Fetching all products with pagination
+2024-11-22 18:48:55 [INFO]: Received POST request for /api/v1/users
+2024-11-22 18:48:55 [INFO]: Creating a new user
+2024-11-22 18:48:56 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:48:56 [INFO]: Fetching all products with pagination
+2024-11-22 18:49:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:49:40 [INFO]: Fetching all products with pagination
+2024-11-22 18:49:42 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:49:42 [INFO]: Fetching all products with pagination
+2024-11-22 18:49:44 [INFO]: Received POST request for /api/v1/users
+2024-11-22 18:49:44 [INFO]: Creating a new user
+2024-11-22 18:50:05 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:50:05 [INFO]: Fetching all products with pagination
+2024-11-22 18:50:15 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2024-11-22 18:50:15 [INFO]: Fetching a product by ID
+2024-11-22 18:50:20 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:50:20 [INFO]: Fetching all products with pagination
+2024-11-22 18:50:22 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:50:22 [INFO]: Fetching all products with pagination
+2024-11-22 18:50:29 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 18:50:29 [INFO]: Fetching all categories
+2024-11-22 18:50:39 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:50:39 [INFO]: Fetching all products with pagination
+2024-11-22 18:50:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 18:50:43 [INFO]: Fetching all products with pagination
+2024-11-22 19:02:15 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:02:15 [INFO]: Fetching all products with pagination
+2024-11-22 19:02:35 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:02:35 [INFO]: Fetching all products with pagination
+2024-11-22 19:04:23 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:04:23 [INFO]: Fetching all products with pagination
+2024-11-22 19:04:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:04:43 [INFO]: Fetching all products with pagination
+2024-11-22 19:07:41 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:07:41 [INFO]: Fetching all products with pagination
+2024-11-22 19:07:51 [INFO]: Received GET request for /api/v1/categories
+2024-11-22 19:07:51 [INFO]: Fetching all categories
+2024-11-22 19:08:01 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:08:01 [INFO]: Fetching all products with pagination
+2024-11-22 19:08:01 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-22 19:08:01 [INFO]: Fetching all products with pagination
+2024-11-22 19:08:41 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2024-11-22 19:08:41 [INFO]: Fetching a product by ID
+2024-11-22 19:23:23 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2024-11-22 19:23:23 [INFO]: Fetching a product by ID
+2024-11-24 00:34:35 [INFO]: Server is running successfully on PORT 8080
+2024-11-24 00:34:59 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:34:59 [INFO]: Fetching all products with pagination
+2024-11-24 00:35:19 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:35:19 [INFO]: Fetching all products with pagination
+2024-11-24 00:35:20 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:35:20 [INFO]: Fetching all products with pagination
+2024-11-24 00:35:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:35:37 [INFO]: Fetching all products with pagination
+2024-11-24 00:36:01 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:36:01 [INFO]: Fetching all products with pagination
+2024-11-24 00:36:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:36:40 [INFO]: Fetching all products with pagination
+2024-11-24 00:37:07 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:37:07 [INFO]: Fetching all products with pagination
+2024-11-24 00:37:35 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:37:35 [INFO]: Fetching all products with pagination
+2024-11-24 00:38:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:38:08 [INFO]: Fetching all products with pagination
+2024-11-24 00:38:19 [INFO]: Received POST request for /api/v1/users
+2024-11-24 00:38:19 [INFO]: Creating a new user
+2024-11-24 00:38:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:38:28 [INFO]: Fetching all products with pagination
+2024-11-24 00:38:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:38:43 [INFO]: Fetching all products with pagination
+2024-11-24 00:39:08 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:39:08 [INFO]: Liking a product
+2024-11-24 00:39:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:39:08 [INFO]: Fetching all products with pagination
+2024-11-24 00:39:14 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:39:14 [INFO]: Fetching all products with pagination
+2024-11-24 00:39:14 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:39:14 [INFO]: Liking a product
+2024-11-24 00:39:26 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 00:39:26 [INFO]: Fetching all products with pagination
+2024-11-24 00:39:46 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:39:46 [INFO]: Liking a product
+2024-11-24 00:39:46 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:39:46 [INFO]: Fetching all products with pagination
+2024-11-24 00:39:51 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:39:51 [INFO]: Liking a product
+2024-11-24 00:39:55 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:39:55 [INFO]: Liking a product
+2024-11-24 00:40:01 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:40:01 [INFO]: Liking a product
+2024-11-24 00:40:03 [INFO]: Received POST request for /api/v1/products/likes/product/like
+2024-11-24 00:40:03 [INFO]: Liking a product
+2024-11-24 00:40:07 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:40:07 [INFO]: Fetching all products with pagination
+2024-11-24 00:42:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:42:08 [INFO]: Fetching all products with pagination
+2024-11-24 00:43:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:43:40 [INFO]: Fetching all products with pagination
+2024-11-24 00:45:16 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:45:16 [INFO]: Fetching all products with pagination
+2024-11-24 00:45:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:45:26 [INFO]: Fetching all products with pagination
+2024-11-24 00:45:32 [INFO]: Received POST request for /api/v1/users
+2024-11-24 00:45:32 [INFO]: Creating a new user
+2024-11-24 00:45:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 00:45:37 [INFO]: Fetching all products with pagination
+2024-11-24 01:11:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:11:28 [INFO]: Fetching all products with pagination
+2024-11-24 01:11:48 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:11:48 [INFO]: Fetching all products with pagination
+2024-11-24 01:12:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:12:26 [INFO]: Fetching all products with pagination
+2024-11-24 01:12:47 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:12:47 [INFO]: Fetching all products with pagination
+2024-11-24 01:12:50 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:12:50 [INFO]: Fetching all products with pagination
+2024-11-24 01:12:51 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:12:51 [INFO]: Creating a new user
+2024-11-24 01:13:58 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:13:58 [INFO]: Fetching all products with pagination
+2024-11-24 01:13:59 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:13:59 [INFO]: Creating a new user
+2024-11-24 01:14:00 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:14:00 [INFO]: Fetching all products with pagination
+2024-11-24 01:14:14 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:14:15 [INFO]: Fetching all products with pagination
+2024-11-24 01:14:15 [INFO]: Received GET request for /api/v1/products/6715c3360443e9f82b4eea56
+2024-11-24 01:14:15 [INFO]: Fetching a product by ID
+2024-11-24 01:14:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:14:31 [INFO]: Fetching all products with pagination
+2024-11-24 01:14:33 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:14:33 [INFO]: Fetching all products with pagination
+2024-11-24 01:14:37 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2024-11-24 01:14:37 [INFO]: Fetching a product by ID
+2024-11-24 01:15:44 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2024-11-24 01:15:44 [INFO]: Fetching a product by ID
+2024-11-24 01:15:46 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:15:46 [INFO]: Fetching all products with pagination
+2024-11-24 01:15:48 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:15:48 [INFO]: Fetching all products with pagination
+2024-11-24 01:15:57 [INFO]: Received GET request for /api/v1/products/6715c1e70443e9f82b4eea54
+2024-11-24 01:15:57 [INFO]: Fetching a product by ID
+2024-11-24 01:16:21 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:16:21 [INFO]: Fetching all products with pagination
+2024-11-24 01:16:23 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:16:23 [INFO]: Fetching all products with pagination
+2024-11-24 01:16:41 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:16:41 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:36 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:36 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:38 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:38 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:39 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:17:39 [INFO]: Creating a new user
+2024-11-24 01:17:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:43 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:44 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:17:44 [INFO]: Creating a new user
+2024-11-24 01:17:44 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:44 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:50 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:50 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:52 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:17:52 [INFO]: Creating a new user
+2024-11-24 01:17:52 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:52 [INFO]: Fetching all products with pagination
+2024-11-24 01:17:54 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:17:54 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:01 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:01 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:03 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:18:03 [INFO]: Creating a new user
+2024-11-24 01:18:03 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:03 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:15 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:15 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:16 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:18:16 [INFO]: Creating a new user
+2024-11-24 01:18:17 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:17 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:32 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:32 [INFO]: Fetching all products with pagination
+2024-11-24 01:18:42 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:18:42 [INFO]: Fetching all products with pagination
+2024-11-24 01:20:49 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:20:50 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:05 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:05 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:37 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:39 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:39 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:21:39 [INFO]: Creating a new user
+2024-11-24 01:21:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:43 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:44 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:21:44 [INFO]: Creating a new user
+2024-11-24 01:21:44 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:44 [INFO]: Fetching all products with pagination
+2024-11-24 01:21:54 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:21:54 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:12 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:22:12 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:14 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:22:14 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:29 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:22:29 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:22:40 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:47 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:22:47 [INFO]: Fetching all products with pagination
+2024-11-24 01:22:53 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:22:53 [INFO]: Creating a new user
+2024-11-24 01:23:08 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-24 01:23:08 [INFO]: Fetching all sellers
+2024-11-24 01:23:08 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:23:08 [INFO]: Creating a new user
+2024-11-24 01:23:18 [INFO]: Received GET request for /api/v1/users/followings/672822a9efcf96ffb2134fde
+2024-11-24 01:23:24 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:23:24 [INFO]: Fetching all products with pagination
+2024-11-24 01:23:24 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:23:24 [INFO]: Creating a new user
+2024-11-24 01:23:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:23:26 [INFO]: Fetching all products with pagination
+2024-11-24 01:23:28 [INFO]: Received GET request for /api/v1/categories
+2024-11-24 01:23:28 [INFO]: Fetching all categories
+2024-11-24 01:23:34 [INFO]: Received GET request for /api/v1/categories
+2024-11-24 01:23:34 [INFO]: Fetching all categories
+2024-11-24 01:23:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:23:37 [INFO]: Fetching all products with pagination
+2024-11-24 01:23:39 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:23:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:04 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:24:04 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:06 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:24:06 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:06 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:24:06 [INFO]: Creating a new user
+2024-11-24 01:24:21 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:24:21 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:23 [INFO]: Received GET request for /api/v1/categories
+2024-11-24 01:24:23 [INFO]: Fetching all categories
+2024-11-24 01:24:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:24:28 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:24:31 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:39 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:24:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:24:58 [INFO]: Received GET request for /api/v1/users/sellers/all
+2024-11-24 01:24:58 [INFO]: Fetching all sellers
+2024-11-24 01:24:58 [INFO]: Received GET request for /api/v1/users/followings/672822a9efcf96ffb2134fde
+2024-11-24 01:25:09 [INFO]: Received GET request for /api/v1/users/followings/672822a9efcf96ffb2134fde
+2024-11-24 01:25:17 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:25:17 [INFO]: Fetching all products with pagination
+2024-11-24 01:25:19 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:25:19 [INFO]: Fetching all products with pagination
+2024-11-24 01:25:22 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:25:22 [INFO]: Fetching all products with pagination
+2024-11-24 01:26:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:26:37 [INFO]: Fetching all products with pagination
+2024-11-24 01:26:39 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:26:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:26:43 [INFO]: Received GET request for /api/v1/products/6715cf2b0443e9f82b4eea66
+2024-11-24 01:26:43 [INFO]: Fetching a product by ID
+2024-11-24 01:27:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:27:28 [INFO]: Fetching all products with pagination
+2024-11-24 01:27:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:27:31 [INFO]: Fetching all products with pagination
+2024-11-24 01:27:34 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:27:34 [INFO]: Fetching all products with pagination
+2024-11-24 01:28:57 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2024-11-24 01:28:57 [INFO]: Fetching a product by ID
+2024-11-24 01:29:06 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:06 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:08 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:11 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:29:11 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:19 [INFO]: Received GET request for /api/v1/products/6715b8020443e9f82b4eea43
+2024-11-24 01:29:19 [INFO]: Fetching a product by ID
+2024-11-24 01:29:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:26 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:28 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:31 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:29:31 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:40 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2024-11-24 01:29:40 [INFO]: Fetching a product by ID
+2024-11-24 01:29:48 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:48 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:51 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:29:51 [INFO]: Fetching all products with pagination
+2024-11-24 01:29:53 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:29:53 [INFO]: Fetching all products with pagination
+2024-11-24 01:30:44 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:30:44 [INFO]: Fetching all products with pagination
+2024-11-24 01:31:07 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:31:07 [INFO]: Fetching all products with pagination
+2024-11-24 01:31:22 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:31:22 [INFO]: Fetching all products with pagination
+2024-11-24 01:31:36 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:31:36 [INFO]: Fetching all products with pagination
+2024-11-24 01:31:39 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:31:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:32:13 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:32:13 [INFO]: Fetching all products with pagination
+2024-11-24 01:32:16 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:32:16 [INFO]: Fetching all products with pagination
+2024-11-24 01:38:21 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:38:21 [INFO]: Fetching all products with pagination
+2024-11-24 01:38:27 [INFO]: Received GET request for /api/v1/products/67159c960443e9f82b4eea25
+2024-11-24 01:38:27 [INFO]: Fetching a product by ID
+2024-11-24 01:41:04 [INFO]: Received GET request for /api/v1/products/67159c960443e9f82b4eea25
+2024-11-24 01:41:04 [INFO]: Fetching a product by ID
+2024-11-24 01:43:25 [INFO]: Received GET request for /api/v1/products/67159c960443e9f82b4eea25
+2024-11-24 01:43:25 [INFO]: Fetching a product by ID
+2024-11-24 01:43:28 [INFO]: Received GET request for /api/v1/products/67159c960443e9f82b4eea25
+2024-11-24 01:43:28 [INFO]: Fetching a product by ID
+2024-11-24 01:43:30 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:43:30 [INFO]: Fetching all products with pagination
+2024-11-24 01:43:32 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:43:32 [INFO]: Fetching all products with pagination
+2024-11-24 01:43:39 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:43:39 [INFO]: Fetching all products with pagination
+2024-11-24 01:43:53 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:43:53 [INFO]: Fetching all products with pagination
+2024-11-24 01:43:53 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:43:53 [INFO]: Fetching a product by ID
+2024-11-24 01:44:03 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:44:03 [INFO]: Fetching a product by ID
+2024-11-24 01:45:18 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:45:18 [INFO]: Fetching a product by ID
+2024-11-24 01:45:25 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:45:25 [INFO]: Fetching a product by ID
+2024-11-24 01:46:19 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:46:19 [INFO]: Fetching a product by ID
+2024-11-24 01:50:24 [INFO]: Received GET request for /api/v1/products/6715b5e50443e9f82b4eea41
+2024-11-24 01:50:24 [INFO]: Fetching a product by ID
+2024-11-24 01:50:38 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:50:38 [INFO]: Fetching all products with pagination
+2024-11-24 01:50:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:50:40 [INFO]: Fetching all products with pagination
+2024-11-24 01:51:00 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:51:00 [INFO]: Creating a new user
+2024-11-24 01:51:05 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:51:05 [INFO]: Fetching all products with pagination
+2024-11-24 01:51:07 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:51:07 [INFO]: Fetching all products with pagination
+2024-11-24 01:51:19 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:51:19 [INFO]: Fetching all products with pagination
+2024-11-24 01:51:33 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:51:33 [INFO]: Fetching all products with pagination
+2024-11-24 01:51:36 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:51:36 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:00 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:52:00 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:03 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:52:03 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:05 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:52:05 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:25 [INFO]: Received GET request for /api/v1/categories
+2024-11-24 01:52:25 [INFO]: Fetching all categories
+2024-11-24 01:52:41 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:52:41 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:52:43 [INFO]: Fetching all products with pagination
+2024-11-24 01:52:46 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:52:46 [INFO]: Fetching all products with pagination
+2024-11-24 01:54:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:54:43 [INFO]: Fetching all products with pagination
+2024-11-24 01:54:46 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:54:46 [INFO]: Fetching all products with pagination
+2024-11-24 01:55:36 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:55:36 [INFO]: Fetching all products with pagination
+2024-11-24 01:55:40 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:55:40 [INFO]: Fetching all products with pagination
+2024-11-24 01:55:54 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:55:54 [INFO]: Fetching all products with pagination
+2024-11-24 01:55:56 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:55:56 [INFO]: Fetching all products with pagination
+2024-11-24 01:55:59 [INFO]: Received GET request for /api/v1/users/undefined/followStatus
+2024-11-24 01:55:59 [INFO]: Checking follow status
+2024-11-24 01:55:59 [INFO]: Received GET request for /api/v1/users/undefined
+2024-11-24 01:55:59 [INFO]: Fetching a user
+2024-11-24 01:55:59 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:55:59 [INFO]: Creating a new user
+2024-11-24 01:56:00 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:56:00 [INFO]: Creating a new user
+2024-11-24 01:56:00 [INFO]: Received GET request for /api/v1/users/undefined/followStatus
+2024-11-24 01:56:00 [INFO]: Checking follow status
+2024-11-24 01:56:00 [INFO]: Received GET request for /api/v1/users/undefined
+2024-11-24 01:56:00 [INFO]: Fetching a user
+2024-11-24 01:56:02 [INFO]: Received GET request for /api/v1/users/undefined/followStatus
+2024-11-24 01:56:02 [INFO]: Checking follow status
+2024-11-24 01:56:03 [INFO]: Received GET request for /api/v1/users/undefined
+2024-11-24 01:56:03 [INFO]: Fetching a user
+2024-11-24 01:56:06 [INFO]: Received GET request for /api/v1/users/undefined/followStatus
+2024-11-24 01:56:06 [INFO]: Checking follow status
+2024-11-24 01:56:07 [INFO]: Received GET request for /api/v1/users/undefined
+2024-11-24 01:56:07 [INFO]: Fetching a user
+2024-11-24 01:56:29 [INFO]: Received GET request for /api/v1/users/undefined/followStatus
+2024-11-24 01:56:29 [INFO]: Checking follow status
+2024-11-24 01:56:29 [INFO]: Received GET request for /api/v1/users/undefined
+2024-11-24 01:56:29 [INFO]: Fetching a user
+2024-11-24 01:56:32 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:56:32 [INFO]: Fetching all products with pagination
+2024-11-24 01:56:34 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:56:34 [INFO]: Fetching all products with pagination
+2024-11-24 01:56:37 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:56:37 [INFO]: Fetching all products with pagination
+2024-11-24 01:56:49 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:56:49 [INFO]: Fetching all products with pagination
+2024-11-24 01:56:52 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:56:52 [INFO]: Fetching all products with pagination
+2024-11-24 01:57:03 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:57:03 [INFO]: Fetching all products with pagination
+2024-11-24 01:57:06 [INFO]: Received GET request for /api/v1/products?page=2&limit=30
+2024-11-24 01:57:06 [INFO]: Fetching all products with pagination
+2024-11-24 01:57:56 [INFO]: Server is running successfully on PORT 8080
+2024-11-24 01:58:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:58:08 [INFO]: Fetching all products with pagination
+2024-11-24 01:58:11 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:58:11 [INFO]: Creating a new user
+2024-11-24 01:58:13 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2024-11-24 01:58:13 [INFO]: Fetching all products with pagination
+2024-11-24 01:58:25 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f/followStatus
+2024-11-24 01:58:25 [INFO]: Checking follow status
+2024-11-24 01:58:25 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f
+2024-11-24 01:58:25 [INFO]: Fetching a user
+2024-11-24 01:58:25 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:58:25 [INFO]: Creating a new user
+2024-11-24 01:58:25 [INFO]: Received POST request for /api/v1/users
+2024-11-24 01:58:25 [INFO]: Creating a new user
+2024-11-24 01:58:27 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f
+2024-11-24 01:58:27 [INFO]: Fetching a user
+2024-11-24 01:58:29 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f
+2024-11-24 01:58:29 [INFO]: Fetching a user
+2024-11-24 01:58:33 [INFO]: Received GET request for /api/v1/users/6715cc120443e9f82b4eea5f
+2024-11-24 01:58:33 [INFO]: Fetching a user
