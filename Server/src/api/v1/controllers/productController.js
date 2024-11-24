@@ -12,6 +12,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 		categoryId,
 		sizes,
 		colors,
+		product_image
 	} = req.body.data;
 
 	console.log(req.body.data);
@@ -25,11 +26,12 @@ export const createProduct = asyncHandler(async (req, res) => {
 				owner: { connect: { email: userEmail } },
 				category: { connect: { id: categoryId } },
 				sizes,
+				product_image,
 				colors,
 			},
 		});
 
-		res.send({ message: "product created successfully", product });
+		res.send({ message: "product created successfully", product,productImages  });
 	} catch (err) {
 		if (err) {
 			throw new Error(err.message);

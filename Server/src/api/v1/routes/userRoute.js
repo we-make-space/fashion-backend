@@ -4,15 +4,14 @@ import {
 	CreateUser,
 	DeleteUser,
 	followStatus,
-	followUser,
 	getAllSeller,
 	GetAllUsers,
 	GetUser,
 	getUserFollowers,
-	getUserFollowing,
+	getUserFollowings,
 	getUserId,
 	GetUserProducts,
-	unfollowUser,
+	toggleFollowUser,
 	upadateAllUsersRole,
 	UpdateUser,
 } from "../controllers/userController.js";
@@ -62,17 +61,13 @@ router.put("/updateRole", logAction("Updating roles"), upadateAllUsersRole)
 router.post(
     "/:id/follow",
     logAction("Creating a new follower"),
-    followUser,
+    toggleFollowUser,
     logError
 );
-router.delete(
-    "/:id/unfollow",
-    logAction("Deleting a follower"),
-    unfollowUser,
-    logError
-);
+
 router.get('/:id/followStatus', logAction("Checking follow status"), followStatus);
 
-router.get("/me/user",logAction("Fetching current user"), getUserId);
+router.get("/followers/:id",logAction("Fetching followers"), getUserFollowers );
+router.get("/followings/:id", logAction("Fetching followings"), getUserFollowings);
 
 export { router as userRoute };

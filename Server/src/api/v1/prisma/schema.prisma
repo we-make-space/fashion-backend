@@ -66,8 +66,7 @@ model Product {
   id                  String         @id @default(auto()) @map("_id") @db.ObjectId
   product_name        String
   price               Float
-  productImages       ProductImage[] @relation("Product")
-  product_image      String[]
+  product_image       String[]
   product_description String
   userEmail           String
   likes               Like[]         @relation("ProductLikes")
@@ -87,16 +86,6 @@ model Product {
   CartItem     CartItem[]
   Inventory    Inventory[]
   WishlistItem WishlistItem[]
-}
-
-// ProductImage model
-model ProductImage {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  url       String
-  product   Product  @relation("Product", fields: [productId], references: [id])
-  productId String   @db.ObjectId
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model Comment {
