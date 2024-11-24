@@ -67,6 +67,7 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 			include: {
 				owner: {
 					select: {
+						id: true,
 						firstName: true,
 						lastName: true,
 						image: true,
