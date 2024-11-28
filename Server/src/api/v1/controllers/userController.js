@@ -125,7 +125,7 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 			return res.status(404).json({ message: "No users found" });
 		}
 
-		res.status(200).json(usersWithCart);
+		res.status(200).json(users);
 	} catch (error) {
 		console.error("Error fetching users:", error);
 
