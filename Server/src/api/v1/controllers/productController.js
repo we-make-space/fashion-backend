@@ -742,3 +742,91 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 		});
 	}
 });
+
+
+export const seachProduct = asyncHandler(async (req, res) => {
+	const { search } = req.params;
+	console.log(search);
+try {
+	const products = await prisma.product.findMany({
+		where: {
+			product_name: {
+				contains: search,
+				mode: "insensitive",
+			},
+		},
+		include: {
+			owner: {
+				select: {
+					id: true,
+					firstName: true,
+					lastName: true,
+					image: true,
+				},
+			},
+			category: {
+				select: {
+					id: true,
+					name: true,
+				},
+			},
+			reviews: {
+				select: {
+					rating: true,
+					comment: true,
+					userEmail: true,
+					user: {
+						select: {
+							firstName: true,
+							lastName: true,
+							image: true,
+						},
+					},
+				},
+			},
+			Inventory: {
+				select: {
+					productId: true,
+					stock: true,
+				},
+			},
+			comments: {
+				select: {
+					content: true,
+					createdAt: true,
+					userEmail: true,
+					User: {
+						select: {
+							firstName: true,
+							lastName: true,
+							image: true,
+						},
+					},
+				},
+			},
+			likes: {
+				select: {
+					id: true,
+					user: {
+						select: {
+							firstName: true,
+							lastName: true,
+							image: true,
+						},
+					},
+				},
+			},
+			_count: {
+				select: {
+					comments: true,
+					likes: true,
+				},
+			},
+		},
+	});
+	res.status(200).json({ success: true, data: products });
+} catch (error) {
+	console.error(error);
+	res.status(500).json({ success: false, message: "Error retrieving products" });
+}
+});

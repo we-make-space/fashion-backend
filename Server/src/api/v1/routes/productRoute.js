@@ -12,6 +12,7 @@ import {
 	getProductLikes,
 	likeComment,
 	likeProduct,
+	seachProduct,
 	updateProduct,
 } from "../controllers/productController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
@@ -122,6 +123,8 @@ router.get(
 	getAllProductLikes,
 	logError
 );
+
+router.get("/search-result/:search", logAction("Search a product"), seachProduct, logError);
 
 
 

@@ -206,6 +206,8 @@ export const GetUser = asyncHandler(async (req, res) => {
 			where: { id },
 			include: {
 				ownedProducts: true,
+				followers: true,
+				following: true,
 			}
 		});
 		if (!user) return res.status(404).json({ message: "User not found" });
