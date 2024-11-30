@@ -1,7 +1,7 @@
 import { prisma } from "../config/prismaConfig.js";
 import asyncHandler from "express-async-handler";
 
-// Create a new category
+//* Create a new category
 export const createCategory = asyncHandler(async (req, res) => {
 	const { name } = req.body;
 	try {
@@ -14,12 +14,34 @@ export const createCategory = asyncHandler(async (req, res) => {
 	}
 });
 
-// Get all categories with their associated products
+//^ Get all categories with their associated products
 export const getCategories = asyncHandler(async (req, res) => {
 	try {
 		const categories = await prisma.category.findMany({
 			include: {
-				products: true,
+				products: {
+					include: {
+						owner: {
+							select: {
+								id: true,
+								firstName: true,
+								lastName: true,
+								image: true,
+							},
+						},
+						likes: {
+							include: {
+								user: {
+									select: {
+										firstName: true,
+										lastName: true,
+										image: true,
+									},
+								},
+							},
+						},
+					},
+				},
 			},
 		});
 		res.status(200).json(categories);
@@ -28,7 +50,7 @@ export const getCategories = asyncHandler(async (req, res) => {
 	}
 });
 
-// Update a category by ID
+//^ Update a category by ID
 export const updateCategory = asyncHandler(async (req, res) => {
 	const { id } = req.params;
 	const { name } = req.body;
@@ -43,22 +65,19 @@ export const updateCategory = asyncHandler(async (req, res) => {
 	}
 });
 
-// Delete a category by ID
+//^ Delete a category by ID
 export const deleteCategory = asyncHandler(async (req, res) => {
 	const { id } = req.params;
 	try {
-		// Optionally, you can check for products associated with this category
 		const categoryWithProducts = await prisma.category.findUnique({
 			where: { id },
 			include: { products: true },
 		});
 
 		if (categoryWithProducts.products.length > 0) {
-			return res
-				.status(400)
-				.json({
-					error: "Cannot delete category with associated products.",
-				});
+			return res.status(400).json({
+				error: "Cannot delete category with associated products.",
+			});
 		}
 
 		await prisma.category.delete({

@@ -220,3 +220,33 @@ model WishlistItem {
   product    Product  @relation(fields: [productId], references: [id])
   addedAt    DateTime @default(now())
 }
+
+// Enum for order status
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELED
+}
+
+enum CategoryEnum {
+  CLOTHING
+  BAGS
+  WATCH
+  FABRIC
+  JEWELLARY
+  SHOES
+}
+
+enum GenderEnum {
+  MALE
+  FEMALE
+  UNISEX
+}
+
+enum Role {
+  USER
+  SELLER
+  ADMIN
+}

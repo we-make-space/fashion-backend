@@ -9,6 +9,7 @@ import { categoryRoute } from "./routes/categoryRoute.js";
 import { reviewRoute } from "./routes/reviewRoute.js";
 import { cartRoute } from "./routes/cartRoute.js";
 import { cartItemRoute } from "./routes/cartItemRoute.js";
+import { corsOptions } from "../../middlewares/sitesAuthorization.js";
 
 dotenv.config();
 
@@ -19,6 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
+app.use(cors(corsOptions));
 
 // Middleware to log each request
 app.use((req, res, next) => {
