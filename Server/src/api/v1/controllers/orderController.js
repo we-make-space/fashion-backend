@@ -2,33 +2,55 @@ import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
 
 export const createOrder = asyncHandler(async (req, res) => {
-    const { userId, status, total, orderItems } = req.body;
+    const { userId, status, totalAmount, orderItems, addressId } = req.body;
     try {
-    
-      const order = await prisma.order.create({
-        data: {
-          user: {
-            connect: { id: userId },
-          },
-          status: status || "PENDING",
-          total,
-          orderItems: {
-            create: orderItems.map(item => ({
-              product: {
-                connect: { id: item.productId },
-              },
-              quantity: item.quantity,
-            })),
-          },
-        },
-      });
-    
-      res.status(201).json({ message: "Order created successfully", order });
+     
+        const order = await prisma.order.create({
+            data: {
+                user: {
+                    connect: { id: userId },
+                },
+                status: status || "PENDING",
+                totalAmount,
+                items: {
+                    create: await Promise.all(orderItems.map(async item => {
+                        const product = await prisma.product.findUnique({
+                            where: { id: item.productId },
+                            select: { price: true },
+                        });
+                        if (!product) {
+                            throw new Error(`Product with id ${item.productId} not found`);
+                        }
+                        return {
+                            product: {
+                                connect: { id: item.productId },
+                            },
+                            quantity: item.quantity,
+                            price: product.price,
+                        };
+                    })),
+                },
+                Shipping: {
+                    create: {
+                        address: {
+                            connect: { 
+                                id: addressId
+                            },
+                        },
+                        carrier: "Emmmaaaa",
+                        trackingNumber: "1222222",
+                        status: "PENDING",
+                    }
+                }
+            },
+        });
+
+        res.status(201).json({ message: "Order created successfully", order});
     } catch (error) {
-      console.error("Error creating order:", error);
-      res.status(500).json({ error: "An error occurred while creating the order" });
+        console.error("Error creating order:", error);
+        res.status(500).json({ error: "An error occurred while creating the order" });
     }
-  });
+});
 
 /**
  * Get all orders
@@ -66,6 +88,29 @@ export const getOrder = asyncHandler(async (req, res) => {
     try {
         const order = await prisma.order.findUnique({
             where: { id },
+            include:{
+                items: {
+                    include: {
+                        product: true,
+                       
+                    }
+                },
+                Shipping: {
+                    include:{
+                        address: true
+                    }
+                },
+                user: {
+                    select: {
+                        firstName: true,
+                        lastName: true,
+                        email: true,
+                        phoneNumber: true,
+                        image: true
+                    }
+                }
+
+            }
         });
         if (!order) {
             return res.status(404).json({ message: "Order not found" });

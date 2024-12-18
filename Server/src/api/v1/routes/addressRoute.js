@@ -11,14 +11,14 @@ import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 const router = express.Router();
 
 router.post(
-	"/users/:userId/addresses",
+	"/:userId",
 	logAction("Creating an address for the user/location"),
 	addAddress,
 	logError
 );
 
 router.get(
-	"/users/:userId/addresses",
+	"/:userId",
 	logAction("Get address from the database/location"),
 	getAddresses,
 	logError

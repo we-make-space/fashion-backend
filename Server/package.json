@@ -11,7 +11,8 @@
 		"prisma:generate": "npx prisma generate --schema=./src/api/v1/prisma/schema.prisma",
 		"prisma:push": "npx prisma db push --schema=./src/api/v1/prisma/schema.prisma",
 		"prisma:studio": "npx prisma studio --schema=./src/api/v1/prisma/schema.prisma",
-		"prisma:format": "npx prisma format --schema=./src/api/v1/prisma/schema.prisma"
+		"prisma:format": "npx prisma format --schema=./src/api/v1/prisma/schema.prisma",
+		"build": "babel src/api/v1/email/emailTemplate.js --out-dir dist"
 	},
 	"keywords": [],
 	"author": "",
@@ -35,13 +36,16 @@
 		"mongoose": "^8.5.1",
 		"morgan": "^1.10.0",
 		"multer": "^1.4.5-lts.1",
+		"nodemailer": "^6.9.16",
 		"nodemon": "^3.1.4",
+		"react-dom": "^19.0.0",
 		"swagger-jsdoc": "^6.2.8",
 		"swagger-ui-express": "^5.0.1",
 		"vercel": "^39.1.2",
 		"winston": "^3.15.0"
 	},
 	"devDependencies": {
+		"@babel/preset-typescript": "^7.26.0",
 		"prisma": "^5.21.0"
 	}
 }

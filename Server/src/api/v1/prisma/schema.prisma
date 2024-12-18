@@ -63,17 +63,17 @@ model User {
 }
 
 model Product {
-  id                  String         @id @default(auto()) @map("_id") @db.ObjectId
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
   product_name        String
   price               Float
   product_image       String[]
   product_description String
   userEmail           String
-  likes               Like[]         @relation("ProductLikes")
+  likes               Like[]   @relation("ProductLikes")
   reviews             Review[]
   sizes               String[]
   colors              String[]
-  owner               User           @relation("Owner", fields: [userEmail], references: [email])
+  owner               User     @relation("Owner", fields: [userEmail], references: [email])
 
   comments  Comment[]
   createdAt DateTime  @default(now())
@@ -82,10 +82,10 @@ model Product {
   categoryId String?   @db.ObjectId
   category   Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
 
-  OrderItem    OrderItem[]
-  CartItem     CartItem[]
-  Inventory    Inventory[]
-  WishlistItem WishlistItem[]
+  OrderItem OrderItem[]
+  CartItem  CartItem[]
+  Inventory Inventory[]
+  Wishlist  Wishlist[]
 }
 
 model Comment {
@@ -158,9 +158,9 @@ model Order {
 model OrderItem {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   orderId   String  @db.ObjectId
-  order     Order   @relation(fields: [orderId], references: [id])
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
   productId String  @db.ObjectId
-  product   Product @relation(fields: [productId], references: [id])
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   quantity  Int
   price     Float
 }
@@ -186,7 +186,7 @@ model Cart {
 model CartItem {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
   cartId    String  @db.ObjectId
-  cart      Cart    @relation(fields: [cartId], references: [id])
+  cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
   productId String  @db.ObjectId
   product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   quantity  Int
@@ -195,20 +195,20 @@ model CartItem {
 }
 
 model Address {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId      String   @db.ObjectId
-  user        User     @relation(fields: [userId], references: [id])
-  street      String
-  city        String
-  town        String?
-  state       String
-  Region      String
-  zipCode     String?
-  country     String
-  countryCode String
-  isDefault   Boolean  @default(false) // To mark the primary address
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        String     @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String     @db.ObjectId
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  street    String
+  city      String
+  town      String?
+  Region    String
+  phone     String
+  zipCode   String?
+  country   String
+  isDefault Boolean    @default(false) // To mark the primary address
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+  shippings Shipping[]
 }
 
 model Inventory {
@@ -223,7 +223,7 @@ model Inventory {
 model Shipping {
   id                String    @id @default(auto()) @map("_id") @db.ObjectId
   orderId           String    @db.ObjectId
-  order             Order     @relation(fields: [orderId], references: [id])
+  order             Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
   carrier           String
   trackingNumber    String?
   status            String
@@ -232,22 +232,16 @@ model Shipping {
   deliveredAt       DateTime?
   createdAt         DateTime  @default(now())
   updatedAt         DateTime  @updatedAt
+  addressId         String    @db.ObjectId
+  address           Address   @relation(fields: [addressId], references: [id], onDelete: Cascade)
 }
 
 model Wishlist {
-  id        String         @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String         @unique @db.ObjectId
-  user      User           @relation(fields: [userId], references: [id])
-  items     WishlistItem[]
-  createdAt DateTime       @default(now())
-  updatedAt DateTime       @updatedAt
-}
-
-model WishlistItem {
-  id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  wishlistId String   @db.ObjectId
-  wishlist   Wishlist @relation(fields: [wishlistId], references: [id])
-  productId  String   @db.ObjectId
-  product    Product  @relation(fields: [productId], references: [id])
-  addedAt    DateTime @default(now())
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @unique @db.ObjectId
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  productId String   @db.ObjectId
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  updatedAt DateTime @updatedAt
 }
