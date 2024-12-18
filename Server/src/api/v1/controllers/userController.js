@@ -18,7 +18,7 @@ export const CreateUser = asyncHandler(async (req, res) => {
 		});
 
 		if (existingUser) {
-			return res.status(200).json(existingUser);
+			return res.status(409).json("User already exist.");
 		}
 
 		// Create new user
