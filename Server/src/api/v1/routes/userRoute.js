@@ -10,6 +10,7 @@ import {
 	getUserFollowers,
 	getUserFollowings,
 	getUserId,
+	getUserOrder,
 	GetUserProducts,
 	toggleFollowUser,
 	upadateAllUsersRole,
@@ -69,5 +70,6 @@ router.get('/:id/followStatus', logAction("Checking follow status"), followStatu
 
 router.get("/followers/:id",logAction("Fetching followers"), getUserFollowers );
 router.get("/followings/:id", logAction("Fetching followings"), getUserFollowings);
+router.get("/:id/orders", logAction("Fetching user orders"), getUserOrder);
 
 export { router as userRoute };

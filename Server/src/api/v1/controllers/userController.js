@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
+import { Role } from "@prisma/client";
 // import { Role } from "@prisma/client";
 
 // import { body, validationResult } from "express-validator";
@@ -140,18 +141,19 @@ export const GetAllUsers = asyncHandler(async (req, res) => {
 
 export const UpdateUser = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { firstName, lastName, image, bio, phoneNumber, role } = req.body;
+	const updateData = {};
+
+	if (req.body.firstName) updateData.firstName = req.body.firstName;
+	if (req.body.lastName) updateData.lastName = req.body.lastName;
+	if (req.body.image) updateData.image = req.body.image;
+	if (req.body.bio) updateData.bio = req.body.bio;
+	if (req.body.phoneNumber) updateData.phoneNumber = req.body.phoneNumber;
+	if (req.body.role) updateData.role = Role[req.body.role.toUpperCase()];
 
 	try {
 		const user = await prisma.user.update({
 			where: { id },
-			data: {
-				firstName,
-				lastName,
-				role: Role[role.toUpperCase()],
-				bio,
-				phoneNumber,
-			},
+			data: updateData,
 		});
 		res.status(200).json({ user, message: "User updated successfully" });
 	} catch (error) {
@@ -161,7 +163,6 @@ export const UpdateUser = asyncHandler(async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 });
-
 //* Delete a User
 
 export const DeleteUser = asyncHandler(async (req, res) => {
@@ -206,7 +207,7 @@ export const GetUser = asyncHandler(async (req, res) => {
 			where: { id },
 			include: {
 				ownedProducts: true,
-			},
+			}
 		});
 		if (!user) return res.status(404).json({ message: "User not found" });
 
@@ -317,6 +318,7 @@ export const upadateAllUsersRole = asyncHandler(async (req, res) => {
 	}
 });
 
+
 export const toggleFollowUser = asyncHandler(async (req, res) => {
 	const followingId = req.params.id;
 	const { followerId } = req.body;
@@ -329,74 +331,60 @@ export const toggleFollowUser = asyncHandler(async (req, res) => {
 	if (followerId === followingId) {
 		return res.status(400).json({ message: "You cannot follow yourself" });
 	}
-
+  
 	try {
-		const followerExists = await prisma.follower.findUnique({
-			where: {
-				followerId_followeeId: { followerId, followeeId: followingId },
-			},
-		});
-
-		if (followerExists) {
-			return res
-				.status(400)
-				.json({ message: "You are already following this user" });
-		}
-
-		await prisma.follower.create({
-			data: {
-				followerId,
-				followeeId: followingId,
-			},
-		});
-
-		res.status(201).json({ message: "User followed successfully" });
+	  const followerExists = await prisma.follower.findUnique({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  if (followerExists) {
+		return res.status(400).json({ message: "You are already following this user" });
+	  }
+  
+	  await prisma.follower.create({
+		data: {
+		  followerId,
+		  followeeId: followingId,
+		},
+	  });
+  
+	  res.status(201).json({ message: "User followed successfully" });
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ message: "Error following user" });
+	  console.error(error);
+	  res.status(500).json({ message: "Error following user" });
 	}
-});
-
-//? Unfollow a user
-export const unfollowUser = asyncHandler(async (req, res) => {
+  });
+  
+  // Unfollow a user
+  export const unfollowUser = asyncHandler(async (req, res) => {
 	const { followerId, followingId } = req.body;
-
+  
 	if (!followerId || !followingId) {
-		return res
-			.status(400)
-			.json({ message: "Missing followerId or followingId" });
+	  return res.status(400).json({ message: "Missing followerId or followingId" });
 	}
 	if (followerId === followingId) {
-		return res
-			.status(400)
-			.json({ message: "You cannot unfollow yourself" });
+	  return res.status(400).json({ message: "You cannot unfollow yourself" });
 	}
-
+  
 	try {
-		const followerExists = await prisma.follower.findUnique({
-			where: {
-				followerId_followeeId: { followerId, followeeId: followingId },
-			},
-		});
-
-		if (!followerExists) {
-			return res
-				.status(400)
-				.json({ message: "You are not following this user" });
-		}
-
-		await prisma.follower.delete({
-			where: {
-				followerId_followeeId: { followerId, followeeId: followingId },
-			},
-		});
-
-		res.status(200).json({ message: "User unfollowed successfully" });
+	  const followerExists = await prisma.follower.findUnique({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  if (!followerExists) {
+		return res.status(400).json({ message: "You are not following this user" });
+	  }
+  
+	  await prisma.follower.delete({
+		where: { followerId_followeeId: { followerId, followeeId: followingId } },
+	  });
+  
+	  res.status(200).json({ message: "User unfollowed successfully" });
 	} catch (error) {
-		console.error(error);
-		res.status(500).json({ message: "Error unfollowing user" });
+	  console.error(error);
+	  res.status(500).json({ message: "Error unfollowing user" });
 	}
-});
+  });
 
 // ? User following status
 export const followStatus = asyncHandler(async (req, res) => {
@@ -431,6 +419,46 @@ export const getUserId = asyncHandler(async (req, res) => {
 		if (!user) return res.status(404).json({ message: "User not found" });
 
 		res.status(200).json(user.id);
+	} catch (error) {
+		res.status(500).json({ error: error.message });
+	}
+});
+
+export const getUserOrder = asyncHandler(async (req, res) => {
+	const { id } = req.params;
+
+	try {
+const orders = await prisma.order.findMany({
+  where: { userId: id },
+  orderBy: {
+	createdAt: 'desc'
+  },
+  include: {
+	Shipping: {
+	  include: {
+		address: true
+	  }
+	},
+	items: {
+	  include: {
+		product: {
+		  include: {
+			owner: {
+			  select: {
+				firstName: true,
+				lastName: true,
+				image: true,
+			  },
+			}
+		  }
+		}
+	  }
+	},
+	user: true
+  }
+});
+
+		res.status(200).json(orders);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
 	}

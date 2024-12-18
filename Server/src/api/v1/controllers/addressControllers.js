@@ -13,7 +13,7 @@ export const addAddress = asyncHandler(async (req, res) => {
 		region,
 		zipCode,
 		country,
-		countryCode,
+		phone,
 		isDefault,
 	} = req.body;
 
@@ -35,7 +35,7 @@ export const addAddress = asyncHandler(async (req, res) => {
 			Region: region,
 			zipCode,
 			country,
-			countryCode,
+			phone,
 			isDefault,
 		},
 	});
@@ -52,6 +52,7 @@ export const getAddresses = asyncHandler(async (req, res) => {
 
 	const addresses = await prisma.address.findMany({
 		where: { userId },
+		orderBy: {createdAt: 'desc'} 
 	});
 
 	const formattedAddresses = addresses.map((address) => ({
