@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
-import { Role } from "@prisma/client";
+// import { Role } from "@prisma/client";
 // import { Role } from "@prisma/client";
 
 // import { body, validationResult } from "express-validator";
