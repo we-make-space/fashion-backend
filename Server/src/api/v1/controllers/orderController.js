@@ -3,6 +3,8 @@ import { prisma } from "../config/prismaConfig.js";
 
 export const createOrder = asyncHandler(async (req, res) => {
     const { userId, status, totalAmount, orderItems, addressId } = req.body;
+
+    console.log("Received request to create order", orderItems);
     try {
      
         const order = await prisma.order.create({
@@ -12,24 +14,24 @@ export const createOrder = asyncHandler(async (req, res) => {
                 },
                 status: status || "PENDING",
                 totalAmount,
-                items: {
-                    create: await Promise.all(orderItems.map(async item => {
-                        const product = await prisma.product.findUnique({
-                            where: { id: item.productId },
-                            select: { price: true },
-                        });
-                        if (!product) {
-                            throw new Error(`Product with id ${item.productId} not found`);
-                        }
-                        return {
-                            product: {
-                                connect: { id: item.productId },
-                            },
-                            quantity: item.quantity,
-                            price: product.price,
-                        };
-                    })),
-                },
+items: {
+  createMany: {
+    data: await Promise.all(orderItems.map(async item => {
+      const product = await prisma.product.findUnique({
+        where: { id: item.productId },
+        select: { price: true },
+      });
+      if (!product) {
+        throw new Error(`Product with id ${item.productId} not found`);
+      }
+      return {
+        productId: item.productId,
+        quantity: item.quantity,
+        price: product.price,
+      };
+    })),
+  },
+},
                 Shipping: {
                     create: {
                         address: {
@@ -44,6 +46,8 @@ export const createOrder = asyncHandler(async (req, res) => {
                 }
             },
         });
+
+        console.log("Order created successfully", order);
 
         res.status(201).json({ message: "Order created successfully", order});
     } catch (error) {

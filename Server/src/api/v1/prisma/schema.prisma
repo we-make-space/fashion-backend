@@ -38,28 +38,38 @@ enum Role {
 }
 
 model User {
-  id            String     @id @default(auto()) @map("_id") @db.ObjectId
-  email         String     @unique
-  firstName     String
-  lastName      String
-  role          Role       @default(USER)
-  image         String?
-  bio           String
-  coverImage    String?
-  location      String?
-  comment       Comment[]
-  likes         Like[]     @relation("UserLikes")
-  phoneNumber   String     @default("000-000-0000")
-  reviews       Review[]
-  followers     Follower[] @relation("Followees")
-  following     Follower[] @relation("Followers")
-  ownedProducts Product[]  @relation("Owner")
-  cartId        String?    @db.ObjectId
-  wishlist      Wishlist?
-  addresses     Address[]
-  orders        Order[]
-  createdAt     DateTime   @default(now())
-  Cart          Cart?
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  email      String  @unique
+  firstName  String
+  lastName   String
+  role       Role    @default(USER)
+  image      String?
+  bio        String
+  coverImage String?
+
+  comment         Comment[]
+  likes           Like[]         @relation("UserLikes")
+  phoneNumber     String         @default("000-000-0000")
+  reviews         Review[]
+  followers       Follower[]     @relation("Followees")
+  following       Follower[]     @relation("Followers")
+  ownedProducts   Product[]      @relation("Owner")
+  cartId          String?        @db.ObjectId
+  wishlist        Wishlist?
+  addresses       Address[]
+  orders          Order[]
+  createdAt       DateTime       @default(now())
+  Cart            Cart?
+  sellerProfile   SellerProfile? @relation(fields: [sellerProfileId], references: [id])
+  sellerProfileId String?        @db.ObjectId
+}
+
+model SellerProfile {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  storeName   String
+  description String
+  location    String?
+  User        User[]
 }
 
 model Product {
@@ -82,7 +92,7 @@ model Product {
   categoryId String?   @db.ObjectId
   category   Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
 
-  OrderItem OrderItem[]
+  OrderItem OrderItem[] @relation("OrderItem")
   CartItem  CartItem[]
   Inventory Inventory[]
   Wishlist  Wishlist[]
@@ -160,7 +170,7 @@ model OrderItem {
   orderId   String  @db.ObjectId
   order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
   productId String  @db.ObjectId
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product   Product @relation("OrderItem", fields: [productId], references: [id], onDelete: Cascade)
   quantity  Int
   price     Float
 }

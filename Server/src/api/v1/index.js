@@ -1,3 +1,9 @@
+import { transformSync } from "@babel/core";
+transformSync("code", {
+	presets: ["@babel/preset-react"],
+  });
+
+
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -15,6 +21,8 @@ import { addressRoute } from "./routes/addressRoute.js";
 import { inventoryRoute } from "./routes/inventoryRoute.js";
 import swaggerSpec from "../../lib/swagger.js";
 import { orderRoute } from "./routes/orderRoute.js";
+import { emailRoute } from "./routes/emailRoute.js";
+import { sendSmsRoute } from "./routes/send-smsRoute.js";
 
 dotenv.config();
 
@@ -35,7 +43,7 @@ app.use((req, res, next) => {
 
 //^ Serve Swagger UI with CORS enabled for the docs route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
+app.use('/images', express.static('images'));
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);
 app.use("/api/v1/categories", categoryRoute);
@@ -45,6 +53,8 @@ app.use("/api/v1/cartItem", cartItemRoute);
 app.use("/api/v1/address", addressRoute);
 app.use("/api/v1/orders", orderRoute);
 app.use("/api/v1/inventory", inventoryRoute);
+app.use("/api/v1/emails", emailRoute)
+app.use("/api/v1/sendSmsRoute", sendSmsRoute);
 
 //~ Error handling middleware
 app.use((err, req, res, next) => {
