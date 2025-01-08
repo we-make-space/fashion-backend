@@ -35482,3 +35482,990 @@ Argument `isDefault`: Invalid value provided. Expected Boolean, provided String.
 2025-01-06 00:23:54 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
 2025-01-06 00:23:54 [INFO]: Fetching a product by ID
 2025-01-06 22:55:37 [INFO]: Server is running successfully on PORT 8080
+2025-01-07 00:32:07 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 00:32:07 [INFO]: Fetching a product by ID
+2025-01-07 00:32:08 [INFO]: Received POST request for /api/v1/users
+2025-01-07 00:32:08 [INFO]: Creating a new user
+2025-01-07 00:33:59 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 00:33:59 [INFO]: Fetching a product by ID
+2025-01-07 00:48:26 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 00:48:26 [INFO]: Fetching a product by ID
+2025-01-07 00:48:30 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:48:30 [INFO]: Fetching all products with pagination
+2025-01-07 00:48:34 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:48:34 [INFO]: Fetching all products with pagination
+2025-01-07 00:49:14 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:49:14 [INFO]: Fetching a product by ID
+2025-01-07 00:49:34 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:49:34 [INFO]: Fetching a product by ID
+2025-01-07 00:49:42 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:49:42 [INFO]: Fetching a product by ID
+2025-01-07 00:49:44 [INFO]: Received POST request for /api/v1/users
+2025-01-07 00:49:44 [INFO]: Creating a new user
+2025-01-07 00:50:16 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:50:16 [INFO]: Fetching all products with pagination
+2025-01-07 00:50:19 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:50:19 [INFO]: Fetching all products with pagination
+2025-01-07 00:50:36 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:50:36 [INFO]: Fetching all products with pagination
+2025-01-07 00:50:36 [INFO]: Received POST request for /api/v1/users
+2025-01-07 00:50:36 [INFO]: Creating a new user
+2025-01-07 00:50:36 [INFO]: Received POST request for /api/v1/users
+2025-01-07 00:50:36 [INFO]: Creating a new user
+2025-01-07 00:50:38 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 00:50:38 [INFO]: Fetching all products with pagination
+2025-01-07 00:52:26 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:52:26 [INFO]: Fetching a product by ID
+2025-01-07 00:52:47 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:52:47 [INFO]: Fetching a product by ID
+2025-01-07 00:52:48 [INFO]: Received POST request for /api/v1/users
+2025-01-07 00:52:48 [INFO]: Creating a new user
+2025-01-07 00:54:51 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 00:54:51 [INFO]: Fetching a product by ID
+2025-01-07 01:01:55 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:01:55 [INFO]: Fetching a product by ID
+2025-01-07 01:03:26 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:03:26 [INFO]: Fetching a product by ID
+2025-01-07 01:03:29 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 01:03:29 [INFO]: Fetching all products with pagination
+2025-01-07 01:03:43 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 01:03:43 [INFO]: Fetching all products with pagination
+2025-01-07 01:04:09 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:04:09 [INFO]: Fetching a product by ID
+2025-01-07 01:05:04 [INFO]: Received POST request for /api/v1/reviews/
+2025-01-07 01:05:12 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:05:12 [INFO]: Fetching a product by ID
+2025-01-07 01:07:11 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:07:11 [INFO]: Fetching a product by ID
+2025-01-07 01:07:21 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:07:21 [INFO]: Fetching a product by ID
+2025-01-07 01:08:20 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:08:20 [INFO]: Fetching a product by ID
+2025-01-07 01:08:32 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:08:32 [INFO]: Fetching a product by ID
+2025-01-07 01:08:36 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:08:36 [INFO]: Fetching a product by ID
+2025-01-07 01:08:50 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:08:50 [INFO]: Fetching a product by ID
+2025-01-07 01:09:09 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:09:09 [INFO]: Fetching a product by ID
+2025-01-07 01:09:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:09:19 [INFO]: Fetching a product by ID
+2025-01-07 01:09:31 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:09:31 [INFO]: Fetching a product by ID
+2025-01-07 01:09:45 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:09:45 [INFO]: Fetching a product by ID
+2025-01-07 01:09:54 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:09:54 [INFO]: Fetching a product by ID
+2025-01-07 01:10:00 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:10:00 [INFO]: Fetching a product by ID
+2025-01-07 01:10:18 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:10:18 [INFO]: Fetching a product by ID
+2025-01-07 01:10:24 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:10:24 [INFO]: Fetching a product by ID
+2025-01-07 01:10:33 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:10:33 [INFO]: Fetching a product by ID
+2025-01-07 01:10:37 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:10:37 [INFO]: Fetching a product by ID
+2025-01-07 01:11:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:11:19 [INFO]: Fetching a product by ID
+2025-01-07 01:11:21 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:11:21 [INFO]: Fetching a product by ID
+2025-01-07 01:11:45 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:11:45 [INFO]: Fetching a product by ID
+2025-01-07 01:28:51 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:28:51 [INFO]: Fetching a product by ID
+2025-01-07 01:29:04 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:29:04 [INFO]: Fetching a product by ID
+2025-01-07 01:29:26 [INFO]: Received POST request for /api/v1/users
+2025-01-07 01:29:26 [INFO]: Creating a new user
+2025-01-07 01:29:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:29:46 [INFO]: Fetching a product by ID
+2025-01-07 01:30:12 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:30:12 [INFO]: Fetching a product by ID
+2025-01-07 01:30:22 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:30:22 [INFO]: Fetching a product by ID
+2025-01-07 01:30:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 01:30:23 [INFO]: Creating a new user
+2025-01-07 01:30:55 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:30:55 [INFO]: Fetching a product by ID
+2025-01-07 01:30:56 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:30:56 [INFO]: Fetching a product by ID
+2025-01-07 01:31:00 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:31:00 [INFO]: Fetching a product by ID
+2025-01-07 01:31:02 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:31:02 [INFO]: Fetching a product by ID
+2025-01-07 01:31:34 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:31:34 [INFO]: Fetching a product by ID
+2025-01-07 01:31:35 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:31:35 [INFO]: Fetching a product by ID
+2025-01-07 01:31:40 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:31:40 [INFO]: Fetching a product by ID
+2025-01-07 01:31:43 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:31:43 [INFO]: Fetching a product by ID
+2025-01-07 01:31:44 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:31:44 [INFO]: Fetching a product by ID
+2025-01-07 01:31:47 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:31:47 [INFO]: Fetching a product by ID
+2025-01-07 01:31:47 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:31:47 [INFO]: Fetching a product by ID
+2025-01-07 01:31:53 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:31:53 [INFO]: Fetching a product by ID
+2025-01-07 01:31:54 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:31:54 [INFO]: Fetching a product by ID
+2025-01-07 01:32:02 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:32:02 [INFO]: Fetching a product by ID
+2025-01-07 01:32:03 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:32:03 [INFO]: Fetching a product by ID
+2025-01-07 01:32:14 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:32:14 [INFO]: Fetching a product by ID
+2025-01-07 01:32:15 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:32:15 [INFO]: Fetching a product by ID
+2025-01-07 01:32:20 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:32:20 [INFO]: Fetching a product by ID
+2025-01-07 01:32:21 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:32:21 [INFO]: Fetching a product by ID
+2025-01-07 01:32:26 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:32:26 [INFO]: Fetching a product by ID
+2025-01-07 01:32:27 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:32:27 [INFO]: Fetching a product by ID
+2025-01-07 01:32:27 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:32:27 [INFO]: Fetching a product by ID
+2025-01-07 01:33:23 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:33:23 [INFO]: Fetching a product by ID
+2025-01-07 01:33:23 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:33:23 [INFO]: Fetching a product by ID
+2025-01-07 01:33:30 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:33:30 [INFO]: Fetching a product by ID
+2025-01-07 01:33:30 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:33:30 [INFO]: Fetching a product by ID
+2025-01-07 01:33:38 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:33:38 [INFO]: Fetching a product by ID
+2025-01-07 01:33:39 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:33:39 [INFO]: Fetching a product by ID
+2025-01-07 01:33:47 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:33:47 [INFO]: Fetching a product by ID
+2025-01-07 01:33:48 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:33:48 [INFO]: Fetching a product by ID
+2025-01-07 01:33:55 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:33:55 [INFO]: Fetching a product by ID
+2025-01-07 01:33:56 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:33:56 [INFO]: Fetching a product by ID
+2025-01-07 01:34:11 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:34:11 [INFO]: Fetching a product by ID
+2025-01-07 01:34:41 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:34:41 [INFO]: Fetching a product by ID
+2025-01-07 01:35:10 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 01:35:10 [INFO]: Fetching a product by ID
+2025-01-07 01:35:57 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 01:35:57 [INFO]: Fetching a product by ID
+2025-01-07 01:44:47 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 01:44:47 [INFO]: Fetching a product by ID
+2025-01-07 02:30:33 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:30:33 [INFO]: Fetching a product by ID
+2025-01-07 02:30:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:30:46 [INFO]: Fetching a product by ID
+2025-01-07 02:30:50 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:30:50 [INFO]: Fetching a product by ID
+2025-01-07 02:49:21 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:49:21 [INFO]: Fetching a product by ID
+2025-01-07 02:49:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 02:49:23 [INFO]: Creating a new user
+2025-01-07 02:50:31 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:50:31 [INFO]: Fetching a product by ID
+2025-01-07 02:59:18 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:59:18 [INFO]: Fetching a product by ID
+2025-01-07 02:59:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 02:59:23 [INFO]: Creating a new user
+2025-01-07 02:59:56 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 02:59:56 [INFO]: Fetching a product by ID
+2025-01-07 03:00:06 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:00:06 [INFO]: Fetching a product by ID
+2025-01-07 03:00:21 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:00:21 [INFO]: Fetching a product by ID
+2025-01-07 03:00:23 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:00:23 [INFO]: Fetching a product by ID
+2025-01-07 03:00:26 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:00:26 [INFO]: Fetching a product by ID
+2025-01-07 03:02:13 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:02:13 [INFO]: Fetching a product by ID
+2025-01-07 03:03:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:03:19 [INFO]: Fetching a product by ID
+2025-01-07 03:03:51 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:03:52 [INFO]: Fetching a product by ID
+2025-01-07 03:05:15 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:05:15 [INFO]: Fetching a product by ID
+2025-01-07 03:05:51 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:05:51 [INFO]: Fetching a product by ID
+2025-01-07 03:05:54 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:05:54 [INFO]: Fetching a product by ID
+2025-01-07 03:06:10 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:06:10 [INFO]: Fetching a product by ID
+2025-01-07 03:10:33 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:10:33 [INFO]: Fetching a product by ID
+2025-01-07 03:11:45 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:11:45 [INFO]: Fetching a product by ID
+2025-01-07 03:16:03 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:16:03 [INFO]: Fetching a product by ID
+2025-01-07 03:17:31 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:17:31 [INFO]: Fetching a product by ID
+2025-01-07 03:18:56 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:18:56 [INFO]: Fetching a product by ID
+2025-01-07 03:20:14 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:20:14 [INFO]: Fetching a product by ID
+2025-01-07 03:22:08 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:22:08 [INFO]: Fetching a product by ID
+2025-01-07 03:24:33 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 03:24:33 [INFO]: Fetching a product by ID
+2025-01-07 03:24:44 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:24:44 [INFO]: Creating a new user
+2025-01-07 03:25:00 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:25:00 [INFO]: Fetching a product by ID
+2025-01-07 03:26:12 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:26:12 [INFO]: Fetching a product by ID
+2025-01-07 03:26:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:26:46 [INFO]: Fetching a product by ID
+2025-01-07 03:28:24 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:28:24 [INFO]: Fetching a product by ID
+2025-01-07 03:31:17 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:31:17 [INFO]: Fetching a product by ID
+2025-01-07 03:34:25 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:34:25 [INFO]: Fetching a product by ID
+2025-01-07 03:34:37 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:34:37 [INFO]: Fetching a product by ID
+2025-01-07 03:34:40 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:34:40 [INFO]: Creating a new user
+2025-01-07 03:36:12 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:36:12 [INFO]: Fetching a product by ID
+2025-01-07 03:36:20 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:36:20 [INFO]: Fetching a product by ID
+2025-01-07 03:36:24 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:36:24 [INFO]: Fetching a product by ID
+2025-01-07 03:36:35 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:36:35 [INFO]: Fetching a product by ID
+2025-01-07 03:37:24 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:37:24 [INFO]: Fetching a product by ID
+2025-01-07 03:38:31 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:38:31 [INFO]: Fetching a product by ID
+2025-01-07 03:42:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:42:46 [INFO]: Fetching a product by ID
+2025-01-07 03:42:47 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:42:47 [INFO]: Creating a new user
+2025-01-07 03:44:43 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:44:43 [INFO]: Fetching a product by ID
+2025-01-07 03:44:58 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:44:58 [INFO]: Fetching a product by ID
+2025-01-07 03:46:35 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:46:35 [INFO]: Fetching a product by ID
+2025-01-07 03:54:36 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:54:36 [INFO]: Fetching a product by ID
+2025-01-07 03:55:03 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:55:03 [INFO]: Fetching a product by ID
+2025-01-07 03:56:13 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:13 [INFO]: Fetching a product by ID
+2025-01-07 03:56:17 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:17 [INFO]: Fetching a product by ID
+2025-01-07 03:56:18 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:18 [INFO]: Creating a new user
+2025-01-07 03:56:23 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:23 [INFO]: Fetching a product by ID
+2025-01-07 03:56:24 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:24 [INFO]: Creating a new user
+2025-01-07 03:56:31 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:31 [INFO]: Fetching a product by ID
+2025-01-07 03:56:32 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:32 [INFO]: Creating a new user
+2025-01-07 03:56:35 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:35 [INFO]: Fetching a product by ID
+2025-01-07 03:56:36 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:36 [INFO]: Creating a new user
+2025-01-07 03:56:39 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:39 [INFO]: Fetching a product by ID
+2025-01-07 03:56:40 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:40 [INFO]: Creating a new user
+2025-01-07 03:56:44 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:56:44 [INFO]: Fetching a product by ID
+2025-01-07 03:56:45 [INFO]: Received POST request for /api/v1/users
+2025-01-07 03:56:45 [INFO]: Creating a new user
+2025-01-07 03:57:02 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 03:57:02 [INFO]: Fetching a product by ID
+2025-01-07 04:00:38 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:00:38 [INFO]: Fetching a product by ID
+2025-01-07 04:00:39 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:00:39 [INFO]: Creating a new user
+2025-01-07 04:02:00 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:02:00 [INFO]: Fetching a product by ID
+2025-01-07 04:02:03 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:02:03 [INFO]: Creating a new user
+2025-01-07 04:03:44 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:03:44 [INFO]: Fetching a product by ID
+2025-01-07 04:03:45 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:03:45 [INFO]: Creating a new user
+2025-01-07 04:04:09 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:04:09 [INFO]: Fetching a product by ID
+2025-01-07 04:07:49 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:07:49 [INFO]: Fetching a product by ID
+2025-01-07 04:13:08 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:13:08 [INFO]: Fetching a product by ID
+2025-01-07 04:16:21 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:16:21 [INFO]: Fetching a product by ID
+2025-01-07 04:16:26 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:16:26 [INFO]: Creating a new user
+2025-01-07 04:16:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:16:46 [INFO]: Fetching a product by ID
+2025-01-07 04:17:04 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:17:04 [INFO]: Fetching a product by ID
+2025-01-07 04:19:55 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:19:55 [INFO]: Fetching a product by ID
+2025-01-07 04:20:42 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:20:42 [INFO]: Fetching a product by ID
+2025-01-07 04:23:08 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:23:08 [INFO]: Fetching a product by ID
+2025-01-07 04:23:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:23:19 [INFO]: Fetching a product by ID
+2025-01-07 04:23:20 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:23:20 [INFO]: Creating a new user
+2025-01-07 04:23:26 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:23:26 [INFO]: Fetching a product by ID
+2025-01-07 04:23:34 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:23:34 [INFO]: Fetching a product by ID
+2025-01-07 04:23:34 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:23:34 [INFO]: Creating a new user
+2025-01-07 04:24:34 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:24:34 [INFO]: Fetching a product by ID
+2025-01-07 04:25:28 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:25:28 [INFO]: Fetching a product by ID
+2025-01-07 04:26:42 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:26:42 [INFO]: Fetching a product by ID
+2025-01-07 04:26:59 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:26:59 [INFO]: Fetching a product by ID
+2025-01-07 04:27:10 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:27:10 [INFO]: Fetching a product by ID
+2025-01-07 04:27:43 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:27:43 [INFO]: Fetching a product by ID
+2025-01-07 04:28:35 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:28:35 [INFO]: Fetching a product by ID
+2025-01-07 04:28:47 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:28:47 [INFO]: Fetching a product by ID
+2025-01-07 04:28:55 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:28:55 [INFO]: Fetching a product by ID
+2025-01-07 04:29:52 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:29:52 [INFO]: Fetching a product by ID
+2025-01-07 04:30:30 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:30:30 [INFO]: Fetching a product by ID
+2025-01-07 04:30:34 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:30:34 [INFO]: Fetching a product by ID
+2025-01-07 04:31:39 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:31:39 [INFO]: Fetching a product by ID
+2025-01-07 04:32:10 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:32:10 [INFO]: Fetching a product by ID
+2025-01-07 04:32:20 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:32:20 [INFO]: Fetching a product by ID
+2025-01-07 04:32:28 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:32:28 [INFO]: Fetching a product by ID
+2025-01-07 04:32:43 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:32:43 [INFO]: Fetching a product by ID
+2025-01-07 04:33:03 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:33:03 [INFO]: Fetching a product by ID
+2025-01-07 04:33:08 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:33:08 [INFO]: Fetching a product by ID
+2025-01-07 04:33:22 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:33:22 [INFO]: Fetching a product by ID
+2025-01-07 04:33:28 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:33:28 [INFO]: Fetching a product by ID
+2025-01-07 04:34:05 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:34:05 [INFO]: Fetching a product by ID
+2025-01-07 04:35:14 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:35:14 [INFO]: Fetching a product by ID
+2025-01-07 04:36:09 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:36:09 [INFO]: Fetching a product by ID
+2025-01-07 04:36:11 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:36:11 [INFO]: Fetching a product by ID
+2025-01-07 04:37:59 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:37:59 [INFO]: Fetching a product by ID
+2025-01-07 04:38:10 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:38:10 [INFO]: Fetching a product by ID
+2025-01-07 04:38:14 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:38:14 [INFO]: Fetching a product by ID
+2025-01-07 04:39:46 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:39:46 [INFO]: Fetching a product by ID
+2025-01-07 04:39:56 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:39:56 [INFO]: Fetching a product by ID
+2025-01-07 04:39:57 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:39:57 [INFO]: Creating a new user
+2025-01-07 04:41:23 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:41:23 [INFO]: Fetching a product by ID
+2025-01-07 04:41:29 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:41:29 [INFO]: Fetching a product by ID
+2025-01-07 04:41:34 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:41:34 [INFO]: Fetching a product by ID
+2025-01-07 04:41:35 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:41:35 [INFO]: Creating a new user
+2025-01-07 04:42:20 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:42:20 [INFO]: Fetching a product by ID
+2025-01-07 04:42:55 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:42:55 [INFO]: Fetching a product by ID
+2025-01-07 04:43:06 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:43:06 [INFO]: Fetching a product by ID
+2025-01-07 04:43:15 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:43:15 [INFO]: Fetching a product by ID
+2025-01-07 04:43:19 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:43:19 [INFO]: Fetching a product by ID
+2025-01-07 04:43:23 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:43:23 [INFO]: Fetching a product by ID
+2025-01-07 04:43:25 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:43:25 [INFO]: Fetching a product by ID
+2025-01-07 04:43:29 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:43:29 [INFO]: Creating a new user
+2025-01-07 04:43:39 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:43:39 [INFO]: Fetching a product by ID
+2025-01-07 04:43:42 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:43:42 [INFO]: Fetching a product by ID
+2025-01-07 04:43:44 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:43:44 [INFO]: Fetching a product by ID
+2025-01-07 04:43:46 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:43:46 [INFO]: Fetching a product by ID
+2025-01-07 04:43:47 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:43:47 [INFO]: Creating a new user
+2025-01-07 04:43:52 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 04:43:52 [INFO]: Fetching a product by ID
+2025-01-07 04:44:22 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:44:22 [INFO]: Creating a new user
+2025-01-07 04:45:09 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:45:09 [INFO]: Fetching a product by ID
+2025-01-07 04:47:35 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:47:35 [INFO]: Fetching a product by ID
+2025-01-07 04:47:56 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:47:56 [INFO]: Fetching a product by ID
+2025-01-07 04:47:56 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:47:56 [INFO]: Fetching a product by ID
+2025-01-07 04:48:03 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:48:03 [INFO]: Fetching a product by ID
+2025-01-07 04:48:08 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:48:08 [INFO]: Fetching a product by ID
+2025-01-07 04:48:09 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:48:09 [INFO]: Creating a new user
+2025-01-07 04:48:13 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:48:13 [INFO]: Fetching a product by ID
+2025-01-07 04:48:13 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:48:13 [INFO]: Fetching a product by ID
+2025-01-07 04:48:21 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:48:21 [INFO]: Fetching a product by ID
+2025-01-07 04:48:21 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:48:21 [INFO]: Fetching a product by ID
+2025-01-07 04:48:25 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:48:25 [INFO]: Fetching a product by ID
+2025-01-07 04:48:25 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:48:25 [INFO]: Fetching a product by ID
+2025-01-07 04:52:27 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:52:27 [INFO]: Fetching a product by ID
+2025-01-07 04:52:28 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:52:28 [INFO]: Creating a new user
+2025-01-07 04:52:33 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:52:33 [INFO]: Fetching a product by ID
+2025-01-07 04:52:34 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:52:34 [INFO]: Creating a new user
+2025-01-07 04:52:36 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:52:36 [INFO]: Fetching a product by ID
+2025-01-07 04:52:37 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:52:37 [INFO]: Creating a new user
+2025-01-07 04:52:40 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:52:40 [INFO]: Fetching a product by ID
+2025-01-07 04:52:40 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:52:40 [INFO]: Creating a new user
+2025-01-07 04:52:51 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:52:51 [INFO]: Fetching a product by ID
+2025-01-07 04:52:55 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 04:52:55 [INFO]: Fetching a product by ID
+2025-01-07 04:52:58 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:52:58 [INFO]: Fetching a product by ID
+2025-01-07 04:53:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:53:02 [INFO]: Creating a new user
+2025-01-07 04:53:04 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 04:53:04 [INFO]: Fetching a product by ID
+2025-01-07 04:53:13 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:53:13 [INFO]: Fetching a product by ID
+2025-01-07 04:53:34 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:53:34 [INFO]: Creating a new user
+2025-01-07 04:53:34 [INFO]: Received POST request for /api/v1/users
+2025-01-07 04:53:34 [INFO]: Creating a new user
+2025-01-07 04:54:47 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 04:54:47 [INFO]: Fetching a product by ID
+2025-01-07 04:54:47 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:54:47 [INFO]: Fetching a product by ID
+2025-01-07 04:56:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:56:19 [INFO]: Fetching a product by ID
+2025-01-07 04:56:25 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:56:25 [INFO]: Fetching a product by ID
+2025-01-07 04:57:33 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-07 04:57:33 [INFO]: Fetching a product by ID
+2025-01-07 04:57:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 04:57:40 [INFO]: Fetching all products with pagination
+2025-01-07 04:57:42 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 04:57:42 [INFO]: Fetching all products with pagination
+2025-01-07 04:57:52 [INFO]: Received GET request for /api/v1/products/6715c9fb0443e9f82b4eea5c
+2025-01-07 04:57:52 [INFO]: Fetching a product by ID
+2025-01-07 04:58:14 [INFO]: Received GET request for /api/v1/products/6715c0c70443e9f82b4eea51
+2025-01-07 04:58:14 [INFO]: Fetching a product by ID
+2025-01-07 04:58:52 [INFO]: Received GET request for /api/v1/products/6715d0080443e9f82b4eea68
+2025-01-07 04:58:52 [INFO]: Fetching a product by ID
+2025-01-07 04:59:37 [INFO]: Received GET request for /api/v1/products/6715cd790443e9f82b4eea62
+2025-01-07 04:59:37 [INFO]: Fetching a product by ID
+2025-01-07 04:59:51 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 04:59:51 [INFO]: Fetching a product by ID
+2025-01-07 05:00:16 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:00:16 [INFO]: Fetching a product by ID
+2025-01-07 05:00:36 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:00:36 [INFO]: Fetching a product by ID
+2025-01-07 05:01:09 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:01:09 [INFO]: Fetching a product by ID
+2025-01-07 05:01:22 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:01:22 [INFO]: Fetching a product by ID
+2025-01-07 05:01:26 [INFO]: Received POST request for /api/v1/users
+2025-01-07 05:01:26 [INFO]: Creating a new user
+2025-01-07 05:03:26 [INFO]: Received POST request for /api/v1/reviews/
+2025-01-07 05:03:30 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:03:30 [INFO]: Fetching a product by ID
+2025-01-07 05:04:08 [INFO]: Received GET request for /api/v1/users/all
+2025-01-07 05:04:08 [INFO]: Fetching a user
+2025-01-07 05:04:18 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:04:18 [INFO]: Fetching a product by ID
+2025-01-07 05:06:09 [INFO]: Received POST request for /api/v1/reviews/
+2025-01-07 05:06:11 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:06:11 [INFO]: Fetching a product by ID
+2025-01-07 05:07:11 [INFO]: Received POST request for /api/v1/reviews/
+2025-01-07 05:07:14 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:07:14 [INFO]: Fetching a product by ID
+2025-01-07 05:07:30 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:07:30 [INFO]: Fetching a product by ID
+2025-01-07 05:08:20 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:08:20 [INFO]: Fetching a product by ID
+2025-01-07 05:10:07 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:10:07 [INFO]: Fetching a product by ID
+2025-01-07 05:11:21 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:11:21 [INFO]: Fetching a product by ID
+2025-01-07 05:18:35 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 05:18:35 [INFO]: Fetching a product by ID
+2025-01-07 13:05:32 [INFO]: Server is running successfully on PORT 8080
+2025-01-07 13:06:05 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:06:05 [INFO]: Fetching a product by ID
+2025-01-07 13:06:08 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:06:08 [INFO]: Creating a new user
+2025-01-07 13:06:13 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:06:13 [INFO]: Fetching a product by ID
+2025-01-07 13:14:38 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:14:38 [INFO]: Fetching a product by ID
+2025-01-07 13:14:42 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:14:42 [INFO]: Fetching a product by ID
+2025-01-07 13:15:38 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:15:38 [INFO]: Fetching a product by ID
+2025-01-07 13:16:12 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:16:12 [INFO]: Fetching a product by ID
+2025-01-07 13:18:05 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:18:05 [INFO]: Fetching a product by ID
+2025-01-07 13:18:55 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:18:55 [INFO]: Fetching a product by ID
+2025-01-07 13:19:00 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:19:00 [INFO]: Fetching a product by ID
+2025-01-07 13:20:43 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:20:43 [INFO]: Fetching a product by ID
+2025-01-07 13:20:46 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:20:46 [INFO]: Fetching a product by ID
+2025-01-07 13:22:42 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 13:22:42 [INFO]: Fetching a product by ID
+2025-01-07 13:29:10 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 13:29:10 [INFO]: Fetching a product by ID
+2025-01-07 13:29:13 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:29:13 [INFO]: Creating a new user
+2025-01-07 13:29:23 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 13:29:23 [INFO]: Fetching a product by ID
+2025-01-07 13:29:24 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:29:24 [INFO]: Creating a new user
+2025-01-07 13:29:43 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 13:29:43 [INFO]: Fetching a product by ID
+2025-01-07 13:29:44 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:29:44 [INFO]: Creating a new user
+2025-01-07 13:29:50 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:29:50 [INFO]: Fetching all products with pagination
+2025-01-07 13:29:53 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:29:53 [INFO]: Fetching all products with pagination
+2025-01-07 13:30:25 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:30:25 [INFO]: Creating a new user
+2025-01-07 13:31:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:31:28 [INFO]: Fetching all products with pagination
+2025-01-07 13:31:29 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:31:29 [INFO]: Creating a new user
+2025-01-07 13:31:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:31:31 [INFO]: Fetching all products with pagination
+2025-01-07 13:31:41 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:31:41 [INFO]: Fetching a user
+2025-01-07 13:31:41 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:31:41 [INFO]: Creating a new user
+2025-01-07 13:31:41 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:31:41 [INFO]: Creating a new user
+2025-01-07 13:32:58 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:32:58 [INFO]: Fetching a user
+2025-01-07 13:32:58 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:32:58 [INFO]: Creating a new user
+2025-01-07 13:32:58 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:32:58 [INFO]: Creating a new user
+2025-01-07 13:33:32 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:33:32 [INFO]: Fetching a user
+2025-01-07 13:33:33 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:33:33 [INFO]: Fetching a user
+2025-01-07 13:33:35 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:33:35 [INFO]: Fetching a user
+2025-01-07 13:33:38 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:33:38 [INFO]: Fetching a user
+2025-01-07 13:33:39 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:33:39 [INFO]: Fetching a user
+2025-01-07 13:34:09 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:34:09 [INFO]: Fetching a user
+2025-01-07 13:34:09 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:34:09 [INFO]: Fetching a user
+2025-01-07 13:36:52 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:36:52 [INFO]: Fetching a user
+2025-01-07 13:49:38 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:49:38 [INFO]: Fetching a user
+2025-01-07 13:49:41 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 13:49:41 [INFO]: Fetching a product by ID
+2025-01-07 13:50:00 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:50:00 [INFO]: Fetching a user
+2025-01-07 13:50:38 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 13:50:38 [INFO]: Fetching a product by ID
+2025-01-07 13:50:45 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:50:45 [INFO]: Fetching a user
+2025-01-07 13:50:45 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:50:45 [INFO]: Fetching a user
+2025-01-07 13:50:47 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:50:47 [INFO]: Fetching a user
+2025-01-07 13:50:49 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:50:49 [INFO]: Fetching a user
+2025-01-07 13:50:50 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:50:50 [INFO]: Creating a new user
+2025-01-07 13:50:50 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:50:50 [INFO]: Creating a new user
+2025-01-07 13:50:50 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:50:50 [INFO]: Creating a new user
+2025-01-07 13:50:53 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:50:53 [INFO]: Fetching a user
+2025-01-07 13:52:11 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:52:11 [INFO]: Fetching a user
+2025-01-07 13:52:20 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:52:20 [INFO]: Fetching a user
+2025-01-07 13:52:21 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:52:21 [INFO]: Fetching a user
+2025-01-07 13:52:22 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:52:22 [INFO]: Fetching a user
+2025-01-07 13:52:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:52:23 [INFO]: Creating a new user
+2025-01-07 13:52:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:52:23 [INFO]: Creating a new user
+2025-01-07 13:52:23 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:52:23 [INFO]: Creating a new user
+2025-01-07 13:52:24 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:52:24 [INFO]: Fetching a user
+2025-01-07 13:52:28 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:52:28 [INFO]: Fetching a user
+2025-01-07 13:55:20 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:55:20 [INFO]: Fetching a user
+2025-01-07 13:55:21 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:21 [INFO]: Creating a new user
+2025-01-07 13:55:21 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:21 [INFO]: Creating a new user
+2025-01-07 13:55:21 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:21 [INFO]: Creating a new user
+2025-01-07 13:55:21 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:21 [INFO]: Creating a new user
+2025-01-07 13:55:21 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:21 [INFO]: Fetching a user
+2025-01-07 13:55:22 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:22 [INFO]: Fetching a user
+2025-01-07 13:55:24 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:24 [INFO]: Fetching a user
+2025-01-07 13:55:35 [INFO]: Received GET request for /api/v1/users/6715cf190443e9f82b4eea65
+2025-01-07 13:55:35 [INFO]: Fetching a user
+2025-01-07 13:55:36 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:36 [INFO]: Fetching a user
+2025-01-07 13:55:37 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:37 [INFO]: Fetching a user
+2025-01-07 13:55:38 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:38 [INFO]: Creating a new user
+2025-01-07 13:55:38 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:38 [INFO]: Creating a new user
+2025-01-07 13:55:38 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:55:38 [INFO]: Creating a new user
+2025-01-07 13:55:39 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:39 [INFO]: Fetching a user
+2025-01-07 13:55:43 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:55:43 [INFO]: Fetching a user
+2025-01-07 13:56:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:56:31 [INFO]: Fetching all products with pagination
+2025-01-07 13:56:33 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 13:56:33 [INFO]: Fetching all products with pagination
+2025-01-07 13:56:42 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44
+2025-01-07 13:56:42 [INFO]: Fetching a user
+2025-01-07 13:56:42 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:56:42 [INFO]: Fetching a user
+2025-01-07 13:56:42 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:56:42 [INFO]: Creating a new user
+2025-01-07 13:56:42 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:56:42 [INFO]: Creating a new user
+2025-01-07 13:56:42 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:56:42 [INFO]: Creating a new user
+2025-01-07 13:56:42 [INFO]: Received POST request for /api/v1/users
+2025-01-07 13:56:42 [INFO]: Creating a new user
+2025-01-07 13:56:43 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:56:43 [INFO]: Fetching a user
+2025-01-07 13:56:45 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:56:45 [INFO]: Fetching a user
+2025-01-07 13:56:49 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 13:56:49 [INFO]: Fetching a user
+2025-01-07 14:00:10 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:00:10 [INFO]: Fetching a product by ID
+2025-01-07 14:01:02 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44
+2025-01-07 14:01:02 [INFO]: Fetching a user
+2025-01-07 14:01:09 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:01:09 [INFO]: Fetching a product by ID
+2025-01-07 14:01:10 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44
+2025-01-07 14:01:10 [INFO]: Fetching a user
+2025-01-07 14:01:10 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:01:10 [INFO]: Creating a new user
+2025-01-07 14:01:10 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:01:10 [INFO]: Creating a new user
+2025-01-07 14:01:10 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:01:10 [INFO]: Creating a new user
+2025-01-07 14:01:10 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:01:10 [INFO]: Creating a new user
+2025-01-07 14:01:11 [INFO]: Received GET request for /api/v1/users/6715b8650443e9f82b4eea44
+2025-01-07 14:01:11 [INFO]: Fetching a user
+2025-01-07 14:01:13 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:01:13 [INFO]: Fetching a product by ID
+2025-01-07 14:01:20 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:01:20 [INFO]: Fetching a user
+2025-01-07 14:01:21 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:01:21 [INFO]: Fetching a user
+2025-01-07 14:01:38 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:01:38 [INFO]: Fetching all products with pagination
+2025-01-07 14:01:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:01:40 [INFO]: Fetching all products with pagination
+2025-01-07 14:03:12 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:03:12 [INFO]: Fetching all products with pagination
+2025-01-07 14:03:12 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:12 [INFO]: Creating a new user
+2025-01-07 14:03:13 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:13 [INFO]: Creating a new user
+2025-01-07 14:03:15 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:03:15 [INFO]: Fetching all products with pagination
+2025-01-07 14:03:26 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:03:26 [INFO]: Fetching a user
+2025-01-07 14:03:27 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:27 [INFO]: Creating a new user
+2025-01-07 14:03:27 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:27 [INFO]: Creating a new user
+2025-01-07 14:03:27 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:27 [INFO]: Creating a new user
+2025-01-07 14:03:27 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:27 [INFO]: Fetching a user
+2025-01-07 14:03:27 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:27 [INFO]: Creating a new user
+2025-01-07 14:03:28 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:28 [INFO]: Fetching a user
+2025-01-07 14:03:30 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:30 [INFO]: Fetching a user
+2025-01-07 14:03:34 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:34 [INFO]: Fetching a user
+2025-01-07 14:03:37 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:03:37 [INFO]: Fetching a user
+2025-01-07 14:03:42 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:03:42 [INFO]: Fetching a user
+2025-01-07 14:03:43 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:43 [INFO]: Fetching a user
+2025-01-07 14:03:44 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:44 [INFO]: Fetching a user
+2025-01-07 14:03:45 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:45 [INFO]: Creating a new user
+2025-01-07 14:03:45 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:45 [INFO]: Creating a new user
+2025-01-07 14:03:45 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:03:45 [INFO]: Creating a new user
+2025-01-07 14:03:46 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:46 [INFO]: Fetching a user
+2025-01-07 14:03:51 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:03:51 [INFO]: Fetching a user
+2025-01-07 14:06:06 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:06:06 [INFO]: Fetching a user
+2025-01-07 14:06:07 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:06:07 [INFO]: Fetching a user
+2025-01-07 14:06:07 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:06:07 [INFO]: Creating a new user
+2025-01-07 14:06:07 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:06:07 [INFO]: Creating a new user
+2025-01-07 14:06:07 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:06:07 [INFO]: Creating a new user
+2025-01-07 14:06:07 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:06:07 [INFO]: Creating a new user
+2025-01-07 14:06:08 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:06:08 [INFO]: Fetching a user
+2025-01-07 14:06:10 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:06:10 [INFO]: Fetching a user
+2025-01-07 14:06:14 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:06:14 [INFO]: Fetching a user
+2025-01-07 14:07:30 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:07:30 [INFO]: Fetching a user
+2025-01-07 14:07:31 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:07:31 [INFO]: Fetching a user
+2025-01-07 14:07:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:07:31 [INFO]: Creating a new user
+2025-01-07 14:07:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:07:31 [INFO]: Creating a new user
+2025-01-07 14:07:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:07:31 [INFO]: Creating a new user
+2025-01-07 14:07:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:07:31 [INFO]: Creating a new user
+2025-01-07 14:07:32 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:07:32 [INFO]: Fetching a user
+2025-01-07 14:07:38 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:07:38 [INFO]: Fetching a user
+2025-01-07 14:07:42 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:07:42 [INFO]: Fetching a user
+2025-01-07 14:08:01 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:08:01 [INFO]: Fetching a user
+2025-01-07 14:08:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:08:02 [INFO]: Creating a new user
+2025-01-07 14:08:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:08:02 [INFO]: Creating a new user
+2025-01-07 14:08:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:08:02 [INFO]: Creating a new user
+2025-01-07 14:08:02 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:08:02 [INFO]: Fetching a user
+2025-01-07 14:08:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:08:02 [INFO]: Creating a new user
+2025-01-07 14:08:03 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:08:03 [INFO]: Fetching a user
+2025-01-07 14:08:05 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:08:05 [INFO]: Fetching a user
+2025-01-07 14:09:54 [INFO]: Received GET request for /api/v1/users/null
+2025-01-07 14:09:54 [INFO]: Fetching a user
+2025-01-07 14:20:22 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:20:22 [INFO]: Fetching a product by ID
+2025-01-07 14:20:28 [INFO]: Received GET request for /api/v1/users/6715bc970443e9f82b4eea4c
+2025-01-07 14:20:28 [INFO]: Fetching a user
+2025-01-07 14:20:29 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:20:29 [INFO]: Fetching all products with pagination
+2025-01-07 14:20:31 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:20:31 [INFO]: Fetching all products with pagination
+2025-01-07 14:20:42 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:20:42 [INFO]: Fetching a product by ID
+2025-01-07 14:20:53 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:20:53 [INFO]: Creating a new user
+2025-01-07 14:21:33 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:21:33 [INFO]: Fetching all products with pagination
+2025-01-07 14:21:36 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:21:36 [INFO]: Fetching all products with pagination
+2025-01-07 14:21:36 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:21:36 [INFO]: Creating a new user
+2025-01-07 14:30:20 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:30:21 [INFO]: Fetching all products with pagination
+2025-01-07 14:30:21 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:30:21 [INFO]: Creating a new user
+2025-01-07 14:30:24 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:30:24 [INFO]: Fetching a product by ID
+2025-01-07 14:30:29 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:30:29 [INFO]: Fetching a product by ID
+2025-01-07 14:31:26 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:31:26 [INFO]: Creating a new user
+2025-01-07 14:31:27 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:31:27 [INFO]: Fetching a product by ID
+2025-01-07 14:31:38 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:31:38 [INFO]: Fetching a product by ID
+2025-01-07 14:32:00 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:32:00 [INFO]: Creating a new user
+2025-01-07 14:37:36 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:37:36 [INFO]: Fetching a product by ID
+2025-01-07 14:38:16 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 14:38:16 [INFO]: Fetching a product by ID
+2025-01-07 14:38:25 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:38:25 [INFO]: Fetching all products with pagination
+2025-01-07 14:38:28 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:38:28 [INFO]: Fetching all products with pagination
+2025-01-07 14:38:30 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:38:30 [INFO]: Creating a new user
+2025-01-07 14:47:02 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:47:02 [INFO]: Fetching all products with pagination
+2025-01-07 14:48:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:48:02 [INFO]: Creating a new user
+2025-01-07 14:48:02 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:48:02 [INFO]: Creating a new user
+2025-01-07 14:48:03 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:48:03 [INFO]: Fetching a product by ID
+2025-01-07 14:50:13 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:50:13 [INFO]: Fetching a product by ID
+2025-01-07 14:50:16 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:50:16 [INFO]: Creating a new user
+2025-01-07 14:50:26 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:50:26 [INFO]: Fetching all products with pagination
+2025-01-07 14:50:29 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:50:29 [INFO]: Fetching all products with pagination
+2025-01-07 14:50:30 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:50:30 [INFO]: Creating a new user
+2025-01-07 14:51:20 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:51:20 [INFO]: Fetching a product by ID
+2025-01-07 14:53:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:53:31 [INFO]: Creating a new user
+2025-01-07 14:53:48 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:53:48 [INFO]: Fetching a product by ID
+2025-01-07 14:53:51 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:53:51 [INFO]: Fetching all products with pagination
+2025-01-07 14:53:53 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:53:53 [INFO]: Fetching all products with pagination
+2025-01-07 14:54:09 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:54:09 [INFO]: Creating a new user
+2025-01-07 14:55:14 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:55:14 [INFO]: Creating a new user
+2025-01-07 14:55:16 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:55:16 [INFO]: Fetching a product by ID
+2025-01-07 14:58:38 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:58:38 [INFO]: Fetching a product by ID
+2025-01-07 14:58:55 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:58:55 [INFO]: Fetching a product by ID
+2025-01-07 14:59:12 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:59:12 [INFO]: Fetching all products with pagination
+2025-01-07 14:59:30 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 14:59:30 [INFO]: Fetching all products with pagination
+2025-01-07 14:59:31 [INFO]: Received POST request for /api/v1/users
+2025-01-07 14:59:31 [INFO]: Creating a new user
+2025-01-07 14:59:48 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 14:59:48 [INFO]: Fetching a product by ID
+2025-01-07 15:00:12 [INFO]: Received POST request for /api/v1/users
+2025-01-07 15:00:12 [INFO]: Creating a new user
+2025-01-07 17:18:09 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 17:18:09 [INFO]: Fetching a product by ID
+2025-01-07 17:19:11 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 17:19:11 [INFO]: Fetching all products with pagination
+2025-01-07 17:19:13 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 17:19:13 [INFO]: Fetching all products with pagination
+2025-01-07 17:19:42 [INFO]: Received POST request for /api/v1/users
+2025-01-07 17:19:42 [INFO]: Creating a new user
+2025-01-07 19:25:18 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 19:25:18 [INFO]: Fetching a product by ID
+2025-01-07 22:06:55 [INFO]: Server is running successfully on PORT 8080
+2025-01-07 22:09:35 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 22:09:35 [INFO]: Fetching all products with pagination
+2025-01-07 22:09:37 [INFO]: Received POST request for /api/v1/users
+2025-01-07 22:09:37 [INFO]: Creating a new user
+2025-01-07 22:09:40 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-07 22:09:40 [INFO]: Fetching all products with pagination
+2025-01-07 22:10:42 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 22:10:42 [INFO]: Fetching a product by ID
+2025-01-07 22:15:06 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 22:15:06 [INFO]: Fetching a product by ID
+2025-01-07 22:15:15 [INFO]: Received POST request for /api/v1/users
+2025-01-07 22:15:15 [INFO]: Creating a new user
+2025-01-07 22:15:23 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-07 22:15:23 [INFO]: Fetching a product by ID
+2025-01-07 22:17:29 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-07 22:17:29 [INFO]: Fetching a product by ID
+2025-01-08 01:48:18 [INFO]: Received GET request for /api/v1/products/6728305922a0e5e6702adeb6
+2025-01-08 01:48:18 [INFO]: Fetching a product by ID
+2025-01-08 14:13:08 [INFO]: Server is running successfully on PORT 8080
