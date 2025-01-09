@@ -84,7 +84,6 @@ model Product {
   sizes               String[]
   colors              String[]
   owner               User     @relation("Owner", fields: [userEmail], references: [email])
-
   comments  Comment[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt

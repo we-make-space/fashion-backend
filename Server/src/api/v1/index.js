@@ -23,6 +23,7 @@ import swaggerSpec from "../../lib/swagger.js";
 import { orderRoute } from "./routes/orderRoute.js";
 import { emailRoute } from "./routes/emailRoute.js";
 import { sendSmsRoute } from "./routes/send-smsRoute.js";
+import { redisClient } from "./config/Redis.js";
 
 dotenv.config();
 
@@ -55,6 +56,11 @@ app.use("/api/v1/orders", orderRoute);
 app.use("/api/v1/inventory", inventoryRoute);
 app.use("/api/v1/emails", emailRoute)
 app.use("/api/v1/sendSmsRoute", sendSmsRoute);
+
+
+
+await redisClient.connect();
+await redisClient.ping(); 
 
 //~ Error handling middleware
 app.use((err, req, res, next) => {
