@@ -5,24 +5,20 @@ import { prisma } from "../config/prismaConfig.js";
 export const createComment = asyncHandler(async (req, res) => {
   const { productId, comment, userEmail } = req.body;
 
-  // Validate input data
   if (!productId || !comment || !userEmail) {
     return res.status(400).json({ message: 'Invalid input data' });
   }
 
-  // Check if product exists
   const product = await prisma.product.findUnique({ where: { id: productId } });
   if (!product) {
     return res.status(404).json({ message: 'Product not found' });
   }
 
-  // Check if user exists
   const user = await prisma.user.findUnique({ where: { email: userEmail } });
   if (!user) {
     return res.status(404).json({ message: 'User not found' });
   }
 
-  // Create comment
   try {
     const newComment = await prisma.comment.create({
       data: {
@@ -39,15 +35,15 @@ export const createComment = asyncHandler(async (req, res) => {
 });
 
 
-export const getAllComments = asyncHandler(async (req, res) => {
-  try {
-    const comments = await prisma.comment.findMany();
-    res.status(200).json(comments);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Error fetching comments' });
-  }
-});
+// export const getAllComments = asyncHandler(async (req, res) => {
+//   try {
+//     const comments = await prisma.comment.findMany();
+//     res.status(200).json(comments);
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: 'Error fetching comments' });
+//   }
+// });
 
 
 export const getCommentById = asyncHandler(async (req, res) => {

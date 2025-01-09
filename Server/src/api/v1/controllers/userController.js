@@ -1,6 +1,6 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
-import { Role } from "@prisma/client";
+// import { Role } from "@prisma/client";
 // import { Role } from "@prisma/client";
 
 // import { body, validationResult } from "express-validator";
@@ -19,7 +19,7 @@ export const CreateUser = asyncHandler(async (req, res) => {
 		});
 
 		if (existingUser) {
-			return res.status(200).json(existingUser);
+			return res.status(409).json("User already exist.");
 		}
 
 		// Create new user
