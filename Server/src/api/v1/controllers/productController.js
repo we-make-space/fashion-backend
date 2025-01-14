@@ -41,133 +41,130 @@ export const createProduct = asyncHandler(async (req, res) => {
 });
 
 //& function to get all the documents/products
+// API route handler
 export const getAllProducts = asyncHandler(async (req, res) => {
-	const page = parseInt(req.query.page) || 1;
-	const limit = parseInt(req.query.limit) || 30;
+  const page = parseInt(req.query.page) || 1;
+  const limit = parseInt(req.query.limit) || 10;
 
-	if (page < 1) {
-		return res
-			.status(400)
-			.json({ error: "Page must be a positive integer." });
-	}
-	if (limit < 1) {
-		return res
-			.status(400)
-			.json({ error: "Limit must be a positive integer." });
-	}
+  if (page < 1) {
+	return res
+	  .status(400)
+	  .json({ error: "Page must be a positive integer." });
+  }
+  if (limit < 1) {
+	return res
+	  .status(400)
+	  .json({ error: "Limit must be a positive integer." });
+  }
 
-	try {
-		const skip = (page - 1) * limit;
-		let products = null;
-		const key = "allProduct";
+  try {
+	const skip = (page - 1) * limit;
+	let products = null;
+	const key = `allProduct:${page}:${limit}`;
 
-		const value = await redisClient.get(key); 
-		if(value){
-			products = JSON.parse(value);
-			console.log("Fetched from Redis");
-		}else{
-			products = await prisma.product.findMany({
-				skip,
-				take: limit,
-				orderBy: {
-					createdAt: "desc",
+	const value = await redisClient.get(key);
+	if (value) {
+	  products = JSON.parse(value);
+	  console.log("Fetched from Redis");
+	} else {
+	  products = await prisma.product.findMany({
+		skip,
+		take: limit,
+		orderBy: {
+		  createdAt: "desc",
+		},
+		include: {
+		  owner: {
+			select: {
+			  id: true,
+			  firstName: true,
+			  lastName: true,
+			  image: true,
+			},
+		  },
+		  category: {
+			select: {
+			  id: true,
+			  name: true,
+			},
+		  },
+		  reviews: {
+			select: {
+			  rating: true,
+			  comment: true,
+			  userEmail: true,
+			  user: {
+				select: {
+				  firstName: true,
+				  lastName: true,
+				  image: true,
 				},
-				include: {
-					owner: {
-						select: {
-							id: true,
-							firstName: true,
-							lastName: true,
-							image: true,
-						},
-					},
-					category: {
-						select: {
-							id: true,
-							name: true,
-						},
-					},
-					reviews: {
-						select: {
-							rating: true,
-							comment: true,
-							userEmail: true,
-							user: {
-								select: {
-									firstName: true,
-									lastName: true,
-									image: true,
-								},
-							},
-						},
-					},
-					Inventory: {
-						select: {
-							productId: true,
-							stock: true,
-						},
-					},
-					comments: {
-						select: {
-							content: true,
-							createdAt: true,
-							userEmail: true,
-							User: {
-								select: {
-									firstName: true,
-									lastName: true,
-									image: true,
-								},
-							},
-						},
-					},
-					likes: {
-						select: {
-							id: true,
-							user: {
-								select: {
-									firstName: true,
-									lastName: true,
-									image: true,
-								},
-							},
-						},
-					},
-					_count: {
-						select: {
-							comments: true,
-							likes: true,
-						},
-					},
+			  },
+			},
+		  },
+		  Inventory: {
+			select: {
+			  productId: true,
+			  stock: true,
+			},
+		  },
+		  comments: {
+			select: {
+			  content: true,
+			  createdAt: true,
+			  userEmail: true,
+			  User: {
+				select: {
+				  firstName: true,
+				  lastName: true,
+				  image: true,
 				},
-			});
+			  },
+			},
+		  },
+		  likes: {
+			select: {
+			  id: true,
+			  user: {
+				select: {
+				  firstName: true,
+				  lastName: true,
+				  image: true,
+				},
+			  },
+			},
+		  },
+		  _count: {
+			select: {
+			  comments: true,
+			  likes: true,
+			},
+		  },
+		},
+	  });
 
-			await redisClient.set(key, JSON.stringify(products), {
-				EX: 300
-			});
-			console.log("Fetched from Prisma");
-		}
-
-
-
-	
-
-		const totalProducts = await prisma.product.count();
-		const totalPages = Math.ceil(totalProducts / limit);
-
-		res.status(200).json({
-			totalProducts,
-			totalPages,
-			currentPage: page,
-			hasMore: page < totalPages,
-			data: products,
-		});
-	} catch (error) {
-		console.error("Error fetching products:", error);
-		res.status(500).json({
-			error: "An error occurred while fetching products",
-		});
+	  await redisClient.set(key, JSON.stringify(products), {
+		EX: 300,
+	  });
+	  console.log("Fetched from Prisma");
 	}
+
+	const totalProducts = await prisma.product.count();
+	const totalPages = Math.ceil(totalProducts / limit);
+
+	res.status(200).json({
+	  totalProducts,
+	  totalPages,
+	  currentPage: page,
+	  hasMore: page < totalPages,
+	  data: products,
+	});
+  } catch (error) {
+	console.error("Error fetching products:", error);
+	res.status(500).json({
+	  error: "An error occurred while fetching products",
+	});
+  }
 });
 
 //& function to get all products (Emma)

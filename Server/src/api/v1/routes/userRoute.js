@@ -22,6 +22,9 @@ import { authMiddlewarez } from "../../../middlewares/authz.js";
 
 const router = express.Router();
 // router.use(authMiddleware);
+//? Get all users
+router.get("/all", logAction("Fetching all users"), GetAllUsers);
+
 //? Creating a user
 router.post("/", logAction("Creating a new user"), CreateUser);
 
@@ -32,10 +35,9 @@ router.get(
 	checkUserExists
 );
 
-router.get('/:id', logAction("Fetching a user"), GetUser);
+router.get('/:id', logAction("Fetching a user by ID"), GetUser);
 
-//? Get all users
-router.get("/all", logAction("Fetching all users"), GetAllUsers);
+
 
 //? Update a user by ID
 router.patch("/:id", logAction("Updating a user by ID"), UpdateUser);
