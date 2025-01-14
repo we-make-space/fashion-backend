@@ -26,9 +26,9 @@ export const CreateUser = asyncHandler(async (req, res) => {
 		const newUser = await prisma.user.create({
 			data: {
 				email,
-				firstName: firstName || "",
-				lastName: lastName || "",
-				image: image || "",
+				firstName: firstName,
+				lastName: lastName,
+				image: image,
 				bio: "",
 				location: "",
 				phoneNumber: "000-000-0000",
