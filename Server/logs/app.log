@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2024-10-28T16:02:15.080Z [INFO]: Server is running successfully on PORT 8080
 2024-10-28T16:02:31.855Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
 2024-10-28T16:02:40.295Z [INFO]: Received GET request for /api/product/allproducts?page=1&limit=20
@@ -36933,3 +36934,130 @@ Argument `isDefault`: Invalid value provided. Expected Boolean, provided String.
 2025-01-13 20:59:52 [INFO]: Fetching all products with pagination
 2025-01-13 22:14:08 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
 2025-01-13 22:14:08 [INFO]: Fetching all products with pagination
+=======
+<<<<<<< HEAD
+=======
+2025-01-10 02:25:44 [INFO]: Received GET request for /api/v1/products/search-result/bag
+2025-01-10 02:25:44 [INFO]: Search a product
+2025-01-10 02:26:04 [INFO]: Received GET request for /api/v1/products/search-result/bag
+2025-01-10 02:26:04 [INFO]: Search a product
+2025-01-10 02:26:04 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 02:26:04 [INFO]: Checking if current user exists
+2025-01-10 02:26:04 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 02:26:04 [INFO]: Checking if current user exists
+2025-01-10 02:26:13 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-10 02:26:13 [INFO]: Fetching a product by ID
+2025-01-10 02:26:13 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-10 02:26:13 [INFO]: Fetching a product by ID
+2025-01-10 02:26:19 [INFO]: Received GET request for /api/v1/address/673b335dda1a13881871013c
+2025-01-10 02:26:19 [INFO]: Get address from the database/location
+2025-01-10 02:26:19 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-10 02:26:19 [INFO]: Fetching a product by ID
+2025-01-10 02:26:19 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-10 02:26:19 [INFO]: Fetching a product by ID
+2025-01-10 02:26:39 [INFO]: Received POST request for /api/v1/orders
+2025-01-10 02:26:39 [INFO]: Creating a new order
+2025-01-10 02:26:41 [INFO]: Received POST request for /api/v1/emails
+2025-01-10 02:26:41 [INFO]: Sending an email
+2025-01-10 02:27:09 [INFO]: Received GET request for /api/v1/products/6715ce430443e9f82b4eea64
+2025-01-10 02:27:09 [INFO]: Fetching a product by ID
+2025-01-10 02:27:09 [INFO]: Received GET request for /api/v1/products/67195bfe2fa290f9f3c61cf3
+2025-01-10 02:27:09 [INFO]: Fetching a product by ID
+2025-01-10 02:27:09 [INFO]: Received GET request for /api/v1/address/673b335dda1a13881871013c
+2025-01-10 02:27:09 [INFO]: Get address from the database/location
+2025-01-10 03:26:09 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-10 03:26:09 [INFO]: Fetching all products with pagination
+2025-01-10 03:26:11 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 03:26:11 [INFO]: Checking if current user exists
+2025-01-10 03:26:15 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-10 03:26:15 [INFO]: Fetching all products with pagination
+2025-01-10 03:26:16 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 03:26:16 [INFO]: Checking if current user exists
+2025-01-10 03:26:19 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 03:26:19 [INFO]: Checking if current user exists
+2025-01-10 03:45:49 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 03:45:52 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:45:52 [INFO]: Creating a new product
+2025-01-10 03:45:52 [ERROR]: Error: Cannot destructure property 'product_name' of 'req.body.data' as it is undefined.
+2025-01-10 03:45:52 [ERROR]: Error occurred: Cannot destructure property 'product_name' of 'req.body.data' as it is undefined.
+2025-01-10 03:46:04 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 03:46:04 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:46:04 [INFO]: Creating a new product
+2025-01-10 03:46:27 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 03:46:27 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:46:27 [INFO]: Creating a new product
+2025-01-10 03:48:29 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:48:29 [INFO]: Creating a new product
+2025-01-10 03:49:55 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:49:55 [INFO]: Creating a new product
+2025-01-10 03:51:59 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:51:59 [INFO]: Creating a new product
+2025-01-10 03:53:04 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:53:04 [INFO]: Creating a new product
+2025-01-10 03:54:24 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:54:24 [INFO]: Creating a new product
+2025-01-10 03:57:23 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:57:23 [INFO]: Creating a new product
+2025-01-10 03:59:20 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 03:59:20 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:59:20 [INFO]: Creating a new product
+2025-01-10 03:59:38 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 03:59:57 [INFO]: Received POST request for /api/v1/products
+2025-01-10 03:59:57 [INFO]: Creating a new product
+2025-01-10 04:01:56 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:01:56 [INFO]: Creating a new product
+2025-01-10 04:02:03 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:02:03 [INFO]: Creating a new product
+2025-01-10 04:02:18 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:02:23 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:02:23 [INFO]: Creating a new product
+2025-01-10 04:06:20 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:06:20 [INFO]: Creating a new product
+2025-01-10 04:10:28 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:10:28 [INFO]: Creating a new product
+2025-01-10 04:10:50 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:10:50 [INFO]: Creating a new product
+2025-01-10 04:12:36 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:12:36 [INFO]: Creating a new product
+2025-01-10 04:13:14 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:13:14 [INFO]: Creating a new product
+2025-01-10 04:21:32 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:21:32 [INFO]: Creating a new product
+2025-01-10 04:22:50 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:22:50 [INFO]: Creating a new product
+2025-01-10 04:28:50 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:28:50 [INFO]: Creating a new product
+2025-01-10 04:29:25 [INFO]: Received POST request for /api/v1/products
+2025-01-10 04:29:25 [INFO]: Creating a new product
+2025-01-10 04:31:33 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:31:33 [INFO]: Creating a new product
+2025-01-10 04:32:13 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:32:24 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:32:24 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:32:24 [INFO]: Creating a new product
+2025-01-10 04:32:35 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:32:40 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:32:40 [INFO]: Creating a new product
+2025-01-10 04:33:11 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:33:11 [INFO]: Creating a new product
+2025-01-10 04:33:23 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:33:24 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:33:24 [INFO]: Creating a new product
+2025-01-10 04:33:40 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 04:33:42 [INFO]: Received POST request for /api/v1/products/
+2025-01-10 04:33:42 [INFO]: Creating a new product
+2025-01-10 04:33:52 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 09:50:37 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-10 09:50:37 [INFO]: Fetching all products with pagination
+2025-01-10 09:50:41 [INFO]: Received GET request for /api/v1/users/user/checkUserExists?&email=owusuemmanuel005%40gmail.com
+2025-01-10 09:50:41 [INFO]: Checking if current user exists
+2025-01-10 09:50:56 [INFO]: Received GET request for /api/v1/products?page=1&limit=30
+2025-01-10 09:50:56 [INFO]: Fetching all products with pagination
+2025-01-10 09:51:13 [INFO]: Received GET request for /api/v1/categories
+2025-01-10 09:51:13 [INFO]: Fetching all categories
+2025-01-10 09:56:43 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 09:56:53 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 09:57:04 [INFO]: Server is running successfully on PORT 8080
+2025-01-10 09:57:18 [INFO]: Server is running successfully on PORT 8080
+>>>>>>> 4b09ee7ab657491ff9603d63d74cdb4882b1e5d7
+>>>>>>> 4f7f8eb41854d4181555532c973829b192a5b735

@@ -38,51 +38,61 @@ enum Role {
 }
 
 model User {
-  id            String     @id @default(auto()) @map("_id") @db.ObjectId
-  email         String     @unique
-  firstName     String
-  lastName      String
-  role          Role       @default(USER)
-  image         String?
-  bio           String
-  coverImage    String?
-  location      String?
-  comment       Comment[]
-  likes         Like[]     @relation("UserLikes")
-  phoneNumber   String     @default("000-000-0000")
-  reviews       Review[]
-  followers     Follower[] @relation("Followees")
-  following     Follower[] @relation("Followers")
-  ownedProducts Product[]  @relation("Owner")
-  cartId        String?    @db.ObjectId
-  wishlist      Wishlist?
-  addresses     Address[]
-  orders        Order[]
-  createdAt     DateTime   @default(now())
-  Cart          Cart?
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  email      String  @unique
+  firstName  String
+  lastName   String
+  role       Role    @default(USER)
+  image      String?
+  bio        String
+  coverImage String?
+
+  comment         Comment[]
+  likes           Like[]         @relation("UserLikes")
+  phoneNumber     String         @default("000-000-0000")
+  reviews         Review[]
+  followers       Follower[]     @relation("Followees")
+  following       Follower[]     @relation("Followers")
+  ownedProducts   Product[]      @relation("Owner")
+  cartId          String?        @db.ObjectId
+  wishlist        Wishlist?
+  addresses       Address[]
+  orders          Order[]
+  createdAt       DateTime       @default(now())
+  Cart            Cart?
+  sellerProfile   SellerProfile? @relation(fields: [sellerProfileId], references: [id])
+  sellerProfileId String?        @db.ObjectId
+  messages        Message[]
+}
+
+model SellerProfile {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  storeName   String
+  description String
+  location    String?
+  User        User[]
 }
 
 model Product {
-  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  id                  String    @id @default(auto()) @map("_id") @db.ObjectId
   product_name        String
   price               Float
   product_image       String[]
   product_description String
   userEmail           String
-  likes               Like[]   @relation("ProductLikes")
+  likes               Like[]    @relation("ProductLikes")
   reviews             Review[]
   sizes               String[]
   colors              String[]
-  owner               User     @relation("Owner", fields: [userEmail], references: [email])
-
-  comments  Comment[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
+  owner               User      @relation("Owner", fields: [userEmail], references: [email])
+  comments            Comment[]
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
 
   categoryId String?   @db.ObjectId
   category   Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
 
-  OrderItem OrderItem[]
+  OrderItem OrderItem[] @relation("OrderItem")
   CartItem  CartItem[]
   Inventory Inventory[]
   Wishlist  Wishlist[]
@@ -160,7 +170,7 @@ model OrderItem {
   orderId   String  @db.ObjectId
   order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
   productId String  @db.ObjectId
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product   Product @relation("OrderItem", fields: [productId], references: [id], onDelete: Cascade)
   quantity  Int
   price     Float
 }
@@ -243,5 +253,24 @@ model Wishlist {
   createdAt DateTime @default(now())
   productId String   @db.ObjectId
   product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  updatedAt DateTime @updatedAt
+}
+
+model Chat {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  members   String[] // Array of user ids
+  messages  Message[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+}
+
+model Message {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  chatId    String   @db.ObjectId
+  chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  text      String
+  senderId  String   @db.ObjectId
+  sender    User     @relation(fields: [senderId], references: [id])
+  createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }

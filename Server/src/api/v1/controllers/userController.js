@@ -19,7 +19,9 @@ export const CreateUser = asyncHandler(async (req, res) => {
 		});
 
 		if (existingUser) {
-			return res.status(409).json("User already exist.");
+			return res.status(409).json({
+				error: `User with email ${email} already exists.`,
+			  });
 		}
 
 		// Create new user
@@ -35,13 +37,9 @@ export const CreateUser = asyncHandler(async (req, res) => {
 				Cart: {
 					create: {}, //? Create an empty cart for the user
 				},
-				wishlist: {
-					create: {}, //? Create an empty wishlist
-				},
 			},
 			include: {
 				Cart: true,
-				wishlist: true,
 			},
 		});
 
@@ -64,18 +62,6 @@ export const checkUserExists = asyncHandler(async (req, res) => {
 	try {
 		const user = await prisma.user.findUnique({
 			where: { email },
-			include: {
-				comment: true,
-				likes: true,
-				reviews: true,
-				followers: true,
-				following: true,
-				ownedProducts: true,
-				wishlist: true,
-				addresses: true,
-				orders: true,
-				Cart: true,
-			},
 		});
 
 		if (!user) {
