@@ -1,41 +1,50 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
 import { redisClient } from "../config/Redis.js";
+import { cloudinary } from "../config/cloudinary.js";
 
 //! A method to create a product
 export const createProduct = asyncHandler(async (req, res) => {
+	const data = JSON.parse(req.body.data);
 	const {
 		product_name,
 		price,
-		product_image,
 		product_description,
-		userEmail,
-		categoryId,
-		sizes,
-		colors,
-	} = req.body.data;
+	} = data;
 
-	console.log(req.body.data);
+
+const categoryId = "6724d6341a85aabc45eeff0b";
+const userEmail = req.body.userEmail;
+
+
 	try {
-		const product = await prisma.product.create({
-			data: {
-				product_name,
-				price,
-				product_image,
-				product_description,
-				owner: { connect: { email: userEmail } },
-				category: { connect: { id: categoryId } },
-				sizes,
-				product_image,
-				colors,
-			},
-		});
 
-		res.send({ message: "product created successfully", product,productImages  });
-	} catch (err) {
-		if (err) {
-			throw new Error(err.message);
+		if (req.files) {
+			const uploadPromises = req.files.map(async (file) => {
+				return await cloudinary.uploader.upload(file.path,{
+					upload_preset: "fashion-app",
+				});
+			});
+			const uploadResults = await Promise.all(uploadPromises);
+
+			if (uploadResults) {
+				const product = await prisma.product.create({
+					data: {
+						product_name,
+						price: parseFloat(price),
+						product_image: uploadResults.map((r) => r.secure_url),
+						product_description,
+						owner: { connect: { email: userEmail } },
+						category: { connect: { id: categoryId } },
+					},
+				});
+		
+				res.status(200).json({ message: "product created successfully", product  });
+			}
+		} else {
+			throw new Error("Missing required parameter - file");
 		}
+	} catch (err) {
 		throw new Error(err.message);
 	}
 });
@@ -144,7 +153,7 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 	  });
 
 	  await redisClient.set(key, JSON.stringify(products), {
-		EX: 300,
+		EX: 60,
 	  });
 	  console.log("Fetched from Prisma");
 	}
@@ -167,57 +176,18 @@ export const getAllProducts = asyncHandler(async (req, res) => {
   }
 });
 
-//& function to get all products (Emma)
-export const getAllProductsTrial = asyncHandler(async (req, res) => {
+export const getAllSellerProducts = asyncHandler(async (req, res) => {
+	const { email } = req.params;
 	try {
 		const products = await prisma.product.findMany({
-			orderBy: {
-				createdAt: "desc",
+			where: {
+				userEmail: email,
 			},
-			include: {
-				createdAt: false,
-				updatedAt: false,
-				owner: {
-					select: {
-						firstName: true,
-						lastName: true,
-						image: true,
-					},
-				},
-				orderItems: {
-					select: {
-						quantity: true,
-						order: {
-							select: {
-								id: true,
-								status: true,
-								total: true,
-								userId: true,
-							},
-						},
-					},
-				},
-				Inventory: {
-					select: {
-						productId: true,
-						stock: true,
-					},
-				},
-				product_image: {
-					select: {
-						url: true,
-						id: true,
-					},
-				},
-			},
-		});
 
+		});
 		res.status(200).json(products);
 	} catch (error) {
-		console.error("Error fetching products:", error);
-		res.status(500).json({
-			error: "An error occurred while fetching products",
-		});
+		throw new Error(error.message);
 	}
 });
 
@@ -395,9 +365,31 @@ export const updateProduct = asyncHandler(async (req, res) => {
 //* Delete a product
 export const deleteProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
+	console.log(`Received DELETE request for /api/v1/products/${id}`);
+	console.log("Deleting a product by ID");
 
 	try {
-		const product = await prisma.product.delete({
+		const product = await prisma.product.findUnique({
+			where: { id },
+			select: {
+				product_image: true,
+			},
+		});
+
+		if (!product) {
+			return res.status(404).json({ message: "Product not found" });
+		}
+
+		if (product.product_image) {
+			const publicIds = product.product_image.map(
+				(image) => image.split("/").pop().split(".")[0]
+			);
+			await Promise.all(
+				publicIds.map((publicId) => cloudinary.uploader.destroy(publicId))
+			);
+		}
+
+		await prisma.product.delete({
 			where: { id },
 		});
 

@@ -46,7 +46,6 @@ app.use(cors());
 
 //^ Serve Swagger UI with CORS enabled for the docs route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use('/images', express.static('images'));
 app.use(cors());
 app.use("/api/v1/users", userRoute);
 app.use("/api/v1/products", productRoute);

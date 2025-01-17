@@ -5,7 +5,7 @@ import {
 	deleteProduct,
 	getAllProductLikes,
 	getAllProducts,
-	getAllProductsTrial,
+	getAllSellerProducts,
 	getCommentLikes,
 	getCommentsForProduct,
 	getProduct,
@@ -16,13 +16,17 @@ import {
 	updateProduct,
 } from "../controllers/productController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
-import {upload} from "../../../middlewares/multer.js";
+import multer from "multer";
 
-
+const upload = multer({
+	dest: './uploads/',
+  });
+  
 const router = express.Router();
 
 router.post(
 	"/",
+	upload.array('productImg[]',12),
 	logAction("Creating a new product"),
 	createProduct,
 	logError
@@ -36,9 +40,9 @@ router.get(
 	logError
 );
 router.get(
-	"/dashboard",
-	logAction("Fetching all pr"),
-	getAllProductsTrial,
+	"/sellerProducts/:email",
+	logAction("Fetching all seller products by email"),
+	getAllSellerProducts,
 	logError
 );
 
