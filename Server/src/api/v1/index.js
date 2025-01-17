@@ -1,7 +1,7 @@
 import { transformSync } from "@babel/core";
 transformSync("code", {
 	presets: ["@babel/preset-react"],
-  });
+});
 
 import express from "express";
 import cors from "cors";
@@ -30,7 +30,7 @@ import { messageRoute } from "./routes/messageRoute.js";
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -39,10 +39,10 @@ app.use(cors());
 // app.use(cors(corsOptions));
 
 //^ Middleware to log each request
-app.use((req, res, next) => {
-	logger.info(`Received ${req.method} request for ${req.url}`);
-	next();
-});
+// app.use((req, res, next) => {
+// 	logger.info(`Received ${req.method} request for ${req.url}`);
+// 	next();
+// });
 
 //^ Serve Swagger UI with CORS enabled for the docs route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
