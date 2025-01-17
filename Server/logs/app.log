@@ -37203,3 +37203,41 @@ Argument `isDefault`: Invalid value provided. Expected Boolean, provided String.
 2025-01-17 12:00:36 [INFO]: Fetching all orders
 2025-01-17 12:10:29 [INFO]: Server is running successfully on PORT 8080
 2025-01-17 12:11:34 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:31:17 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:31:19 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:31:19 [INFO]: Fetching all orders
+2025-01-17 12:31:55 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:32:15 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:32:18 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:32:18 [INFO]: Fetching all orders
+2025-01-17 12:32:21 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:32:21 [INFO]: Fetching all orders
+2025-01-17 12:32:33 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:33:29 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:33:35 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:33:35 [INFO]: Fetching all orders
+2025-01-17 12:33:37 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:33:37 [INFO]: Fetching all orders
+2025-01-17 12:34:13 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:34:29 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:34:29 [INFO]: Fetching all orders
+2025-01-17 12:34:32 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:34:32 [INFO]: Fetching all orders
+2025-01-17 12:37:45 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:37:58 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:37:58 [INFO]: Fetching all orders
+2025-01-17 12:39:40 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:40:34 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:40:37 [INFO]: Received GET request for /api/v1/orders
+2025-01-17 12:40:37 [INFO]: Fetching all orders
+2025-01-17 12:42:57 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:44:48 [INFO]: Received GET request for /api/v1/orders?page=2&limit=10
+2025-01-17 12:44:48 [INFO]: Fetching all orders
+2025-01-17 12:45:00 [INFO]: Received GET request for /api/v1/orders?page=2&limit=1
+2025-01-17 12:45:00 [INFO]: Fetching all orders
+2025-01-17 12:46:14 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:46:44 [INFO]: Server is running successfully on PORT 8080
+2025-01-17 12:46:51 [INFO]: Received GET request for /api/v1/orders?page=2&limit=1
+2025-01-17 12:46:51 [INFO]: Fetching all orders
+2025-01-17 12:46:51 [INFO]: Received GET request for /api/v1/orders?page=2&limit=1
+2025-01-17 12:46:51 [INFO]: Fetching all orders
