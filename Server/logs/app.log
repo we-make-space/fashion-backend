@@ -37241,3 +37241,6 @@ Argument `isDefault`: Invalid value provided. Expected Boolean, provided String.
 2025-01-17 12:46:51 [INFO]: Fetching all orders
 2025-01-17 12:46:51 [INFO]: Received GET request for /api/v1/orders?page=2&limit=1
 2025-01-17 12:46:51 [INFO]: Fetching all orders
+2025-01-17 20:27:41 [INFO]: Fetching all orders
+2025-01-17 20:27:41 [INFO]: Fetching all orders
+2025-01-17 23:52:38 [INFO]: Server is running successfully on PORT 8080

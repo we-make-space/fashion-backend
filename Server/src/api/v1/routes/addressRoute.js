@@ -6,43 +6,43 @@ import {
     deleteAddress,
     setDefaultAddress,
 } from "../controllers/addressControllers.js";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 router.post(
 	"/:userId",
-	logAction("Creating an address for the user/location"),
+	// logAction("Creating an address for the user/location"),
 	addAddress,
-	logError
+	// logError
 );
 
 router.get(
 	"/:userId",
-	logAction("Get address from the database/location"),
+	// logAction("Get address from the database/location"),
 	getAddresses,
-	logError
+	// logError
 );
 
 router.patch(
 	"/addresses/:addressId",
-	logAction("Updating an address/location"),
+	// logAction("Updating an address/location"),
 	updateAddress,
-	logError
+	// logError
 );
 
 router.delete(
 	"/addresses/:addressId",
-	logAction("Deleting an address/location"),
+	// logAction("Deleting an address/location"),
 	deleteAddress,
-	logError
+	// logError
 );
 
 router.patch(
 	"/addresses/:addressId/default",
-	logAction("Updating a default address/location"),
+	// logAction("Updating a default address/location"),
 	setDefaultAddress,
-	logError
+	// logError
 );
 
 export { router as addressRoute };

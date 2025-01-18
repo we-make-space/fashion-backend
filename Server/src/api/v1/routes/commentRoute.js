@@ -1,5 +1,5 @@
 import express from "express";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 import { createComment, deleteComment, getAllComments, getCommentById, updateComment } from "../controllers/commentController.js";
 
 
@@ -8,35 +8,35 @@ const router = express.Router();
 
 router.post(
     "/",
-    logAction("Creating a new comment"),
+    // logAction("Creating a new comment"),
     createComment,
-    logError
+    // logError
 )
 
 router.get(
     "/",
-    logAction("Fetching all comments"),
+    // logAction("Fetching all comments"),
     getAllComments,
-    logError
+    // logError
 )
 
 router.get(
     '/:id',
-    logAction("Fetching a comment"),
+    // logAction("Fetching a comment"),
     getCommentById,
-    logError
+    // logError
 )
 router.delete(
     '/:id',
-    logAction("Deleting a comment"),
+    // logAction("Deleting a comment"),
     deleteComment,
-    logError
+    // logError
 )
 router.patch(
     '/:id',
-    logAction("Updating a comment"),
+    // logAction("Updating a comment"),
     updateComment,
-    logError
+    // logError
 )
 
 

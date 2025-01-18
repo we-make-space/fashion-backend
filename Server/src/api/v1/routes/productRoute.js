@@ -15,7 +15,7 @@ import {
 	seachProduct,
 	updateProduct,
 } from "../controllers/productController.js";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 import multer from "multer";
 
 const upload = multer({
@@ -27,23 +27,23 @@ const router = express.Router();
 router.post(
 	"/",
 	upload.array('productImg[]',12),
-	logAction("Creating a new product"),
+	// logAction("Creating a new product"),
 	createProduct,
-	logError
+	// logError
 );
 
 // Route to get all products with pagination
 router.get(
 	"/",
-	logAction("Fetching all products with pagination"),
+	// logAction("Fetching all products with pagination"),
 	getAllProducts,
-	logError
+	// logError
 );
 router.get(
 	"/sellerProducts/:email",
-	logAction("Fetching all seller products by email"),
+	// logAction("Fetching all seller products by email"),
 	getAllSellerProducts,
-	logError
+	// logError
 );
 
 
@@ -51,84 +51,89 @@ router.get(
 //? Route to get a single product by ID
 router.get(
 	"/:id",
-	logAction("Fetching a product by ID"),
+	// logAction("Fetching a product by ID"),
 	getProduct,
-	logError
+	// logError
 );
 
 //? Route to update a product by ID
 router.patch(
 	"/:id",
-	logAction("Updating a product by ID"),
+	// logAction("Updating a product by ID"),
 	updateProduct,
-	logError
+	// logError
 );
 
 //? Route to delete a product by ID
 router.delete(
 	"/:id",
-	logAction("Deleting a product by ID"),
+	// logAction("Deleting a product by ID"),
 	deleteProduct,
-	logError
+	// logError
 );
 
 //? Route to add a comment to a product
 router.post(
 	"/:productId/comment",
-	logAction("Adding a comment to a product"),
+	// logAction("Adding a comment to a product"),
 	addCommentToProduct,
-	logError
+	// logError
 );
 
 //? Route to get comments for a specific product with pagination
 router.get(
 	"/:productId/product-comments",
-	logAction("Fetching comments for a specific product"),
+	// logAction("Fetching comments for a specific product"),
 	getCommentsForProduct,
-	logError
+	// logError
 );
 
 //? Route to like a comment
 router.post(
 	"/:commentId/:userId/like-comment",
-	logAction("Liking a comment"),
+	// logAction("Liking a comment"),
 	likeComment,
-	logError
+	// logError
 );
 
 //? Route to like a product
 router.post(
 	"/likes/product/like",
-	logAction("Liking a product"),
+	// logAction("Liking a product"),
 	likeProduct,
-	logError
+	// logError
 );
 
 //? Route to get all the likes on a product
 router.get(
 	"/product/:productId/likes",
-	logAction("Return all likes on a product"),
+	// logAction("Return all likes on a product"),
 	getProductLikes,
-	logError
+	// logError
 );
 
 //? Route to get all likes on a comment
 router.get(
 	"/comment/:commentId/likes",
-	logAction("Return all likes on a comment"),
+	// logAction("Return all likes on a comment"),
 	getCommentLikes,
-	logError
+	// logError
 );
 
 //? Route to get all likes on a every product
 router.get(
 	"/products/likes",
-	logAction("Return all likes on a every product"),
+	// logAction("Return all likes on a every product"),
 	getAllProductLikes,
-	logError
+	// logError
 );
 
-router.get("/search-result/:search", logAction("Search a product"), seachProduct, logError);
+router.get(
+	"/search-result/:search", 
+	// logAction("Search a product"), 
+	seachProduct, 
+	// logError
+);
 
 
 

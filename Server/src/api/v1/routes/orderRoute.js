@@ -5,36 +5,36 @@ import {
     getOrder,
     updateOrder,
 } from "../controllers/orderController.js";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 router.post(
     "/",
-    logAction("Creating a new order"),
+    // logAction("Creating a new order"),
     createOrder,
-    logError
+    // logError
 );
 
 router.get(
     "/",
-    logAction("Fetching all orders"),
+    // logAction("Fetching all orders"),
     getAllOrders,
-    logError
+    // logError
 );
 
 router.get(
     "/:id",
-    logAction("Fetching an order"),
+    // logAction("Fetching an order"),
     getOrder,
-    logError
+    // logError
 );
 
 router.put(
     "/:id",
-    logAction("Updating an order"),
+    // logAction("Updating an order"),
     updateOrder,
-    logError
+    // logError
 );
 
 export { router as orderRoute}
