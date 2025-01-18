@@ -1,5 +1,11 @@
 {
 	"version": 2,
-	"builds": [{ "src": "src/api/v1/index.js", "use": "@vercel/node" }],
-	"routes": [{ "src": "/(.*)", "dest": "src/api/v1/index.js" }]
-}
+	"functions": {
+	"src/api/v1/**/*.js": {
+		"includeFiles": "src/api/v1/prisma/**"
+	}
+	},
+	"routes": [
+	{ "src": "/(.*)", "dest": "src/api/v1/index.js" }
+	]
+}  
