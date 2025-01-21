@@ -1,27 +1,17 @@
-import asyncHandler from "express-async-handler";
-import { prisma } from "../config/prismaConfig.js";
-import { formatDate } from "../../../utils/formatDate.js";
+import asyncHandler from 'express-async-handler';
+import { prisma } from '../config/prismaConfig.js';
+import { formatDate } from '../../../utils/formatDate.js';
 
 // ^ Add a new address
 export const addAddress = asyncHandler(async (req, res) => {
 	const { userId } = req.params;
-	const {
-		street,
-		city,
-		town,
-		state,
-		region,
-		zipCode,
-		country,
-		phone,
-		isDefault,
-	} = req.body;
+	const { street, city, town, state, region, zipCode, country, phone, isDefault } = req.body;
 
 	if (isDefault) {
 		//^ Ensuring only one address is marked as default
 		await prisma.address.updateMany({
 			where: { userId, isDefault: true },
-			data: { isDefault: false },
+			data: { isDefault: false }
 		});
 	}
 
@@ -36,8 +26,8 @@ export const addAddress = asyncHandler(async (req, res) => {
 			zipCode,
 			country,
 			phone,
-			isDefault,
-		},
+			isDefault
+		}
 	});
 
 	newAddress.createdAt = formatDate(newAddress.createdAt);
@@ -52,13 +42,13 @@ export const getAddresses = asyncHandler(async (req, res) => {
 
 	const addresses = await prisma.address.findMany({
 		where: { userId },
-		orderBy: {createdAt: 'desc'} 
+		orderBy: { createdAt: 'desc' }
 	});
 
 	const formattedAddresses = addresses.map((address) => ({
 		...address,
 		createdAt: formatDate(address.createdAt),
-		updatedAt: formatDate(address.updatedAt),
+		updatedAt: formatDate(address.updatedAt)
 	}));
 
 	res.status(200).json({ success: true, addresses: formattedAddresses });
@@ -67,30 +57,18 @@ export const getAddresses = asyncHandler(async (req, res) => {
 // * Update an existing address
 export const updateAddress = asyncHandler(async (req, res) => {
 	const { addressId } = req.params;
-	const {
-		street,
-		city,
-		town,
-		state,
-		region,
-		zipCode,
-		country,
-		countryCode,
-		isDefault,
-	} = req.body;
+	const { street, city, town, state, region, zipCode, country, countryCode, isDefault } = req.body;
 
 	if (isDefault) {
 		const address = await prisma.address.findUnique({
-			where: { id: addressId },
+			where: { id: addressId }
 		});
 		if (!address) {
-			return res
-				.status(404)
-				.json({ success: false, message: "Address not found" });
+			return res.status(404).json({ success: false, message: 'Address not found' });
 		}
 		await prisma.address.updateMany({
 			where: { userId: address.userId, isDefault: true },
-			data: { isDefault: false },
+			data: { isDefault: false }
 		});
 	}
 
@@ -105,8 +83,8 @@ export const updateAddress = asyncHandler(async (req, res) => {
 			zipCode,
 			country,
 			countryCode,
-			isDefault,
-		},
+			isDefault
+		}
 	});
 
 	updatedAddress.createdAt = formatDate(updatedAddress.createdAt);
@@ -120,19 +98,17 @@ export const deleteAddress = asyncHandler(async (req, res) => {
 	const { addressId } = req.params;
 
 	const address = await prisma.address.findUnique({
-		where: { id: addressId },
+		where: { id: addressId }
 	});
 	if (!address) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Address not found" });
+		return res.status(404).json({ success: false, message: 'Address not found' });
 	}
 
 	await prisma.address.delete({ where: { id: addressId } });
 
 	res.status(200).json({
 		success: true,
-		message: "Address deleted successfully",
+		message: 'Address deleted successfully'
 	});
 });
 
@@ -141,24 +117,22 @@ export const setDefaultAddress = asyncHandler(async (req, res) => {
 	const { addressId } = req.params;
 
 	const address = await prisma.address.findUnique({
-		where: { id: addressId },
+		where: { id: addressId }
 	});
 	if (!address) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Address not found" });
+		return res.status(404).json({ success: false, message: 'Address not found' });
 	}
 
 	//^ this Unset any other default addresses
 	await prisma.address.updateMany({
 		where: { userId: address.userId, isDefault: true },
-		data: { isDefault: false },
+		data: { isDefault: false }
 	});
 
 	//^ Set the selected address as default
 	const updatedAddress = await prisma.address.update({
 		where: { id: addressId },
-		data: { isDefault: true },
+		data: { isDefault: true }
 	});
 
 	updatedAddress.createdAt = formatDate(updatedAddress.createdAt);

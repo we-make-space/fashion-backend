@@ -1,47 +1,47 @@
-import express from "express";
+import express from 'express';
 import {
-    addAddress,
-    getAddresses,
-    updateAddress,
-    deleteAddress,
-    setDefaultAddress,
-} from "../controllers/addressControllers.js";
+	addAddress,
+	getAddresses,
+	updateAddress,
+	deleteAddress,
+	setDefaultAddress
+} from '../controllers/addressControllers.js';
 // import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 router.post(
-	"/:userId",
+	'/:userId',
 	// logAction("Creating an address for the user/location"),
-	addAddress,
+	addAddress
 	// logError
 );
 
 router.get(
-	"/:userId",
+	'/:userId',
 	// logAction("Get address from the database/location"),
-	getAddresses,
+	getAddresses
 	// logError
 );
 
 router.patch(
-	"/addresses/:addressId",
+	'/addresses/:addressId',
 	// logAction("Updating an address/location"),
-	updateAddress,
+	updateAddress
 	// logError
 );
 
 router.delete(
-	"/addresses/:addressId",
+	'/addresses/:addressId',
 	// logAction("Deleting an address/location"),
-	deleteAddress,
+	deleteAddress
 	// logError
 );
 
 router.patch(
-	"/addresses/:addressId/default",
+	'/addresses/:addressId/default',
 	// logAction("Updating a default address/location"),
-	setDefaultAddress,
+	setDefaultAddress
 	// logError
 );
 

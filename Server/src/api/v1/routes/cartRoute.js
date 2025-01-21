@@ -1,51 +1,51 @@
-import express from "express";
+import express from 'express';
 import {
 	addToCart,
 	removeFromCart,
 	updateCartQuantity,
 	getCartItems,
-    createCartForUser,
-} from "../controllers/cartController.js";
+	createCartForUser
+} from '../controllers/cartController.js';
 // import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 // Route to add a product to the cart
 router.post(
-	"/addtocart",
+	'/addtocart',
 	// logAction("Adding item to cart successfull"),
-	addToCart,
+	addToCart
 	// logError
 );
 
 // Route to remove a product from the cart
 router.delete(
-	"/remove/:productId",
+	'/remove/:productId',
 	// logAction("Removed item from cart"),
-	removeFromCart,
+	removeFromCart
 	// logError
 );
 
 // Route to update the quantity of a product in the cart
 router.put(
-	"/update/:productId",
+	'/update/:productId',
 	// logAction("Update quantity of a product in a cart"),
-	updateCartQuantity,
+	updateCartQuantity
 	// logError
 );
 
 // Route to get all items in the cart
 router.get(
-	"/",
+	'/',
 	// logAction("Fetching all items in cart"),
-	getCartItems,
+	getCartItems
 	// logError
 );
 
 router.post(
-	"/",
+	'/',
 	// logAction("Creating a cart for a user"),
-	createCartForUser,
+	createCartForUser
 	// logError
 );
 

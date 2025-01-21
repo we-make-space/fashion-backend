@@ -15,7 +15,9 @@
 		"prisma:format": "npx prisma format --schema=./src/api/v1/prisma/schema.prisma",
 		"build": "babel src/email/emailTemplate.jsx --out-dir dist",
 		"email": "email dev --dir ./src/email",
-		"postinstall": "npm run prisma:generate"
+		"postinstall": "npm run prisma:generate",
+		"check": "npx @biomejs/biome check",
+		"fix": "npx @biomejs/biome format --write"
 	},
 	"keywords": [],
 	"author": "",
@@ -65,6 +67,7 @@
 	"devDependencies": {
 		"@babel/preset-react": "^7.26.3",
 		"@babel/preset-typescript": "^7.26.0",
+		"@biomejs/biome": "1.9.4",
 		"prisma": "^5.21.0",
 		"react-email": "3.0.4"
 	}

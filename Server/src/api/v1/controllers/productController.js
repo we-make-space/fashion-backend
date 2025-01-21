@@ -1,28 +1,21 @@
-import asyncHandler from "express-async-handler";
-import { prisma } from "../config/prismaConfig.js";
-import { redisClient } from "../config/Redis.js";
-import { cloudinary } from "../config/cloudinary.js";
+import asyncHandler from 'express-async-handler';
+import { prisma } from '../config/prismaConfig.js';
+import { redisClient } from '../config/Redis.js';
+import { cloudinary } from '../config/cloudinary.js';
 
 //! A method to create a product
 export const createProduct = asyncHandler(async (req, res) => {
 	const data = JSON.parse(req.body.data);
-	const {
-		product_name,
-		price,
-		product_description,
-	} = data;
+	const { product_name, price, product_description } = data;
 
-
-const categoryId = "6724d6341a85aabc45eeff0b";
-const userEmail = req.body.userEmail;
-
+	const categoryId = '6724d6341a85aabc45eeff0b';
+	const userEmail = req.body.userEmail;
 
 	try {
-
 		if (req.files) {
 			const uploadPromises = req.files.map(async (file) => {
-				return await cloudinary.uploader.upload(file.path,{
-					upload_preset: "fashion-app",
+				return await cloudinary.uploader.upload(file.path, {
+					upload_preset: 'fashion-app'
 				});
 			});
 			const uploadResults = await Promise.all(uploadPromises);
@@ -35,14 +28,14 @@ const userEmail = req.body.userEmail;
 						product_image: uploadResults.map((r) => r.secure_url),
 						product_description,
 						owner: { connect: { email: userEmail } },
-						category: { connect: { id: categoryId } },
-					},
+						category: { connect: { id: categoryId } }
+					}
 				});
-		
-				res.status(200).json({ message: "product created successfully", product  });
+
+				res.status(200).json({ message: 'product created successfully', product });
 			}
 		} else {
-			throw new Error("Missing required parameter - file");
+			throw new Error('Missing required parameter - file');
 		}
 	} catch (err) {
 		throw new Error(err.message);
@@ -52,128 +45,124 @@ const userEmail = req.body.userEmail;
 //& function to get all the documents/products
 // API route handler
 export const getAllProducts = asyncHandler(async (req, res) => {
-  const page = parseInt(req.query.page) || 1;
-  const limit = parseInt(req.query.limit) || 10;
+	const page = parseInt(req.query.page) || 1;
+	const limit = parseInt(req.query.limit) || 10;
 
-  if (page < 1) {
-	return res
-	  .status(400)
-	  .json({ error: "Page must be a positive integer." });
-  }
-  if (limit < 1) {
-	return res
-	  .status(400)
-	  .json({ error: "Limit must be a positive integer." });
-  }
-
-  try {
-	const skip = (page - 1) * limit;
-	let products = null;
-	const key = `allProduct:${page}:${limit}`;
-
-	const value = await redisClient.get(key);
-	if (value) {
-	  products = JSON.parse(value);
-	  console.log("Fetched from Redis");
-	} else {
-	  products = await prisma.product.findMany({
-		skip,
-		take: limit,
-		orderBy: {
-		  createdAt: "desc",
-		},
-		include: {
-		  owner: {
-			select: {
-			  id: true,
-			  firstName: true,
-			  lastName: true,
-			  image: true,
-			},
-		  },
-		  category: {
-			select: {
-			  id: true,
-			  name: true,
-			},
-		  },
-		  reviews: {
-			select: {
-			  rating: true,
-			  comment: true,
-			  userEmail: true,
-			  user: {
-				select: {
-				  firstName: true,
-				  lastName: true,
-				  image: true,
-				},
-			  },
-			},
-		  },
-		  Inventory: {
-			select: {
-			  productId: true,
-			  stock: true,
-			},
-		  },
-		  comments: {
-			select: {
-			  content: true,
-			  createdAt: true,
-			  userEmail: true,
-			  User: {
-				select: {
-				  firstName: true,
-				  lastName: true,
-				  image: true,
-				},
-			  },
-			},
-		  },
-		  likes: {
-			select: {
-			  id: true,
-			  user: {
-				select: {
-				  firstName: true,
-				  lastName: true,
-				  image: true,
-				},
-			  },
-			},
-		  },
-		  _count: {
-			select: {
-			  comments: true,
-			  likes: true,
-			},
-		  },
-		},
-	  });
-
-	  await redisClient.set(key, JSON.stringify(products), {
-		EX: 60,
-	  });
-	  console.log("Fetched from Prisma");
+	if (page < 1) {
+		return res.status(400).json({ error: 'Page must be a positive integer.' });
+	}
+	if (limit < 1) {
+		return res.status(400).json({ error: 'Limit must be a positive integer.' });
 	}
 
-	const totalProducts = await prisma.product.count();
-	const totalPages = Math.ceil(totalProducts / limit);
+	try {
+		const skip = (page - 1) * limit;
+		let products = null;
+		const key = `allProduct:${page}:${limit}`;
 
-	res.status(200).json({
-	  totalProducts,
-	  totalPages,
-	  currentPage: page,
-	  hasMore: page < totalPages,
-	  data: products,
-	});
-  } catch (error) {
-	console.error("Error fetching products:", error);
-	res.status(500).json({
-	  error: "An error occurred while fetching products",
-	});
-  }
+		const value = await redisClient.get(key);
+		if (value) {
+			products = JSON.parse(value);
+			console.log('Fetched from Redis');
+		} else {
+			products = await prisma.product.findMany({
+				skip,
+				take: limit,
+				orderBy: {
+					createdAt: 'desc'
+				},
+				include: {
+					owner: {
+						select: {
+							id: true,
+							firstName: true,
+							lastName: true,
+							image: true
+						}
+					},
+					category: {
+						select: {
+							id: true,
+							name: true
+						}
+					},
+					reviews: {
+						select: {
+							rating: true,
+							comment: true,
+							userEmail: true,
+							user: {
+								select: {
+									firstName: true,
+									lastName: true,
+									image: true
+								}
+							}
+						}
+					},
+					Inventory: {
+						select: {
+							productId: true,
+							stock: true
+						}
+					},
+					comments: {
+						select: {
+							content: true,
+							createdAt: true,
+							userEmail: true,
+							User: {
+								select: {
+									firstName: true,
+									lastName: true,
+									image: true
+								}
+							}
+						}
+					},
+					likes: {
+						select: {
+							id: true,
+							user: {
+								select: {
+									firstName: true,
+									lastName: true,
+									image: true
+								}
+							}
+						}
+					},
+					_count: {
+						select: {
+							comments: true,
+							likes: true
+						}
+					}
+				}
+			});
+
+			await redisClient.set(key, JSON.stringify(products), {
+				EX: 60
+			});
+			console.log('Fetched from Prisma');
+		}
+
+		const totalProducts = await prisma.product.count();
+		const totalPages = Math.ceil(totalProducts / limit);
+
+		res.status(200).json({
+			totalProducts,
+			totalPages,
+			currentPage: page,
+			hasMore: page < totalPages,
+			data: products
+		});
+	} catch (error) {
+		console.error('Error fetching products:', error);
+		res.status(500).json({
+			error: 'An error occurred while fetching products'
+		});
+	}
 });
 
 export const getAllSellerProducts = asyncHandler(async (req, res) => {
@@ -181,9 +170,8 @@ export const getAllSellerProducts = asyncHandler(async (req, res) => {
 	try {
 		const products = await prisma.product.findMany({
 			where: {
-				userEmail: email,
-			},
-
+				userEmail: email
+			}
 		});
 		res.status(200).json(products);
 	} catch (error) {
@@ -204,17 +192,17 @@ export const getProduct = asyncHandler(async (req, res) => {
 							select: {
 								firstName: true,
 								lastName: true,
-								image: true,
-							},
-						},
-					},
+								image: true
+							}
+						}
+					}
 				},
 				owner: {
 					select: {
 						firstName: true,
 						lastName: true,
-						image: true,
-					},
+						image: true
+					}
 				},
 				comments: {
 					include: {
@@ -222,10 +210,10 @@ export const getProduct = asyncHandler(async (req, res) => {
 							select: {
 								firstName: true,
 								lastName: true,
-								image: true,
-							},
-						},
-					},
+								image: true
+							}
+						}
+					}
 				},
 				reviews: {
 					include: {
@@ -233,27 +221,27 @@ export const getProduct = asyncHandler(async (req, res) => {
 							select: {
 								firstName: true,
 								lastName: true,
-								image: true,
-							},
-						},
-					},
+								image: true
+							}
+						}
+					}
 				},
 				Inventory: {
 					select: {
 						productId: true,
-						stock: true,
-					},
+						stock: true
+					}
 				},
 				category: {
 					select: {
-						name: true,
-					},
-				},
-			},
+						name: true
+					}
+				}
+			}
 		});
 
 		if (!product) {
-			return res.status(404).json({ error: "Product not found" });
+			return res.status(404).json({ error: 'Product not found' });
 		}
 
 		res.status(200).json(product);
@@ -273,11 +261,11 @@ export const updateProduct = asyncHandler(async (req, res) => {
 		categoryId,
 		sizes,
 		colors,
-		stock, // Added stock to the request body
+		stock // Added stock to the request body
 	} = req.body;
 
 	try {
-		console.log("Update request:", {
+		console.log('Update request:', {
 			id,
 			product_name,
 			price,
@@ -286,52 +274,41 @@ export const updateProduct = asyncHandler(async (req, res) => {
 			categoryId,
 			sizes,
 			colors,
-			stock, // Added stock to the log
+			stock // Added stock to the log
 		});
 
 		// Find the existing product
 		const existingProduct = await prisma.product.findUnique({
-			where: { id },
+			where: { id }
 		});
 
 		if (!existingProduct) {
-			return res.status(404).json({ error: "Product not found" });
+			return res.status(404).json({ error: 'Product not found' });
 		}
 
-		console.log("Existing product:", existingProduct);
+		console.log('Existing product:', existingProduct);
 
 		// Update the product details
 		const updatedProduct = await prisma.product.update({
 			where: { id },
 			data: {
-				product_name:
-					product_name !== undefined
-						? product_name
-						: existingProduct.product_name,
+				product_name: product_name !== undefined ? product_name : existingProduct.product_name,
 				price: price !== undefined ? price : existingProduct.price,
-				product_image:
-					product_image !== undefined
-						? product_image
-						: existingProduct.product_image,
+				product_image: product_image !== undefined ? product_image : existingProduct.product_image,
 				product_description:
-					product_description !== undefined
-						? product_description
-						: existingProduct.product_description,
-				categoryId:
-					categoryId !== undefined
-						? categoryId
-						: existingProduct.categoryId,
+					product_description !== undefined ? product_description : existingProduct.product_description,
+				categoryId: categoryId !== undefined ? categoryId : existingProduct.categoryId,
 				sizes: sizes !== undefined ? sizes : existingProduct.sizes,
-				colors: colors !== undefined ? colors : existingProduct.colors,
-			},
+				colors: colors !== undefined ? colors : existingProduct.colors
+			}
 		});
 
-		console.log("Updated product:", updatedProduct);
+		console.log('Updated product:', updatedProduct);
 
 		//? the stock is provided, update the inventory as well
 		if (stock !== undefined) {
 			const inventoryItem = await prisma.inventory.findUnique({
-				where: { productId: id },
+				where: { productId: id }
 			});
 
 			if (!inventoryItem) {
@@ -339,25 +316,25 @@ export const updateProduct = asyncHandler(async (req, res) => {
 				await prisma.inventory.create({
 					data: {
 						productId: id,
-						stock,
-					},
+						stock
+					}
 				});
 			} else {
 				//? Update the stock of the existing inventory item
 				await prisma.inventory.update({
 					where: { productId: id },
-					data: { stock },
+					data: { stock }
 				});
 			}
 
-			console.log("Inventory updated with stock:", stock);
+			console.log('Inventory updated with stock:', stock);
 		}
 
 		res.status(200).json(updatedProduct);
 	} catch (error) {
-		console.error("Error updating product:", error);
+		console.error('Error updating product:', error);
 		res.status(500).json({
-			error: "An error occurred while updating the product.",
+			error: 'An error occurred while updating the product.'
 		});
 	}
 });
@@ -366,47 +343,43 @@ export const updateProduct = asyncHandler(async (req, res) => {
 export const deleteProduct = asyncHandler(async (req, res) => {
 	const { id } = req.params;
 	console.log(`Received DELETE request for /api/v1/products/${id}`);
-	console.log("Deleting a product by ID");
+	console.log('Deleting a product by ID');
 
 	try {
 		const product = await prisma.product.findUnique({
 			where: { id },
 			select: {
-				product_image: true,
-			},
+				product_image: true
+			}
 		});
 
 		if (!product) {
-			return res.status(404).json({ message: "Product not found" });
+			return res.status(404).json({ message: 'Product not found' });
 		}
 
 		if (product.product_image) {
-			const publicIds = product.product_image.map(
-				(image) => image.split("/").pop().split(".")[0]
-			);
-			await Promise.all(
-				publicIds.map((publicId) => cloudinary.uploader.destroy(publicId))
-			);
+			const publicIds = product.product_image.map((image) => image.split('/').pop().split('.')[0]);
+			await Promise.all(publicIds.map((publicId) => cloudinary.uploader.destroy(publicId)));
 		}
 
 		await prisma.product.delete({
-			where: { id },
+			where: { id }
 		});
 
 		res.status(200).json({
-			message: "Product deleted successfully",
-			product,
+			message: 'Product deleted successfully',
+			product
 		});
 	} catch (error) {
-		if (error.code === "P2025") {
-			return res.status(404).json({ message: "Product not found" });
+		if (error.code === 'P2025') {
+			return res.status(404).json({ message: 'Product not found' });
 		}
 
-		console.error("Error deleting product:", error);
+		console.error('Error deleting product:', error);
 
 		res.status(500).json({
-			error: "An error occurred while deleting the product",
-			details: error.message,
+			error: 'An error occurred while deleting the product',
+			details: error.message
 		});
 	}
 });
@@ -418,11 +391,11 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 
 	try {
 		const user = await prisma.user.findUnique({
-			where: { email: userEmail },
+			where: { email: userEmail }
 		});
 
 		if (!user) {
-			return res.status(400).json({ message: "User not found" });
+			return res.status(400).json({ message: 'User not found' });
 		}
 
 		const comment = await prisma.comment.create({
@@ -431,26 +404,26 @@ export const addCommentToProduct = asyncHandler(async (req, res) => {
 				createdAt: new Date(),
 				User: {
 					connect: {
-						email: userEmail,
-					},
+						email: userEmail
+					}
 				},
 				product: {
 					connect: {
-						id: productId,
-					},
-				},
-			},
+						id: productId
+					}
+				}
+			}
 		});
 
 		return res.status(201).json({
-			message: "Comment added successfully",
-			data: comment,
+			message: 'Comment added successfully',
+			data: comment
 		});
 	} catch (error) {
-		console.error("Error adding comment:", error);
+		console.error('Error adding comment:', error);
 		return res.status(500).json({
-			message: "An error occurred while adding the comment",
-			error: error.message,
+			message: 'An error occurred while adding the comment',
+			error: error.message
 		});
 	}
 });
@@ -463,14 +436,10 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 		const limit = parseInt(req.query.limit) || 10;
 
 		if (isNaN(page) || page < 1) {
-			return res
-				.status(400)
-				.json({ message: "Page must be a positive integer." });
+			return res.status(400).json({ message: 'Page must be a positive integer.' });
 		}
 		if (isNaN(limit) || limit < 1) {
-			return res
-				.status(400)
-				.json({ message: "Limit must be a positive integer." });
+			return res.status(400).json({ message: 'Limit must be a positive integer.' });
 		}
 
 		const skip = (page - 1) * limit;
@@ -482,43 +451,43 @@ export const getCommentsForProduct = asyncHandler(async (req, res) => {
 					select: {
 						firstName: true,
 						lastName: true,
-						image: true,
-					},
-				},
+						image: true
+					}
+				}
 			},
 			skip: skip,
 			take: limit,
 			orderBy: {
-				createdAt: "desc",
-			},
+				createdAt: 'desc'
+			}
 		});
 
 		const totalComments = await prisma.comment.count({
-			where: { productId },
+			where: { productId }
 		});
 
 		const totalPages = Math.ceil(totalComments / limit);
 
 		res.status(200).json({
-			message: "Comments retrieved successfully",
+			message: 'Comments retrieved successfully',
 			totalComments,
 			totalPages,
 			currentPage: page,
 			hasMore: page < totalPages,
-			data: comments,
+			data: comments
 		});
 	} catch (error) {
-		console.error("Error fetching comments:", error);
+		console.error('Error fetching comments:', error);
 		res.status(500).json({
-			message: "An error occurred while fetching comments",
+			message: 'An error occurred while fetching comments'
 		});
 	}
 });
 
 //* Toggle like on a comment
 export const likeComment = asyncHandler(async (req, res) => {
-	console.log("Received request to toggle comment like");
-	console.log("Request body:", req.body);
+	console.log('Received request to toggle comment like');
+	console.log('Request body:', req.body);
 
 	let { userId, commentId } = req.body;
 
@@ -530,76 +499,74 @@ export const likeComment = asyncHandler(async (req, res) => {
 	}
 
 	if (!userId || !commentId) {
-		console.log("Missing required fields:", { userId, commentId });
+		console.log('Missing required fields:', { userId, commentId });
 		res.status(400);
-		throw new Error(
-			`User ID and Comment ID are required. Received: userId=${userId}, commentId=${commentId}`
-		);
+		throw new Error(`User ID and Comment ID are required. Received: userId=${userId}, commentId=${commentId}`);
 	}
 
 	try {
-		console.log("Looking up comment:", commentId);
+		console.log('Looking up comment:', commentId);
 		const comment = await prisma.comment.findUnique({
 			where: {
-				id: commentId,
+				id: commentId
 			},
 			select: {
 				id: true,
 				productId: true,
-				content: true,
-			},
+				content: true
+			}
 		});
 
-		console.log("Found comment:", comment);
+		console.log('Found comment:', comment);
 
 		if (!comment) {
-			console.log("Comment not found:", commentId);
+			console.log('Comment not found:', commentId);
 			res.status(404);
-			throw new Error("Comment not found");
+			throw new Error('Comment not found');
 		}
 
-		console.log("Checking for existing like");
+		console.log('Checking for existing like');
 		const existingLike = await prisma.like.findFirst({
 			where: {
 				userId: userId,
-				commentId: commentId,
-			},
+				commentId: commentId
+			}
 		});
 
-		console.log("Existing like:", existingLike);
+		console.log('Existing like:', existingLike);
 
 		if (existingLike) {
-			console.log("Deleting existing like");
+			console.log('Deleting existing like');
 			await prisma.like.delete({
 				where: {
-					id: existingLike.id,
-				},
+					id: existingLike.id
+				}
 			});
 
-			console.log("Like deleted successfully");
+			console.log('Like deleted successfully');
 			res.status(200).json({
-				message: "Comment unliked successfully",
-				liked: false,
+				message: 'Comment unliked successfully',
+				liked: false
 			});
 		} else {
-			console.log("Creating new like");
+			console.log('Creating new like');
 			const newLike = await prisma.like.create({
 				data: {
 					userId: userId,
 					productId: comment.productId,
-					commentId: commentId,
-				},
+					commentId: commentId
+				}
 			});
 
-			console.log("New like created:", newLike);
+			console.log('New like created:', newLike);
 			res.status(201).json({
-				message: "Comment liked successfully",
+				message: 'Comment liked successfully',
 				liked: true,
-				like: newLike,
+				like: newLike
 			});
 		}
 	} catch (error) {
-		console.error("Error in toggleCommentLike:", error);
+		console.error('Error in toggleCommentLike:', error);
 		res.status(error.status || 400);
 		throw error;
 	}
@@ -609,14 +576,12 @@ export const likeProduct = asyncHandler(async (req, res) => {
 	try {
 		const { userId, productId, commentId } = req.body.data;
 
-		console.log("Received userId:", userId);
-		console.log("Received productId:", productId);
-		console.log("Received commentId:", commentId);
+		console.log('Received userId:', userId);
+		console.log('Received productId:', productId);
+		console.log('Received commentId:', commentId);
 
 		if (!userId || !productId) {
-			return res
-				.status(400)
-				.json({ message: "userId and productId are required" });
+			return res.status(400).json({ message: 'userId and productId are required' });
 		}
 
 		// Check if the like already exists
@@ -624,47 +589,43 @@ export const likeProduct = asyncHandler(async (req, res) => {
 			where: {
 				userId,
 				productId,
-				...(commentId ? { commentId } : {}),
-			},
+				...(commentId ? { commentId } : {})
+			}
 		});
 
 		if (existingLike) {
 			// If it exists, delete it (unlike)
 			await prisma.like.delete({
 				where: {
-					id: existingLike.id,
-				},
+					id: existingLike.id
+				}
 			});
-			return res.status(200).json({ message: "Product unliked" });
+			return res.status(200).json({ message: 'Product unliked' });
 		} else {
 			// If it does not exist, create it (like)
 			await prisma.like.create({
 				data: {
 					user: {
-						connect: { id: userId },
+						connect: { id: userId }
 					},
 					product: {
-						connect: { id: productId },
+						connect: { id: productId }
 					},
 					...(commentId && {
 						comment: {
-							connect: { id: commentId },
-						},
-					}),
-				},
+							connect: { id: commentId }
+						}
+					})
+				}
 			});
 
-			console.log(
-				`Like created for productId: ${productId}, userId: ${userId}`
-			);
+			console.log(`Like created for productId: ${productId}, userId: ${userId}`);
 
-			return res.status(201).json({ message: "Product liked" });
+			return res.status(201).json({ message: 'Product liked' });
 		}
 	} catch (error) {
-		console.error("Error toggling like for product:", error);
-		return res
-			.status(500)
-			.json({ message: "An error occurred while toggling like", error });
+		console.error('Error toggling like for product:', error);
+		return res.status(500).json({ message: 'An error occurred while toggling like', error });
 	}
 });
 
@@ -677,15 +638,15 @@ export const getProductLikes = asyncHandler(async (req, res) => {
 		const likesCount = await prisma.like.count({
 			where: {
 				productId: productId,
-				commentId: null, // Only count likes for the product, not comments
-			},
+				commentId: null // Only count likes for the product, not comments
+			}
 		});
 
-		console.log("Likes count:", likesCount); // Add this to log the count
+		console.log('Likes count:', likesCount); // Add this to log the count
 
 		res.status(200).json({
 			productId: productId,
-			likesCount: likesCount,
+			likesCount: likesCount
 		});
 	} catch (error) {
 		res.status(400);
@@ -700,13 +661,13 @@ export const getCommentLikes = asyncHandler(async (req, res) => {
 	try {
 		const likesCount = await prisma.like.count({
 			where: {
-				commentId: commentId,
-			},
+				commentId: commentId
+			}
 		});
 
 		res.status(200).json({
 			commentId: commentId,
-			likesCount: likesCount,
+			likesCount: likesCount
 		});
 	} catch (error) {
 		res.status(400);
@@ -724,10 +685,10 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 					select: {
 						id: true,
 						firstName: true,
-						image: true,
-					},
-				},
-			},
+						image: true
+					}
+				}
+			}
 		});
 
 		const response = productsWithLikes
@@ -736,7 +697,7 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 				product_name: product.product_name,
 				likesCount: product.likes.length,
 				likes: product.likes,
-				owner: product.owner,
+				owner: product.owner
 			}))
 			.sort((a, b) => b.likesCount - a.likesCount);
 
@@ -745,95 +706,94 @@ export const getAllProductLikes = asyncHandler(async (req, res) => {
 		console.error(error);
 		res.status(500).json({
 			success: false,
-			message: "Error retrieving product likes",
+			message: 'Error retrieving product likes'
 		});
 	}
 });
 
-
 export const seachProduct = asyncHandler(async (req, res) => {
 	const { search } = req.params;
 	console.log(search);
-try {
-	const products = await prisma.product.findMany({
-		where: {
-			product_name: {
-				contains: search,
-				mode: "insensitive",
+	try {
+		const products = await prisma.product.findMany({
+			where: {
+				product_name: {
+					contains: search,
+					mode: 'insensitive'
+				}
 			},
-		},
-		include: {
-			owner: {
-				select: {
-					id: true,
-					firstName: true,
-					lastName: true,
-					image: true,
+			include: {
+				owner: {
+					select: {
+						id: true,
+						firstName: true,
+						lastName: true,
+						image: true
+					}
 				},
-			},
-			category: {
-				select: {
-					id: true,
-					name: true,
+				category: {
+					select: {
+						id: true,
+						name: true
+					}
 				},
-			},
-			reviews: {
-				select: {
-					rating: true,
-					comment: true,
-					userEmail: true,
-					user: {
-						select: {
-							firstName: true,
-							lastName: true,
-							image: true,
-						},
-					},
+				reviews: {
+					select: {
+						rating: true,
+						comment: true,
+						userEmail: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true
+							}
+						}
+					}
 				},
-			},
-			Inventory: {
-				select: {
-					productId: true,
-					stock: true,
+				Inventory: {
+					select: {
+						productId: true,
+						stock: true
+					}
 				},
-			},
-			comments: {
-				select: {
-					content: true,
-					createdAt: true,
-					userEmail: true,
-					User: {
-						select: {
-							firstName: true,
-							lastName: true,
-							image: true,
-						},
-					},
+				comments: {
+					select: {
+						content: true,
+						createdAt: true,
+						userEmail: true,
+						User: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true
+							}
+						}
+					}
 				},
-			},
-			likes: {
-				select: {
-					id: true,
-					user: {
-						select: {
-							firstName: true,
-							lastName: true,
-							image: true,
-						},
-					},
+				likes: {
+					select: {
+						id: true,
+						user: {
+							select: {
+								firstName: true,
+								lastName: true,
+								image: true
+							}
+						}
+					}
 				},
-			},
-			_count: {
-				select: {
-					comments: true,
-					likes: true,
-				},
-			},
-		},
-	});
-	res.status(200).json({ success: true, data: products });
-} catch (error) {
-	console.error(error);
-	res.status(500).json({ success: false, message: "Error retrieving products" });
-}
+				_count: {
+					select: {
+						comments: true,
+						likes: true
+					}
+				}
+			}
+		});
+		res.status(200).json({ success: true, data: products });
+	} catch (error) {
+		console.error(error);
+		res.status(500).json({ success: false, message: 'Error retrieving products' });
+	}
 });

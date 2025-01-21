@@ -1,4 +1,4 @@
-import express from "express";
+import express from 'express';
 import {
 	getInventoryItems,
 	getInventoryItemByProductId,
@@ -9,90 +9,90 @@ import {
 	deleteInventoryItem,
 	checkInventoryAvailability,
 	getLowStockItems,
-	resetInventoryStock,
-} from "../controllers/inventoryController.js";
+	resetInventoryStock
+} from '../controllers/inventoryController.js';
 // import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 //^ Create a new inventory item
 router.post(
-	"/",
+	'/',
 	// logAction("Creating a new inventory item"),
-	createInventoryItem,
+	createInventoryItem
 	// logError
 );
 
 //^ Get all inventory items
 router.get(
-	"/",
+	'/',
 	// logAction("Fetching all inventory items"),
-	getInventoryItems,
+	getInventoryItems
 	// logError
 );
 
 //^ Get a single inventory item by productId
 router.get(
-	"/:productId",
+	'/:productId',
 	// logAction("Get a single inventory item by productId"),
-	getInventoryItemByProductId,
+	getInventoryItemByProductId
 	// logError
 );
 
 //^ Update the inventory stock
 router.patch(
-	"/:productId",
+	'/:productId',
 	// logAction("Updating an inventory stock"),
-	updateInventoryStock,
+	updateInventoryStock
 	// logError
 );
 
 //^ Reduced inventory stock
 router.patch(
-	"/:productId/reduce",
+	'/:productId/reduce',
 	// logAction("Reduced inventory stock"),
-	reduceInventoryStock,
+	reduceInventoryStock
 	// logError
 );
 
 //^ Added inventory stock
 router.patch(
-	"/:productId/add",
+	'/:productId/add',
 	// logAction("Added inventory stock"),
-	addInventoryStock,
+	addInventoryStock
 	// logError
 );
 
 //^ Delete an inventory item
 router.delete(
-	"/:productId",
+	'/:productId',
 	// logAction("Deleting an inventory item"),
-	deleteInventoryItem,
+	deleteInventoryItem
 	// logError
 );
 
 //^ Checking stock for multiple products
 router.post(
-	"/check-availability",
+	'/check-availability',
 	// logAction("Checking stock for multiple products"),
-	checkInventoryAvailability,
+	checkInventoryAvailability
 	// logError
-); 
+);
 
 //^ Getting items below stock threshold
 router.get(
-	"/low-stock",
+	'/low-stock',
 	// logAction("Getting items below stock threshold"),
-	getLowStockItems,
+	getLowStockItems
 	// logError
-); 
+);
 
 //^ Reseting stock for a product
 router.patch(
-	"/:productId/reset",
+	'/:productId/reset',
 	// logAction("Reseting stock for a product"),
-	resetInventoryStock,
+	resetInventoryStock
 	// logError
-); 
+);
 
 export { router as inventoryRoute };

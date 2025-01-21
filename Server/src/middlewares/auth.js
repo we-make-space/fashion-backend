@@ -1,23 +1,20 @@
 // import dotenv from "dotenv";
-import { expressjwt } from "express-jwt";
-import jwksRsa from "jwks-rsa";
+import { expressjwt } from 'express-jwt';
+import jwksRsa from 'jwks-rsa';
 
 // dotenv.config();
-
 
 const authMiddleware = expressjwt({
 	secret: jwksRsa.expressJwtSecret({
 		cache: true,
 		rateLimit: true,
 		jwksRequestsPerMinute: 5,
-		jwksUri:
-			"https://dev-dksewc7q6mj7vink.us.auth0.com/.well-known/jwks.json",
-		
+		jwksUri: 'https://dev-dksewc7q6mj7vink.us.auth0.com/.well-known/jwks.json'
 	}),
-	audience: "fashion_house_app",
-	issuer: "https://dev-dksewc7q6mj7vink.us.auth0.com/",
-	algorithms: ["RS256"],
-}).unless({ path: [""] }); //^ put routes that you would want to access without authentication
+	audience: 'fashion_house_app',
+	issuer: 'https://dev-dksewc7q6mj7vink.us.auth0.com/',
+	algorithms: ['RS256']
+}).unless({ path: [''] }); //^ put routes that you would want to access without authentication
 
 // app.use((req, res, next) => {
 // 	const token = req.headers.authorization?.split(" ")[1]; // Bearer token
@@ -32,12 +29,12 @@ const authMiddleware = expressjwt({
 
 //^ Custom error handler middleware
 const handleAuthErrors = (err, req, res, next) => {
-	if (err.name === "UnauthorizedError") {
+	if (err.name === 'UnauthorizedError') {
 		logger.error(`Unauthorized access attempt: ${req.originalUrl}`, {
 			ip: req.ip,
-			headers: req.headers,
+			headers: req.headers
 		});
-		return res.status(401).send("Invalid token");
+		return res.status(401).send('Invalid token');
 	}
 	next(err);
 };

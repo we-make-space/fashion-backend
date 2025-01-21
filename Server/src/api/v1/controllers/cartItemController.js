@@ -1,5 +1,5 @@
-import { prisma } from "../config/prismaConfig.js";
-import asyncHandler from "express-async-handler";
+import { prisma } from '../config/prismaConfig.js';
+import asyncHandler from 'express-async-handler';
 
 // Add a cart item
 export const addCartItem = asyncHandler(async (req, res) => {
@@ -10,13 +10,13 @@ export const addCartItem = asyncHandler(async (req, res) => {
 			data: {
 				cartId,
 				productId,
-				quantity,
-			},
+				quantity
+			}
 		});
 		res.status(201).json(cartItem);
 	} catch (error) {
-		console.error("Error adding cart item:", error);
-		res.status(500).json({ error: "Failed to add cart item" });
+		console.error('Error adding cart item:', error);
+		res.status(500).json({ error: 'Failed to add cart item' });
 	}
 });
 
@@ -28,12 +28,12 @@ export const updateCartItem = asyncHandler(async (req, res) => {
 	try {
 		const cartItem = await prisma.cartItem.update({
 			where: { id },
-			data: { quantity },
+			data: { quantity }
 		});
 		res.status(200).json(cartItem);
 	} catch (error) {
-		console.error("Error updating cart item:", error);
-		res.status(500).json({ error: "Failed to update cart item" });
+		console.error('Error updating cart item:', error);
+		res.status(500).json({ error: 'Failed to update cart item' });
 	}
 });
 
@@ -43,12 +43,12 @@ export const removeCartItem = asyncHandler(async (req, res) => {
 
 	try {
 		await prisma.cartItem.delete({
-			where: { id },
+			where: { id }
 		});
-		res.status(200).json({ message: "Cart item removed" });
+		res.status(200).json({ message: 'Cart item removed' });
 	} catch (error) {
-		console.error("Error removing cart item:", error);
-		res.status(500).json({ error: "Failed to remove cart item" });
+		console.error('Error removing cart item:', error);
+		res.status(500).json({ error: 'Failed to remove cart item' });
 	}
 });
 
@@ -71,30 +71,28 @@ export const getCartItemsByCartId = asyncHandler(async (req, res) => {
 								id: true,
 								firstName: true,
 								lastName: true,
-								email: true,
-							},
-						},
-					},
-				},
-			},
+								email: true
+							}
+						}
+					}
+				}
+			}
 		});
 
 		if (cartItems.length === 0) {
-			return res
-				.status(404)
-				.json({ message: "No items found in this cart" });
+			return res.status(404).json({ message: 'No items found in this cart' });
 		}
 
 		res.status(200).json(cartItems);
 	} catch (error) {
-		console.error("Error retrieving cart items:", error);
-		res.status(500).json({ error: "Failed to retrieve cart items" });
+		console.error('Error retrieving cart items:', error);
+		res.status(500).json({ error: 'Failed to retrieve cart items' });
 	}
 });
 
 // Get a specific cart item by ID
 export const getCartItemById = asyncHandler(async (req, res) => {
-	const { id } = req.params; 
+	const { id } = req.params;
 
 	try {
 		const cartItem = await prisma.cartItem.findUnique({
@@ -111,21 +109,21 @@ export const getCartItemById = asyncHandler(async (req, res) => {
 								id: true,
 								firstName: true,
 								lastName: true,
-								email: true,
-							},
-						},
-					},
-				},
-			},
+								email: true
+							}
+						}
+					}
+				}
+			}
 		});
 
 		if (!cartItem) {
-			return res.status(404).json({ message: "Cart item not found" });
+			return res.status(404).json({ message: 'Cart item not found' });
 		}
 
 		res.status(200).json(cartItem);
 	} catch (error) {
-		console.error("Error retrieving cart item:", error);
-		res.status(500).json({ error: "Failed to retrieve cart item" });
+		console.error('Error retrieving cart item:', error);
+		res.status(500).json({ error: 'Failed to retrieve cart item' });
 	}
 });

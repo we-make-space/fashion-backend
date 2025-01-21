@@ -1,12 +1,12 @@
-import { prisma } from "../config/prismaConfig.js";
-import asyncHandler from "express-async-handler";
+import { prisma } from '../config/prismaConfig.js';
+import asyncHandler from 'express-async-handler';
 
 //* Create a new category
 export const createCategory = asyncHandler(async (req, res) => {
 	const { name } = req.body;
 	try {
 		const category = await prisma.category.create({
-			data: { name },
+			data: { name }
 		});
 		res.status(201).json(category);
 	} catch (error) {
@@ -26,8 +26,8 @@ export const getCategories = asyncHandler(async (req, res) => {
 								id: true,
 								firstName: true,
 								lastName: true,
-								image: true,
-							},
+								image: true
+							}
 						},
 						likes: {
 							include: {
@@ -35,14 +35,14 @@ export const getCategories = asyncHandler(async (req, res) => {
 									select: {
 										firstName: true,
 										lastName: true,
-										image: true,
-									},
-								},
-							},
-						},
-					},
-				},
-			},
+										image: true
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		});
 		res.status(200).json(categories);
 	} catch (error) {
@@ -57,7 +57,7 @@ export const updateCategory = asyncHandler(async (req, res) => {
 	try {
 		const category = await prisma.category.update({
 			where: { id },
-			data: { name },
+			data: { name }
 		});
 		res.status(200).json(category);
 	} catch (error) {
@@ -71,17 +71,17 @@ export const deleteCategory = asyncHandler(async (req, res) => {
 	try {
 		const categoryWithProducts = await prisma.category.findUnique({
 			where: { id },
-			include: { products: true },
+			include: { products: true }
 		});
 
 		if (categoryWithProducts.products.length > 0) {
 			return res.status(400).json({
-				error: "Cannot delete category with associated products.",
+				error: 'Cannot delete category with associated products.'
 			});
 		}
 
 		await prisma.category.delete({
-			where: { id },
+			where: { id }
 		});
 		res.status(204).send();
 	} catch (error) {

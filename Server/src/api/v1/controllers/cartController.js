@@ -1,25 +1,25 @@
-import { prisma } from "../config/prismaConfig.js";
-import asyncHandler from "express-async-handler";
+import { prisma } from '../config/prismaConfig.js';
+import asyncHandler from 'express-async-handler';
 
 // Add product to cart
 export const addToCart = asyncHandler(async (req, res) => {
 	const { userId, productId, quantity } = req.body; // Grab userId from request body
 
 	if (!userId) {
-		return res.status(400).json({ error: "User ID is required." });
+		return res.status(400).json({ error: 'User ID is required.' });
 	}
 
 	try {
 		// Check if the cart already exists for the user
 		let cart = await prisma.cart.findUnique({
 			where: { userId },
-			include: { items: true },
+			include: { items: true }
 		});
 
 		// If no cart exists, create one
 		if (!cart) {
 			cart = await prisma.cart.create({
-				data: { userId },
+				data: { userId }
 			});
 		}
 
@@ -28,16 +28,16 @@ export const addToCart = asyncHandler(async (req, res) => {
 			where: {
 				cartId_productId: {
 					cartId: cart.id,
-					productId,
-				},
-			},
+					productId
+				}
+			}
 		});
 
 		if (existingCartItem) {
 			// Update quantity if product is already in the cart
 			const updatedCartItem = await prisma.cartItem.update({
 				where: { id: existingCartItem.id },
-				data: { quantity: existingCartItem.quantity + quantity },
+				data: { quantity: existingCartItem.quantity + quantity }
 			});
 			return res.status(200).json(updatedCartItem);
 		} else {
@@ -46,14 +46,14 @@ export const addToCart = asyncHandler(async (req, res) => {
 				data: {
 					cartId: cart.id,
 					productId,
-					quantity,
-				},
+					quantity
+				}
 			});
 			return res.status(201).json(newCartItem);
 		}
 	} catch (error) {
-		console.error("Error adding product to cart:", error);
-		res.status(500).json({ error: "Failed to add product to cart" });
+		console.error('Error adding product to cart:', error);
+		res.status(500).json({ error: 'Failed to add product to cart' });
 	}
 });
 
@@ -63,17 +63,17 @@ export const removeFromCart = asyncHandler(async (req, res) => {
 	const { productId } = req.params;
 
 	if (!userId) {
-		return res.status(400).json({ error: "User ID is required." });
+		return res.status(400).json({ error: 'User ID is required.' });
 	}
 
 	try {
 		// Find user's cart
 		const cart = await prisma.cart.findUnique({
-			where: { userId },
+			where: { userId }
 		});
 
 		if (!cart) {
-			return res.status(404).json({ error: "Cart not found" });
+			return res.status(404).json({ error: 'Cart not found' });
 		}
 
 		// Remove the item from the cart
@@ -81,15 +81,15 @@ export const removeFromCart = asyncHandler(async (req, res) => {
 			where: {
 				cartId_productId: {
 					cartId: cart.id,
-					productId,
-				},
-			},
+					productId
+				}
+			}
 		});
 
-		res.status(200).json({ message: "Product removed from cart" });
+		res.status(200).json({ message: 'Product removed from cart' });
 	} catch (error) {
-		console.error("Error removing product from cart:", error);
-		res.status(500).json({ error: "Failed to remove product from cart" });
+		console.error('Error removing product from cart:', error);
+		res.status(500).json({ error: 'Failed to remove product from cart' });
 	}
 });
 
@@ -100,17 +100,17 @@ export const updateCartQuantity = asyncHandler(async (req, res) => {
 	const { quantity } = req.body;
 
 	if (!userId) {
-		return res.status(400).json({ error: "User ID is required." });
+		return res.status(400).json({ error: 'User ID is required.' });
 	}
 
 	try {
 		// Find user's cart
 		const cart = await prisma.cart.findUnique({
-			where: { userId },
+			where: { userId }
 		});
 
 		if (!cart) {
-			return res.status(404).json({ error: "Cart not found" });
+			return res.status(404).json({ error: 'Cart not found' });
 		}
 
 		// Update the quantity of the item
@@ -118,16 +118,16 @@ export const updateCartQuantity = asyncHandler(async (req, res) => {
 			where: {
 				cartId_productId: {
 					cartId: cart.id,
-					productId,
-				},
+					productId
+				}
 			},
-			data: { quantity },
+			data: { quantity }
 		});
 
 		res.status(200).json(updatedCartItem);
 	} catch (error) {
-		console.error("Error updating cart item quantity:", error);
-		res.status(500).json({ error: "Failed to update cart item quantity" });
+		console.error('Error updating cart item quantity:', error);
+		res.status(500).json({ error: 'Failed to update cart item quantity' });
 	}
 });
 
@@ -136,7 +136,7 @@ export const getCartItems = asyncHandler(async (req, res) => {
 	const { userId } = req.body; // Grab userId from request body
 
 	if (!userId) {
-		return res.status(400).json({ error: "User ID is required." });
+		return res.status(400).json({ error: 'User ID is required.' });
 	}
 
 	try {
@@ -151,22 +151,22 @@ export const getCartItems = asyncHandler(async (req, res) => {
 								id: true,
 								product_name: true,
 								price: true,
-								product_image: true,
-							},
-						},
-					},
-				},
-			},
+								product_image: true
+							}
+						}
+					}
+				}
+			}
 		});
 
 		if (!cart || cart.items.length === 0) {
-			return res.status(200).json({ message: "Your cart is empty" });
+			return res.status(200).json({ message: 'Your cart is empty' });
 		}
 
 		res.status(200).json(cart.items);
 	} catch (error) {
-		console.error("Error retrieving cart items:", error);
-		res.status(500).json({ error: "Failed to retrieve cart items" });
+		console.error('Error retrieving cart items:', error);
+		res.status(500).json({ error: 'Failed to retrieve cart items' });
 	}
 });
 
@@ -178,19 +178,19 @@ export const createCartForUser = asyncHandler(async (req, res) => {
 		// Create a new cart
 		const cart = await prisma.cart.create({
 			data: {
-				userId, // Link cart to user
-			},
+				userId // Link cart to user
+			}
 		});
 
 		// Update the user's cartId
 		await prisma.user.update({
 			where: { id: userId },
-			data: { cartId: cart.id }, // Set the cartId in the user's record
+			data: { cartId: cart.id } // Set the cartId in the user's record
 		});
 
 		res.status(201).json({ cartId: cart.id });
 	} catch (error) {
-		console.error("Error creating cart for user:", error);
-		res.status(500).json({ error: "Failed to create cart" });
+		console.error('Error creating cart for user:', error);
+		res.status(500).json({ error: 'Failed to create cart' });
 	}
 });

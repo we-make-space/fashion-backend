@@ -1,12 +1,12 @@
-import asyncHandler from "express-async-handler";
-import { prisma } from "../config/prismaConfig.js";
+import asyncHandler from 'express-async-handler';
+import { prisma } from '../config/prismaConfig.js';
 
 // ^ Get all inventory items
 export const getInventoryItems = asyncHandler(async (req, res) => {
 	const inventoryItems = await prisma.inventory.findMany({
 		include: {
-			product: true, 
-		},
+			product: true
+		}
 	});
 	res.status(200).json({ success: true, inventoryItems });
 });
@@ -18,14 +18,12 @@ export const getInventoryItemByProductId = asyncHandler(async (req, res) => {
 	const inventoryItem = await prisma.inventory.findUnique({
 		where: { productId },
 		include: {
-			product: true, //? Include product details
-		},
+			product: true //? Include product details
+		}
 	});
 
 	if (!inventoryItem) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Inventory item not found" });
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
 	}
 
 	res.status(200).json({ success: true, inventoryItem });
@@ -37,18 +35,16 @@ export const updateInventoryStock = asyncHandler(async (req, res) => {
 	const { stock } = req.body;
 
 	const inventoryItem = await prisma.inventory.findUnique({
-		where: { productId },
+		where: { productId }
 	});
 
 	if (!inventoryItem) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Inventory item not found" });
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
 	}
 
 	const updatedInventory = await prisma.inventory.update({
 		where: { productId },
-		data: { stock },
+		data: { stock }
 	});
 
 	res.status(200).json({ success: true, inventory: updatedInventory });
@@ -60,25 +56,23 @@ export const reduceInventoryStock = asyncHandler(async (req, res) => {
 	const { quantity } = req.body;
 
 	const inventoryItem = await prisma.inventory.findUnique({
-		where: { productId },
+		where: { productId }
 	});
 
 	if (!inventoryItem) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Inventory item not found" });
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
 	}
 
 	if (inventoryItem.stock < quantity) {
 		return res.status(400).json({
 			success: false,
-			message: "Insufficient stock for this product",
+			message: 'Insufficient stock for this product'
 		});
 	}
 
 	const updatedInventory = await prisma.inventory.update({
 		where: { productId },
-		data: { stock: inventoryItem.stock - quantity },
+		data: { stock: inventoryItem.stock - quantity }
 	});
 
 	res.status(200).json({ success: true, inventory: updatedInventory });
@@ -90,18 +84,16 @@ export const addInventoryStock = asyncHandler(async (req, res) => {
 	const { quantity } = req.body;
 
 	const inventoryItem = await prisma.inventory.findUnique({
-		where: { productId },
+		where: { productId }
 	});
 
 	if (!inventoryItem) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Inventory item not found" });
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
 	}
 
 	const updatedInventory = await prisma.inventory.update({
 		where: { productId },
-		data: { stock: inventoryItem.stock + quantity },
+		data: { stock: inventoryItem.stock + quantity }
 	});
 
 	res.status(200).json({ success: true, inventory: updatedInventory });
@@ -112,17 +104,15 @@ export const createInventoryItem = asyncHandler(async (req, res) => {
 	const { productId, stock } = req.body;
 
 	const product = await prisma.product.findUnique({
-		where: { id: productId },
+		where: { id: productId }
 	});
 
 	if (!product) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Product not found" });
+		return res.status(404).json({ success: false, message: 'Product not found' });
 	}
 
 	const inventoryItem = await prisma.inventory.create({
-		data: { productId, stock },
+		data: { productId, stock }
 	});
 
 	res.status(201).json({ success: true, inventory: inventoryItem });
@@ -133,95 +123,91 @@ export const deleteInventoryItem = asyncHandler(async (req, res) => {
 	const { productId } = req.params;
 
 	const inventoryItem = await prisma.inventory.findUnique({
-		where: { productId },
+		where: { productId }
 	});
 
 	if (!inventoryItem) {
-		return res
-			.status(404)
-			.json({ success: false, message: "Inventory item not found" });
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
 	}
 
 	await prisma.inventory.delete({
-		where: { productId },
+		where: { productId }
 	});
 
 	res.status(200).json({
 		success: true,
-		message: "Inventory item deleted successfully",
+		message: 'Inventory item deleted successfully'
 	});
 });
 
 // ^ Check inventory availability for multiple products
 export const checkInventoryAvailability = asyncHandler(async (req, res) => {
-    const { productIds } = req.body; 
+	const { productIds } = req.body;
 
-    const inventoryItems = await prisma.inventory.findMany({
-        where: {
-            productId: { in: productIds },
-        },
-    });
+	const inventoryItems = await prisma.inventory.findMany({
+		where: {
+			productId: { in: productIds }
+		}
+	});
 
-    const unavailableProducts = productIds.filter(
-        (id) => !inventoryItems.some((item) => item.productId === id && item.stock > 0)
-    );
+	const unavailableProducts = productIds.filter(
+		(id) => !inventoryItems.some((item) => item.productId === id && item.stock > 0)
+	);
 
-    if (unavailableProducts.length > 0) {
-        return res.status(400).json({
-            success: false,
-            message: "Some products are out of stock",
-            unavailableProducts,
-        });
-    }
+	if (unavailableProducts.length > 0) {
+		return res.status(400).json({
+			success: false,
+			message: 'Some products are out of stock',
+			unavailableProducts
+		});
+	}
 
-    res.status(200).json({
-        success: true,
-        message: "All products are available in stock",
-    });
+	res.status(200).json({
+		success: true,
+		message: 'All products are available in stock'
+	});
 });
 
 // ^ Get low stock items
 export const getLowStockItems = asyncHandler(async (req, res) => {
-    const { threshold = 10 } = req.query; // Default threshold is 10
+	const { threshold = 10 } = req.query; // Default threshold is 10
 
-    const lowStockItems = await prisma.inventory.findMany({
-        where: {
-            stock: { lt: parseInt(threshold) },
-        },
-        include: {
-            product: true,
-        },
-    });
+	const lowStockItems = await prisma.inventory.findMany({
+		where: {
+			stock: { lt: parseInt(threshold) }
+		},
+		include: {
+			product: true
+		}
+	});
 
-    res.status(200).json({
-        success: true,
-        lowStockItems,
-    });
+	res.status(200).json({
+		success: true,
+		lowStockItems
+	});
 });
 
 // ^ Reset stock for a product
 export const resetInventoryStock = asyncHandler(async (req, res) => {
-    const { productId } = req.params;
-    const { defaultStock = 0 } = req.body; //? Default is 0 unless 
+	const { productId } = req.params;
+	const { defaultStock = 0 } = req.body; //? Default is 0 unless
 
-    const inventoryItem = await prisma.inventory.findUnique({
-        where: { productId },
-    });
+	const inventoryItem = await prisma.inventory.findUnique({
+		where: { productId }
+	});
 
-    if (!inventoryItem) {
-        return res
-            .status(404)
-            .json({ success: false, message: "Inventory item not found" });
-    }
+	if (!inventoryItem) {
+		return res.status(404).json({ success: false, message: 'Inventory item not found' });
+	}
 
-    const updatedInventory = await prisma.inventory.update({
-        where: { productId },
-        data: { stock: defaultStock },
-    });
+	const updatedInventory = await prisma.inventory.update({
+		where: { productId },
+		data: { stock: defaultStock }
+	});
 
-    res.status(200).json({
-        success: true,
-        message: "Stock reset successfully",
-        inventory: updatedInventory,
-    });
+	res.status(200).json({
+		success: true,
+		message: 'Stock reset successfully',
+		inventory: updatedInventory
+	});
 });
