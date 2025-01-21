@@ -11,88 +11,88 @@ import {
 	getLowStockItems,
 	resetInventoryStock,
 } from "../controllers/inventoryController.js";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
 //^ Create a new inventory item
 router.post(
 	"/",
-	logAction("Creating a new inventory item"),
+	// logAction("Creating a new inventory item"),
 	createInventoryItem,
-	logError
+	// logError
 );
 
 //^ Get all inventory items
 router.get(
 	"/",
-	logAction("Fetching all inventory items"),
+	// logAction("Fetching all inventory items"),
 	getInventoryItems,
-	logError
+	// logError
 );
 
 //^ Get a single inventory item by productId
 router.get(
 	"/:productId",
-	logAction("Get a single inventory item by productId"),
+	// logAction("Get a single inventory item by productId"),
 	getInventoryItemByProductId,
-	logError
+	// logError
 );
 
 //^ Update the inventory stock
 router.patch(
 	"/:productId",
-	logAction("Updating an inventory stock"),
+	// logAction("Updating an inventory stock"),
 	updateInventoryStock,
-	logError
+	// logError
 );
 
 //^ Reduced inventory stock
 router.patch(
 	"/:productId/reduce",
-	logAction("Reduced inventory stock"),
+	// logAction("Reduced inventory stock"),
 	reduceInventoryStock,
-	logError
+	// logError
 );
 
 //^ Added inventory stock
 router.patch(
 	"/:productId/add",
-	logAction("Added inventory stock"),
+	// logAction("Added inventory stock"),
 	addInventoryStock,
-	logError
+	// logError
 );
 
 //^ Delete an inventory item
 router.delete(
 	"/:productId",
-	logAction("Deleting an inventory item"),
+	// logAction("Deleting an inventory item"),
 	deleteInventoryItem,
-	logError
+	// logError
 );
 
 //^ Checking stock for multiple products
 router.post(
 	"/check-availability",
-	logAction("Checking stock for multiple products"),
+	// logAction("Checking stock for multiple products"),
 	checkInventoryAvailability,
-	logError
+	// logError
 ); 
 
 //^ Getting items below stock threshold
 router.get(
 	"/low-stock",
-	logAction("Getting items below stock threshold"),
+	// logAction("Getting items below stock threshold"),
 	getLowStockItems,
-	logError
+	// logError
 ); 
 
 //^ Reseting stock for a product
 router.patch(
 	"/:productId/reset",
-	logAction("Reseting stock for a product"),
+	// logAction("Reseting stock for a product"),
 	resetInventoryStock,
-	logError
+	// logError
 ); 
 
 export { router as inventoryRoute };

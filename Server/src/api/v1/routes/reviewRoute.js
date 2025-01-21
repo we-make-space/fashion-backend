@@ -5,7 +5,7 @@ import {
 	updateReview,
 	deleteReview,
 } from "../controllers/reviewController.js";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 
 const router = express.Router();
 
@@ -15,15 +15,25 @@ router.post("/", createReview);
 // Route for getting reviews by product ID
 router.get(
 	"/:productId/reviews",
-	logAction("Getting reviews on a product"),
+	// logAction("Getting reviews on a product"),
 	getReviewsByProductId,
-	logError
+	// logError
 );
 
 // Route for updating a review
-router.put("/:id", logAction("Updating a review"), updateReview, logError);
+router.put(
+	"/:id", 
+	// logAction("Updating a review"), 
+	updateReview, 
+	// logError
+);
 
 // Route for deleting a review
-router.delete("/:id", logAction("deleting a review"), deleteReview, logError);
+router.delete(
+	"/:id", 
+	// logAction("deleting a review"), 
+	deleteReview, 
+	// logError
+);
 
 export { router as reviewRoute };

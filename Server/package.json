@@ -14,7 +14,8 @@
 		"prisma:studio": "npx prisma studio --schema=./src/api/v1/prisma/schema.prisma",
 		"prisma:format": "npx prisma format --schema=./src/api/v1/prisma/schema.prisma",
 		"build": "babel src/email/emailTemplate.jsx --out-dir dist",
-		"email": "email dev --dir ./src/email"
+		"email": "email dev --dir ./src/email",
+		"postinstall": "npm run prisma:generate"
 	},
 	"keywords": [],
 	"author": "",

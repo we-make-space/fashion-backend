@@ -1,21 +1,21 @@
 import express from "express";
-import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+// import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 import { createMessage, getMessages } from "../controllers/messageController.js";
 
 const router = express.Router();
 
 router.get(
     "/:chatId",
-    logAction("Fetching all messages"),
+    // logAction("Fetching all messages"),
     getMessages,
-    logError
+    // logError
 )
 
 router.post(
     "/",
-    logAction("Creating a new message"),
+    // logAction("Creating a new message"),
     createMessage,
-    logError
+    // logError
 )
 
 export { router as messageRoute };
