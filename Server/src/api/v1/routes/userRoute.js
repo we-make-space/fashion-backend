@@ -76,7 +76,6 @@ router.get("/:id", (req, res, next) => {
 	});
 });
 
-router.get("/sellers/all", logAction("Fetching all sellers"), getAllSeller);
 
 router.put(
 	"/updateRole", 

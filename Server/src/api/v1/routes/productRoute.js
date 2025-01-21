@@ -38,13 +38,6 @@ router.get(
 	getAllProducts,
 	// logError
 );
-router.get(
-	"/sellerProducts/:email",
-	logAction("Fetching all seller products by email"),
-	getAllSellerProducts,
-	logError
-);
-
 
 
 //? Route to get a single product by ID

@@ -8,7 +8,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import swaggerUi from "swagger-ui-express";
-import logger from "../../utils/logger.js";
+// import logger from "../../utils/logger.js";
 import { corsOptions } from "../../middlewares/sitesAuthorization.js";
 import swaggerSpec from "../../lib/swagger.js";
 import { v1Router } from "./routes/routes.js";
