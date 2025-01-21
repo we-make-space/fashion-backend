@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
+import { Role } from "@prisma/client";
 // import { Role } from "@prisma/client";
 // import { Role } from "@prisma/client";
 
@@ -259,30 +260,7 @@ export const getUserFollowings = asyncHandler(async (req, res) => {
 	}
 });
 
-// * Get All Seller
-export const getAllSeller = asyncHandler(async (req, res) => {
-	try {
-		const sellers = await prisma.user.findMany({
-			where: {
-				role: "SELLER",
-				ownedProducts: {
-					some: {},
-				},
-			},
-			include: {
-				ownedProducts: true,
-			},
-		});
 
-		if (!sellers || sellers.length === 0) {
-			return res.status(404).json({ message: "No Seller found" });
-		}
-
-		res.status(200).json(sellers);
-	} catch (error) {
-		res.status(500).json({ error: error.message });
-	}
-});
 export const upadateAllUsersRole = asyncHandler(async (req, res) => {
 	const { role } = req.body;
 	role.toUpperCase();

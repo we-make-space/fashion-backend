@@ -10,6 +10,7 @@ export const createProduct = asyncHandler(async (req, res) => {
 		product_name,
 		price,
 		product_description,
+		stock
 	} = data;
 
 
@@ -36,6 +37,11 @@ const userEmail = req.body.userEmail;
 						product_description,
 						owner: { connect: { email: userEmail } },
 						category: { connect: { id: categoryId } },
+						Inventory: {
+							create: {
+								stock: parseInt(stock),
+							},
+						},
 					},
 				});
 		
@@ -176,20 +182,6 @@ export const getAllProducts = asyncHandler(async (req, res) => {
   }
 });
 
-export const getAllSellerProducts = asyncHandler(async (req, res) => {
-	const { email } = req.params;
-	try {
-		const products = await prisma.product.findMany({
-			where: {
-				userEmail: email,
-			},
-
-		});
-		res.status(200).json(products);
-	} catch (error) {
-		throw new Error(error.message);
-	}
-});
 
 //& function to get a single product
 export const getProduct = asyncHandler(async (req, res) => {
@@ -249,6 +241,16 @@ export const getProduct = asyncHandler(async (req, res) => {
 						name: true,
 					},
 				},
+				OrderItem:{
+					include:{
+						order:{
+							include: {
+								user: true
+							}
+						}
+						
+					}
+				}
 			},
 		});
 

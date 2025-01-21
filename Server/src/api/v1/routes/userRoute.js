@@ -4,7 +4,6 @@ import {
 	CreateUser,
 	DeleteUser,
 	followStatus,
-	getAllSeller,
 	GetAllUsers,
 	GetUser,
 	getUserFollowers,
@@ -56,8 +55,6 @@ router.get("/:id", (req, res, next) => {
 		next(error);
 	});
 });
-
-router.get("/sellers/all", logAction("Fetching all sellers"), getAllSeller);
 
 router.put("/updateRole", logAction("Updating roles"), upadateAllUsersRole)
 
