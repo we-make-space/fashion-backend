@@ -5,4 +5,4 @@
 # Ignore all log files and the logs directory
 logs/
 *.log
-logs
+logs.DS_Store
