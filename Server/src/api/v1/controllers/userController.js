@@ -283,6 +283,7 @@ export const getAllSeller = asyncHandler(async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 });
+
 export const upadateAllUsersRole = asyncHandler(async (req, res) => {
 	const { role } = req.body;
 	role.toUpperCase();

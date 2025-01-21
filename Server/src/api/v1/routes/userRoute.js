@@ -4,7 +4,6 @@ import {
 	CreateUser,
 	DeleteUser,
 	followStatus,
-	getAllSeller,
 	GetAllUsers,
 	GetUser,
 	getUserFollowers,

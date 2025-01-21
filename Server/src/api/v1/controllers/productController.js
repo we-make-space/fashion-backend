@@ -6,7 +6,11 @@ import { cloudinary } from '../config/cloudinary.js';
 //! A method to create a product
 export const createProduct = asyncHandler(async (req, res) => {
 	const data = JSON.parse(req.body.data);
-	const { product_name, price, product_description } = data;
+	const {
+		product_name,
+		price,
+		product_description,
+	} = data;
 
 	const categoryId = '6724d6341a85aabc45eeff0b';
 	const userEmail = req.body.userEmail;
@@ -28,8 +32,8 @@ export const createProduct = asyncHandler(async (req, res) => {
 						product_image: uploadResults.map((r) => r.secure_url),
 						product_description,
 						owner: { connect: { email: userEmail } },
-						category: { connect: { id: categoryId } }
-					}
+						category: { connect: { id: categoryId } },
+					},
 				});
 
 				res.status(200).json({ message: 'product created successfully', product });
@@ -170,8 +174,9 @@ export const getAllSellerProducts = asyncHandler(async (req, res) => {
 	try {
 		const products = await prisma.product.findMany({
 			where: {
-				userEmail: email
-			}
+				userEmail: email,
+			},
+
 		});
 		res.status(200).json(products);
 	} catch (error) {
@@ -234,10 +239,10 @@ export const getProduct = asyncHandler(async (req, res) => {
 				},
 				category: {
 					select: {
-						name: true
-					}
-				}
-			}
+						name: true,
+					},
+				},
+			},
 		});
 
 		if (!product) {

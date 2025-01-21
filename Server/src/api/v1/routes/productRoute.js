@@ -5,7 +5,6 @@ import {
 	deleteProduct,
 	getAllProductLikes,
 	getAllProducts,
-	getAllSellerProducts,
 	getCommentLikes,
 	getCommentsForProduct,
 	getProduct,
