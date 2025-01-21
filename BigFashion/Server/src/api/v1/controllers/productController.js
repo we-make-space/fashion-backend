@@ -151,7 +151,7 @@ export const getAllProductsTrial = asyncHandler(async (req, res) => {
 		const products = await prisma.product.findMany({
 			orderBy: {
 				createdAt: "desc",
-			},
+			}, 
 			include: {
 				createdAt: false,
 				updatedAt: false,

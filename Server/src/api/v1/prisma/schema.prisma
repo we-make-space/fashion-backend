@@ -7,11 +7,42 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// Enum for order status
+enum OrderStatus {
+  PENDING
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELED
+}
+
+enum CategoryEnum {
+  CLOTHING
+  BAGS
+  WATCH
+  FABRIC
+  JEWELLARY
+  SHOES
+}
+
+enum GenderEnum {
+  MALE
+  FEMALE
+  UNISEX
+}
+
+enum Role {
+  USER
+  SELLER
+  ADMIN
+}
+
 model User {
   id            String     @id @default(auto()) @map("_id") @db.ObjectId
   email         String     @unique
   firstName     String
   lastName      String
+  role          Role       @default(USER)
   image         String?
   bio           String
   coverImage    String?
@@ -32,17 +63,17 @@ model User {
 }
 
 model Product {
-  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  id                  String         @id @default(auto()) @map("_id") @db.ObjectId
   product_name        String
   price               Float
   product_image       String[]
   product_description String
   userEmail           String
-  likes               Like[]   @relation("ProductLikes")
+  likes               Like[]         @relation("ProductLikes")
   reviews             Review[]
   sizes               String[]
   colors              String[]
-  owner               User     @relation("Owner", fields: [userEmail], references: [email])
+  owner               User           @relation("Owner", fields: [userEmail], references: [email])
 
   comments  Comment[]
   createdAt DateTime  @default(now())
@@ -61,7 +92,7 @@ model Comment {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   content   String
   likes     Like[]   @relation("CommentLikes")
-  product   Product  @relation(fields: [productId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId String   @db.ObjectId
   User      User?    @relation(fields: [userEmail], references: [email])
   userEmail String
@@ -95,7 +126,7 @@ model Review {
   comment   String
   userEmail String?
   user      User?    @relation(fields: [userEmail], references: [email])
-  product   Product  @relation(fields: [productId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId String   @db.ObjectId
   createdAt DateTime @default(now())
 }
@@ -157,7 +188,7 @@ model CartItem {
   cartId    String  @db.ObjectId
   cart      Cart    @relation(fields: [cartId], references: [id])
   productId String  @db.ObjectId
-  product   Product @relation(fields: [productId], references: [id])
+  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   quantity  Int
 
   @@unique([cartId, productId]) // Add this line for composite unique constraint
@@ -183,7 +214,7 @@ model Address {
 model Inventory {
   id        String   @id @default(auto()) @map("_id") @db.ObjectId
   productId String   @db.ObjectId
-  product   Product  @relation(fields: [productId], references: [id])
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   stock     Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -219,34 +250,4 @@ model WishlistItem {
   productId  String   @db.ObjectId
   product    Product  @relation(fields: [productId], references: [id])
   addedAt    DateTime @default(now())
-}
-
-// Enum for order status
-enum OrderStatus {
-  PENDING
-  PROCESSING
-  SHIPPED
-  DELIVERED
-  CANCELED
-}
-
-enum CategoryEnum {
-  CLOTHING
-  BAGS
-  WATCH
-  FABRIC
-  JEWELLARY
-  SHOES
-}
-
-enum GenderEnum {
-  MALE
-  FEMALE
-  UNISEX
-}
-
-enum Role {
-  USER
-  SELLER
-  ADMIN
 }

@@ -3,8 +3,16 @@ import {
 	checkUserExists,
 	CreateUser,
 	DeleteUser,
+	followStatus,
+	getAllSeller,
 	GetAllUsers,
+	GetUser,
+	getUserFollowers,
+	getUserFollowings,
+	getUserId,
 	GetUserProducts,
+	toggleFollowUser,
+	upadateAllUsersRole,
 	UpdateUser,
 } from "../controllers/userController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
@@ -23,6 +31,8 @@ router.get(
 	checkUserExists
 );
 
+router.get('/:id', logAction("Fetching a user"), GetUser);
+
 //? Get all users
 router.get("/all", logAction("Fetching all users"), GetAllUsers);
 
@@ -32,14 +42,32 @@ router.patch("/:id", logAction("Updating a user by ID"), UpdateUser);
 //? Delete a user by ID
 router.delete("/:id", logAction("Deleting a user by ID"), DeleteUser);
 
-//? Get products for a specific user by user ID
-router.get(
-	"/:id",
-	logAction("Fetching products for a specific user"),
-	GetUserProducts
+// Get products for a specific user by user ID
+router.get("/:id", (req, res, next) => {
+	const { id } = req.params;
+	logger.info(`Fetching products for user with ID: ${id}`);
+	GetUserProducts(req, res).catch((error) => {
+		logger.error(
+			`Error fetching products for user with ID ${id}: ${error.message}`
+		);
+		next(error);
+	});
+});
+
+router.get("/sellers/all", logAction("Fetching all sellers"), getAllSeller);
+
+router.put("/updateRole", logAction("Updating roles"), upadateAllUsersRole)
+
+router.post(
+    "/:id/follow",
+    logAction("Creating a new follower"),
+    toggleFollowUser,
+    logError
 );
 
-router.use(logError);
-// router.use(handleAuthErrors);
+router.get('/:id/followStatus', logAction("Checking follow status"), followStatus);
+
+router.get("/followers/:id",logAction("Fetching followers"), getUserFollowers );
+router.get("/followings/:id", logAction("Fetching followings"), getUserFollowings);
 
 export { router as userRoute };

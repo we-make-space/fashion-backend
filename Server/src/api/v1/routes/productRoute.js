@@ -15,23 +15,28 @@ import {
 	updateProduct,
 } from "../controllers/productController.js";
 import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
+import {upload} from "../../../middlewares/multer.js";
+
 
 const router = express.Router();
 
-router.post("/", logAction("Creating a new product"), createProduct, logError);
+router.post(
+	"/",
+	logAction("Creating a new product"),
+	createProduct,
+	logError
+);
 
-//? Route to get all products with pagination
+// Route to get all products with pagination
 router.get(
 	"/",
 	logAction("Fetching all products with pagination"),
 	getAllProducts,
 	logError
 );
-
-//^ Route to get all products without pagination (E)
 router.get(
-	"/",
-	logAction("Fetching all products without pagination"),
+	"/dashboard",
+	logAction("Fetching all pr"),
 	getAllProductsTrial,
 	logError
 );
@@ -117,5 +122,7 @@ router.get(
 	getAllProductLikes,
 	logError
 );
+
+
 
 export { router as productRoute };
