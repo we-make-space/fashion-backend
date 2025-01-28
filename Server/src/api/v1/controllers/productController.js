@@ -159,7 +159,7 @@ export const getAllProducts = asyncHandler(async (req, res) => {
 	  });
 
 	  await redisClient.set(key, JSON.stringify(products), {
-		EX: 60,
+		EX: 300,
 	  });
 	  console.log("Fetched from Prisma");
 	}
@@ -247,7 +247,8 @@ export const getProduct = asyncHandler(async (req, res) => {
 							include: {
 								user: true
 							}
-						}
+						},
+						product: true
 						
 					}
 				}
@@ -310,7 +311,7 @@ export const updateProduct = asyncHandler(async (req, res) => {
 					product_name !== undefined
 						? product_name
 						: existingProduct.product_name,
-				price: price !== undefined ? price : existingProduct.price,
+				price: price !== undefined ? parseFloat(price) : existingProduct.price,
 				product_image:
 					product_image !== undefined
 						? product_image

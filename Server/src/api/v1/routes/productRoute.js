@@ -16,6 +16,7 @@ import {
 } from "../controllers/productController.js";
 // import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
 import multer from "multer";
+import protect from "../../../middlewares/protect.js";
 
 const upload = multer({
 	dest: './uploads/',
@@ -25,6 +26,7 @@ const router = express.Router();
 
 router.post(
 	"/",
+	protect,
 	upload.array('productImg[]',12),
 	// logAction("Creating a new product"),
 	createProduct,
@@ -91,6 +93,7 @@ router.post(
 //? Route to like a product
 router.post(
 	"/likes/product/like",
+
 	// logAction("Liking a product"),
 	likeProduct,
 	// logError

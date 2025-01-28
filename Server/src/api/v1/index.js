@@ -14,18 +14,44 @@ import swaggerSpec from "../../lib/swagger.js";
 import { v1Router } from "./routes/routes.js";
 import { redisClient } from "./config/Redis.js";
 import { Server } from "socket.io";
-
+import fs from "fs";
+import { auth } from "express-openid-connect";
+import { CreateUser } from "./controllers/userController.js";
 
 dotenv.config();
-
 const app = express();
 const PORT = process.env.PORT || 9001;
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.AUTH0_SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.AUTH0_CLIENT_ID,
+  issuerBaseURL: process.env.AUTH0_ISSUER_BASE_URL,
+  routes: {
+	postLogoutRedirect: process.env.CLIENT_URL
+  } 
+};
+app.use(auth(config));
+
+app.get("/", async (req, res) => {
+  if (req.oidc.isAuthenticated()) {
+    await CreateUser(req.oidc.user);
+    return res.redirect(process.env.CLIENT_URL);
+  }
+});
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(cors());
+app.use(cors({
+	origin: process.env.CLIENT_URL,
+	credentials: true
+}));
 app.use(v1Router);
+// auth router attaches /login, /logout, and /callback routes to the baseURL
+
 // app.use(cors(corsOptions));
 
 
@@ -38,8 +64,6 @@ app.use(v1Router);
 
 //^ Serve Swagger UI with CORS enabled for the docs route
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use(cors());
-const API_VERSION = "/api/v1";
 
 await redisClient.connect();
 await redisClient.ping(); 
@@ -98,7 +122,6 @@ socket.on("disconnect", () => {
 
 // Start the server on port 9000
 io.listen(9000);
-
 
 //~ Error handling middleware
 // app.use((err, req, res, next) => {

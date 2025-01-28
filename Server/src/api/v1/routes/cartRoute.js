@@ -49,5 +49,5 @@ router.post(
 	// logError
 );
 
-export default router;
+
 export { router as cartRoute };

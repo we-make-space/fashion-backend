@@ -50,5 +50,5 @@ router.get(
 	// logError
 );
 
-export default router;
+
 export { router as cartItemRoute };

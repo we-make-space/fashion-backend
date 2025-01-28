@@ -37,6 +37,12 @@ export const getAllSellerProducts = asyncHandler(async (req, res) => {
             orderBy: {
                 createdAt: 'desc',
             },
+            include:{
+                OrderItem:true,
+                comments: true,
+                reviews: true,
+                likes: true
+            }
         });
         res.status(200).json(products);
     } catch (error) {
@@ -131,3 +137,41 @@ export const getSellerOrderById = asyncHandler(async (req, res) => {
         throw new Error(error.message);
     }
 })
+
+export const getTopSelleingProduct = asyncHandler(async (req, res) => {
+    const {email} = req.params;
+
+    try {
+        const products = await prisma.product.findMany({
+            where: {
+                userEmail: email,
+            },
+            include: {
+                OrderItem: {
+                    include: {
+                        order: true
+                    }
+                }
+            } ,
+            orderBy: {
+                OrderItem: {
+                    _count: 'desc',
+                },
+            },
+            take: 3
+
+        })
+
+        if (!products || products.length === 0) {
+            return res.status(404).json({ message: 'No products found' });
+        }
+
+        res.status(200).json(products);
+    } catch (error) {
+        console.log(error);
+        throw new Error(error.message);
+    }
+})
+
+
+

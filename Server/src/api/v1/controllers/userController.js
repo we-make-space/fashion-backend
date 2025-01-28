@@ -8,46 +8,60 @@ import { Role } from "@prisma/client";
 
 //* Create a new user method
 
-export const CreateUser = asyncHandler(async (req, res) => {
+export const CreateUser = asyncHandler(async (user) => {
 	console.log("Creating a user");
 
 	try {
-		const { email, firstName, lastName, image } = req.body;
+		const { given_name, family_name, picture } = user;
 
 		// Check if user already exists
 		const existingUser = await prisma.user.findUnique({
-			where: { email },
+			where: {
+				auth0Id: user.sub,
+			},
 		});
 
 		if (existingUser) {
-			return res.status(409).json({
-				error: `User with email ${email} already exists.`,
-			  });
+			throw new Error(`User with email ${user.sub} already exists.`);
 		}
 
 		// Create new user
 		const newUser = await prisma.user.create({
 			data: {
-				email,
-				firstName: firstName,
-				lastName: lastName,
-				image: image,
+				email: user.email,
+				firstName: given_name,
+				lastName: family_name,
+				image: picture,
 				bio: "",
-				location: "",
+				auth0Id: user.sub,
 				phoneNumber: "000-000-0000",
 				Cart: {
 					create: {}, //? Create an empty cart for the user
 				},
+				// Include optional fields with default values if necessary
+				role: "USER",
+				coverImage: null,
+				cartId: null,
+				comment: {},
+				likes: {},
+				reviews: {},
+				followers: {},
+				following: {},
+				ownedProducts: {},
+				wishlist: {},
+				addresses: {},
+				orders: {},
+				sellerProfile: {},
+				messages: {}
 			},
 			include: {
 				Cart: true,
 			},
 		});
 
-		res.status(201).json(newUser);
+		console.log("New user created:", newUser);
 	} catch (error) {
 		console.error("Error creating user:", error);
-		res.status(500).json({ error: "Failed to create user" });
 	}
 });
 
@@ -154,10 +168,10 @@ export const UpdateUser = asyncHandler(async (req, res) => {
 
 export const DeleteUser = asyncHandler(async (req, res) => {
 	// Use authenticated user's email to find their account
-	const { email } = req.user;
+	const { id } = req.params;
 
 	try {
-		await prisma.user.delete({ where: { email } });
+		await prisma.user.delete({ where: { id } });
 		res.status(200).json({ message: "User deleted successfully" });
 	} catch (error) {
 		if (error.code === "P2025") {
@@ -187,6 +201,22 @@ export const GetUserProducts = asyncHandler(async (req, res) => {
 });
 
 // ^ Get user
+export const GetUserAuth = asyncHandler(async (req, res) => {
+	const { id } = req.params;
+	try {
+		const user = await prisma.user.findUnique({
+			where: { auth0Id: id },
+			include: {
+				ownedProducts: true,
+			}
+		});
+		if (!user) return res.status(404).json({ message: "User not found" });
+
+		res.status(200).json(user);
+	} catch (error) {
+		res.status(500).json({ error: error.message });
+	}
+});
 export const GetUser = asyncHandler(async (req, res) => {
 	const { id } = req.params;
 	try {
@@ -425,5 +455,15 @@ const orders = await prisma.order.findMany({
 		res.status(200).json(orders);
 	} catch (error) {
 		res.status(500).json({ error: error.message });
+	}
+});
+
+export const checkAuth = asyncHandler(async (req, res) => {
+	console.log(req.oidc);
+	if(req.oidc.isAuthenticated()) {
+		console.log(req.oidc.user);
+		return res.status(200).json({isAuthenticated: true, user: req.oidc.user});
+	}else{
+		return res.status(200).json({isAuthenticated: false});
 	}
 });

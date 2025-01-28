@@ -1,6 +1,6 @@
 import express from "express";
 // import { logAction, logError } from "../../../middlewares/loggerMiddlewares.js";
-import { getAllSeller, getAllSellerOrders, getAllSellerProducts, getSellerOrderById } from "../controllers/sellerController.js";
+import { getAllSeller, getAllSellerOrders, getAllSellerProducts, getSellerOrderById, getTopSelleingProduct } from "../controllers/sellerController.js";
 
 
 const router = express.Router();
@@ -27,6 +27,13 @@ router.get("/sellerOrderById/:id",
 	getSellerOrderById,	
 	// logError
 );
+
+router.get("/topSellingProducts/:email", 
+	// logAction("Fetching all seller orders by id"), 
+	getTopSelleingProduct,	
+	// logError
+);
+
 
 
 

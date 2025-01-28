@@ -1,5 +1,6 @@
 import asyncHandler from "express-async-handler";
 import { prisma } from "../config/prismaConfig.js";
+import { OrderStatus } from "@prisma/client";
 
 //* Create order for products
 export const createOrder = asyncHandler(async (req, res) => {
@@ -179,21 +180,34 @@ export const getOrder = asyncHandler(async (req, res) => {
 /**
  * Update an order
  */
+/**
+ * Update an order
+ */
 export const updateOrder = asyncHandler(async (req, res) => {
 	const { id } = req.params;
-	const { status, total, } = req.body;
+	const { status: statusInput } = req.query;
+
+	const status = Object.values(OrderStatus).find(
+		(s) => s === statusInput.toUpperCase()
+	);
+
+	if (!status) {
+		return res.status(400).json({
+			error: `Invalid status. Supported statuses are: ${Object.values(OrderStatus).join(", ")}`,
+		});
+	}
+
 	try {
 		const order = await prisma.order.update({
 			where: { id },
-			data: {
-				status,
-				total,
-				
-			},
+			data: { status },
 		});
+
 		res.status(200).json(order);
 	} catch (error) {
 		console.error("Error updating order:", error);
 		res.status(500).json({ error: "An error occurred while updating the order" });
 	}
 });
+
+

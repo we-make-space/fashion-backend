@@ -1,11 +1,13 @@
 import express from "express";
 import {
+	checkAuth,
 	checkUserExists,
 	CreateUser,
 	DeleteUser,
 	followStatus,
 	GetAllUsers,
 	GetUser,
+	GetUserAuth,
 	getUserFollowers,
 	getUserFollowings,
 	getUserId,
@@ -46,6 +48,11 @@ router.get(
 	'/:id', 
 	// logAction("Fetching a user by ID"), 
 	GetUser
+);
+router.get(
+	'/Auth/:id', 
+	// logAction("Fetching a user by ID"), 
+	GetUserAuth
 );
 
 
@@ -112,6 +119,11 @@ router.get(
 	"/:id/orders", 
 	// logAction("Fetching user orders"), 
 	getUserOrder
+);
+
+router.get(
+	"/checkAuth/all",
+	checkAuth
 );
 
 export { router as userRoute };

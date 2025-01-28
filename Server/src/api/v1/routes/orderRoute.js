@@ -31,7 +31,7 @@ router.get(
 );
 
 router.put(
-    "/:id",
+    "/:id/update-status",
     // logAction("Updating an order"),
     updateOrder,
     // logError

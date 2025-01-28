@@ -10,6 +10,7 @@ datasource db {
 // Enum for order status
 enum OrderStatus {
   PENDING
+  ACCEPTED
   PROCESSING
   SHIPPED
   DELIVERED
@@ -38,15 +39,15 @@ enum Role {
 }
 
 model User {
-  id         String  @id @default(auto()) @map("_id") @db.ObjectId
-  email      String  @unique
-  firstName  String
-  lastName   String
-  role       Role    @default(USER)
-  image      String?
-  bio        String
-  coverImage String?
-
+  id              String         @id @default(auto()) @map("_id") @db.ObjectId
+  email           String         @unique
+  firstName       String
+  lastName        String
+  role            Role           @default(USER)
+  image           String?
+  bio             String
+  coverImage      String?
+  auth0Id         String?        @unique
   comment         Comment[]
   likes           Like[]         @relation("UserLikes")
   phoneNumber     String         @default("000-000-0000")
@@ -84,12 +85,12 @@ model Product {
   reviews             Review[]
   sizes               String[]
   colors              String[]
-  owner               User      @relation("Owner", fields: [userEmail], references: [email])
+  owner               User      @relation("Owner", fields: [userEmail], references: [email], onDelete: Cascade)
   comments            Comment[]
   createdAt           DateTime  @default(now())
   updatedAt           DateTime  @updatedAt
-  categoryId String?   @db.ObjectId
-  category   Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
+  categoryId          String?   @db.ObjectId
+  category            Category? @relation(fields: [categoryId], references: [id]) // Link to Category model
 
   OrderItem OrderItem[] @relation("OrderItem")
   CartItem  CartItem[]
@@ -103,7 +104,7 @@ model Comment {
   likes     Like[]   @relation("CommentLikes")
   product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId String   @db.ObjectId
-  User      User?    @relation(fields: [userEmail], references: [email])
+  User      User?    @relation(fields: [userEmail], references: [email], onDelete: Cascade)
   userEmail String
   createdAt DateTime @default(now())
 }
@@ -142,8 +143,8 @@ model Review {
 
 model Follower {
   id         String   @id @default(auto()) @map("_id") @db.ObjectId
-  follower   User     @relation("Followers", fields: [followerId], references: [id])
-  followee   User     @relation("Followees", fields: [followeeId], references: [id])
+  follower   User     @relation("Followers", fields: [followerId], references: [id],onDelete: Cascade)
+  followee   User     @relation("Followees", fields: [followeeId], references: [id], onDelete: Cascade)
   followerId String   @db.ObjectId
   followeeId String   @db.ObjectId
   createdAt  DateTime @default(now())
@@ -154,9 +155,9 @@ model Follower {
 model Order {
   id          String      @id @default(auto()) @map("_id") @db.ObjectId
   userId      String      @db.ObjectId
-  user        User        @relation(fields: [userId], references: [id])
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
   items       OrderItem[] // Array of items in the order
-  status      String      @default("Pending") // e.g., Pending, Shipped, Delivered, Cancelled
+  status      OrderStatus @default(PENDING) // e.g., Pending, Shipped, Delivered, Cancelled
   totalAmount Float
   createdAt   DateTime    @default(now())
   updatedAt   DateTime    @updatedAt
@@ -187,7 +188,7 @@ model Payment {
 model Cart {
   id        String     @id @default(auto()) @map("_id") @db.ObjectId
   userId    String     @unique @db.ObjectId
-  user      User       @relation(fields: [userId], references: [id])
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
   items     CartItem[] // Relation to CartItem
   createdAt DateTime   @default(now())
 }
@@ -269,7 +270,7 @@ model Message {
   chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
   text      String
   senderId  String   @db.ObjectId
-  sender    User     @relation(fields: [senderId], references: [id])
+  sender    User     @relation(fields: [senderId], references: [id], onDelete: Cascade)
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
